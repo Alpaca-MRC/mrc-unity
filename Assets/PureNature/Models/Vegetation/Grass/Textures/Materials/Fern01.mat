@@ -13,11 +13,10 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords:
-  - _ALPHATEST_ON
   - _BASEWINDCHANNEL_B
   - _MICROWINDCHANNEL_R
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 1
+  m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -78,14 +77,28 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AlphaCutoff: 0.5
     - _BaseWindChannel: 2
     - _BumpScale: 1
     - _ColorVariationPower: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _EnvironmentReflections: 1
     - _Float2: 1.09
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -100,16 +113,19 @@ Material:
     - _MicroWindMultiplier: 0.5
     - _Mode: 1
     - _NoiseScale: 0.5
-    - _NoiseTiling: 1
+    - _NoiseTiling: 1.09
     - _NoiseWorldSpaceUVs: 0
     - _NormalAttenuation: 1
     - _NormalPower: 1
     - _NormalWorldSpaceUVs: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
     - _ScatteringScale: 1
     - _SeeVertexColor: 0
-    - _Smoothness: 0
+    - _Smoothness: 0.1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -122,8 +138,8 @@ Material:
     - __dirty: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color01: {r: 0.58915365, g: 0.8018868, b: 0, a: 1}
-    - _Color02: {r: 0.44102374, g: 0.6509434, b: 0.034798816, a: 1}
+    - _Color01: {r: 0.6156863, g: 0.7294118, b: 0.2784314, a: 1}
+    - _Color02: {r: 0.69411767, g: 0.8000001, b: 0.28627452, a: 1}
     - _ColorVariation: {r: 0.14204341, g: 0.5377358, b: 0.337626, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GradientColor: {r: 1, g: 0.31296754, b: 0, a: 0}

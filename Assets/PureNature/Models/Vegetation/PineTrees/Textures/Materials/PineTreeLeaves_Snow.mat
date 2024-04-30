@@ -13,8 +13,8 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords:
-  - _ALPHATEST_ON
   - _BASEWINDCHANNEL_R
+  - _DEPOSITLAYERCHANNEL_B
   - _MICROWINDCHANNEL_R
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
@@ -114,8 +114,21 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AlphaCutoff: 0.5
     - _BaseWind: 2
     - _BaseWindChannel: 0
     - _BranchPhase: 0.35
@@ -140,6 +153,7 @@ Material:
     - _DstBlend: 0
     - _EdgeFlutter: 1
     - _EdgeFlutter1: 1
+    - _EnvironmentReflections: 1
     - _Float0: 1
     - _Frequency: 10
     - _Frequency1: 2
@@ -151,7 +165,7 @@ Material:
     - _GlossyReflections: 1
     - _GradientFalloff: 0.58
     - _GradientFalloff1: 1.18
-    - _GradientPosition: 0.69
+    - _GradientPosition: 0.655
     - _GradientPosition1: -0.53
     - _HideHardAngles: 0
     - _HidePower: 2.5
@@ -172,7 +186,7 @@ Material:
     - _NoiseScale1: 0.06
     - _NormalAttenuation: 1
     - _NormalDistortion: 1
-    - _NormalPower: 1
+    - _NormalPower: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _ParallaxBias: 0
@@ -180,7 +194,11 @@ Material:
     - _Power1: 0.05
     - _PrimaryFactor: 1.01
     - _PrimaryFactor1: 0
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
     - _RefractionPower: 0
+    - _Scattering: 1
     - _ScatteringPower: 1
     - _ScatteringScale: 0.15
     - _SecondaryFactor: 1.81
@@ -204,9 +222,11 @@ Material:
     - _Tiling: 1
     - _TransAmbient: 1
     - _TransDirect: 1
-    - _TransNormalDistortion: 0
+    - _TransNormal: 0
+    - _TransNormalDistortion: 1
     - _TransScattering: 1
     - _TransShadow: 0.5
+    - _TransStrength: 1
     - _Translucency: 1
     - _TrunkWindAmplitude: 0.05
     - _TrunkWindPower: 1
@@ -224,7 +244,7 @@ Material:
     - _WindSpeed: 1
     - _WindTrunkContrast: 0
     - _WindTrunkContrast1: 15
-    - _WindTrunkPosition: 2
+    - _WindTrunkPosition: 1
     - _WindTrunkPosition1: 8
     - _ZWrite: 1
     - __dirty: 0
@@ -237,7 +257,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GradientColor: {r: 0.764151, g: 0.764151, b: 0.764151, a: 0}
     - _GradientColor1: {r: 1, g: 1, b: 1, a: 0}
-    - _MainColor: {r: 0.25925693, g: 0.3679245, b: 0.23082057, a: 0}
+    - _MainColor: {r: 0.2592569, g: 0.36792448, b: 0.23082054, a: 0}
     - _MainColor1: {r: 0.57778096, g: 1, b: 0, a: 0}
     - _ScatteringColor: {r: 0.4030302, g: 0.7264151, b: 0, a: 0}
     - _Specular: {r: 0, g: 0, b: 0, a: 0}
