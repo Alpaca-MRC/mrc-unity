@@ -2,20 +2,26 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Ocean
   m_Shader: {fileID: 4800000, guid: 6468bfbdaa889dd40a87fa06b6428b8f, type: 3}
-  m_ShaderKeywords: _MULTIPLYOPACITY_ON _USETRANSPARENCY_ON
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _MULTIPLYOPACITY_ON
+  - _USETRANSPARENCY_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2998
+  m_CustomRenderQueue: 3000
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -111,8 +117,23 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
+    - _AlphaCutoff: 0.5
     - _BumpScale: 1
+    - _CausticsOffset: 0
     - _CausticsScale: 0.15
     - _CausticsSpeed: 1.5
     - _ChromaticAberration: 0.1
@@ -130,6 +151,7 @@ Material:
     - _EdgeLength: 50
     - _EdgePower: 1
     - _EdgesFade: 0.05
+    - _EnvironmentReflections: 1
     - _Float2: 1000
     - _Float3: 0.744
     - _FoamContrast: 9.99
@@ -160,6 +182,9 @@ Material:
     - _NormalTiling: 0.05
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
     - _RefractionPower: 2
     - _SmoothnessPower: 1
     - _SmoothnessTextureChannel: 0
@@ -199,6 +224,7 @@ Material:
     - _MainColor: {r: 0, g: 0.6810271, b: 0.6886792, a: 1}
     - _NormalDirection: {r: 1, g: 0, b: -1, a: 0.2}
     - _SecondColor: {r: 0.5404058, g: 0.8679245, b: 0.8414827, a: 0}
+    - _ShallowColor: {r: 0, g: 0.6810271, b: 0.6886792, a: 1}
     - _WaterDeepColor: {r: 1, g: 1, b: 1, a: 0}
     - _WaterShallowColor: {r: 0, g: 0, b: 0, a: 0}
     - _WavesColor: {r: 0.27874687, g: 0.646538, b: 0.8207547, a: 0}
@@ -207,3 +233,4 @@ Material:
     - _WavesScale: {r: 1, g: 1, b: 0, a: 0}
     - _WavesScaleOLD: {r: 1, g: 1, b: 0, a: 0}
     - _WavesScaleXY: {r: 0.1, g: 0.1, b: 0, a: 0}
+  m_BuildTextureStacks: []
