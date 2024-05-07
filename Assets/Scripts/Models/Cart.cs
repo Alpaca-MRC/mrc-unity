@@ -9,10 +9,10 @@ public enum Grade {
     Legendary
 }
 
-public class Cart : MonoBehaviour
+public class Cart
 {
     public int id; // 카트의 고유 ID
-    public new string name; // 카트의 이름
+    public string name; // 카트의 이름
     public Grade grade; // 등급
 
     // 생성자
