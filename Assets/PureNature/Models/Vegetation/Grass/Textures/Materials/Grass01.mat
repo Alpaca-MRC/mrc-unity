@@ -11,8 +11,7 @@ Material:
   m_Shader: {fileID: 4800000, guid: 947355c823b272d489f36561db5960f5, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - _NOISEWORLDSPACEUVS_ON
+  m_ValidKeywords: []
   m_InvalidKeywords:
   - _ALPHABLEND_ON
   m_LightmapFlags: 4
@@ -85,13 +84,27 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AlphaCutoff: 0.5
     - _BumpScale: 1
     - _ColorVariationPower: 1
     - _Cutoff: 0.29
     - _DetailNormalMapScale: 1
     - _DstBlend: 10
+    - _EnvironmentReflections: 1
     - _Float2: 0.04
     - _GlossMapScale: 1
     - _Glossiness: 0
@@ -101,12 +114,15 @@ Material:
     - _Metallic: 0
     - _Mode: 2
     - _NoiseScale: 4.39
-    - _NoiseTiling: 0.01
-    - _NoiseWorldSpaceUVs: 1
-    - _NormalPower: 0
+    - _NoiseTiling: -0.02
+    - _NoiseWorldSpaceUVs: 0
+    - _NormalPower: 0.59
     - _NormalWorldSpaceUVs: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
     - _Shininess: 0.01
     - _Smoothness: 0.1
     - _SmoothnessTextureChannel: 0
@@ -121,8 +137,8 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color0: {r: 0.44313726, g: 0.7803922, b: 0.12549016, a: 1}
-    - _Color01: {r: 0.575358, g: 0.8018868, b: 0.2471223, a: 1}
-    - _Color02: {r: 0.8751501, g: 1, b: 0.47798735, a: 1}
+    - _Color01: {r: 0.4365885, g: 0.6226415, b: 0.13803844, a: 1}
+    - _Color02: {r: 0.69515264, g: 0.8867924, b: 0.18823427, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _WaveAndDistance: {r: 12, g: 3.6, b: 1, a: 1}
     - _WaveAndDistance1: {r: 12, g: 3.6, b: 1, a: 1}

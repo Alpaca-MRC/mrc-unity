@@ -3,12 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - CharacterOnStage
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Post-process Layer
   - Water
   - UI
   - 
@@ -35,7 +36,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - XR Simulation
   - 
   m_SortingLayers:
   - name: Default
