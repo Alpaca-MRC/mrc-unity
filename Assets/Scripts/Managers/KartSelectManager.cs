@@ -6,12 +6,13 @@ public class KartSelectManager : MonoBehaviour
 {
     public GameObject[] kartPrefabs;
     public CartUIManager cartUIManager;
-    private readonly int size = 13;
+    private readonly int size = 11;
     private int curIndex = 0;
 
     void Start()
     {
-        ActivateCharacter(kartPrefabs[curIndex]);
+        ActivateCart(kartPrefabs[curIndex]);
+        cartUIManager.GetCartInfo(curIndex);
     }
 
 
@@ -23,7 +24,7 @@ public class KartSelectManager : MonoBehaviour
         Debug.Log("현재 인덱스 : " + curIndex);
 
         // 변경된 캐릭터로 단상 위의 캐릭터 설정
-        ActivateCharacter(kartPrefabs[curIndex]);
+        ActivateCart(kartPrefabs[curIndex]);
         cartUIManager.GetCartInfo(curIndex);
     }
 
@@ -35,13 +36,13 @@ public class KartSelectManager : MonoBehaviour
         Debug.Log("현재 인덱스 : " + curIndex);
 
         // 변경된 캐릭터로 단상 위의 캐릭터 설정
-        ActivateCharacter(kartPrefabs[curIndex]);
+        ActivateCart(kartPrefabs[curIndex]);
         cartUIManager.GetCartInfo(curIndex);
     }
 
     
     // 캐릭터 활성화 및 비활성화 메서드
-    private void ActivateCharacter(GameObject cartObject)
+    public void ActivateCart(GameObject cartObject)
     {
         // 모든 캐릭터를 비활성화
         foreach (GameObject cart in kartPrefabs)

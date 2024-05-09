@@ -9,6 +9,7 @@ public class CartUIManager : MonoBehaviour
     public TextMeshProUGUI cartNameText;
     public TextMeshProUGUI cartGradeText;
     public CartData cartData;
+    public ProfileAPI profileAPI;
     
     public void GetCartInfo(int index)
     {
@@ -16,7 +17,7 @@ public class CartUIManager : MonoBehaviour
 
         
         // 카트 db에서 이름, 등급 가져오기
-        Cart cart = cartData.GetCartInfo(index + 1);
+        Cart cart = cartData.FindCartById(index + 1);
 
         // 이름 변경
         cartNameText = GameObject.Find("NameContent_Txt").GetComponent<TextMeshProUGUI>();
@@ -25,5 +26,11 @@ public class CartUIManager : MonoBehaviour
         // 등급 변경
         cartGradeText = GameObject.Find("GradeContent_Txt").GetComponent<TextMeshProUGUI>();
         cartGradeText.text = cart.grade.ToString();
+    }
+
+    public void OnClickWearButton()
+    {
+        Debug.Log(cartNameText.text);
+        profileAPI.ChangeCart(cartNameText.text);
     }
 }

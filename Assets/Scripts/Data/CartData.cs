@@ -16,29 +16,42 @@ public class CartData : MonoBehaviour
     {
         cartList = new List<Cart>
         {
-            new(1, "Basic Cart", Grade.Normal),
-            new(2, "Speedy Cart", Grade.Normal),
-            new(3, "Turbo Cart", Grade.Rare),
-            new(4, "Super Cart", Grade.Rare),
-            new(5, "Mega Cart", Grade.Unique),
-            new(6, "Ultra Cart", Grade.Unique),
-            new(7, "Hyper Cart", Grade.Legendary),
-            new(8, "Epic Cart", Grade.Legendary),
-            new(9, "Sonic Cart", Grade.Normal),
-            new(10, "Blaze Cart", Grade.Normal),
-            new(11, "Thunder Cart", Grade.Rare),
-            new(12, "Fury Cart", Grade.Rare),
-            new(13, "Inferno Cart", Grade.Unique)
+            new(1, "노멀 카트 1", Grade.NORMAL),
+            new(2, "노멀 카트 2", Grade.NORMAL),
+            new(3, "레어 카트 1", Grade.RARE),
+            new(4, "레어 카트 2", Grade.RARE),
+            new(5, "유니크 카트 1", Grade.UNIQUE),
+            new(6, "유니트 카트 2", Grade.UNIQUE),
+            new(7, "레전더리 카트1", Grade.LEGENDARY),
+            new(8, "레전더리 카트2", Grade.LEGENDARY),
+            new(9, "노멀 카트 3", Grade.NORMAL),
+            new(10, "노멀 카트 4", Grade.NORMAL),
+            new(11, "레어 카트 3", Grade.RARE),
+            new(12, "레어 카트 4", Grade.RARE),
+            new(13, "유니크 카트 3", Grade.UNIQUE)
         };
         
     }
 
     // 특정 카트 정보 가져오기 메서드
-    public Cart GetCartInfo(int cartId)
+    public Cart FindCartById(int cartId)
     {
         foreach (Cart cart in cartList)
         {
             if (cart.id == cartId)
+            {
+                return cart;
+            }
+        }
+        return null;
+    }
+
+    // 이름으로 가져오기
+    public Cart FindCartByName(string cartName)
+    {
+        foreach (Cart cart in cartList)
+        {
+            if (cart.name == cartName)
             {
                 return cart;
             }

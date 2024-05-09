@@ -27,16 +27,6 @@ public class ProfileCameraManager : MonoBehaviour
         ActivateUI(cartUI);
     }
 
-    public void OnCharacterButtonClicked()
-    {
-        Debug.Log("character 버튼 클릭!!");
-        // -50, 0, -228
-        // 0, -120, 0
-        SetCameraPositionAndRotation(new Vector3(-49.79f, 3f, -236.15f), Quaternion.Euler(0f, -120f, 0f));
-
-        // ActivateUI(characterUI);
-    }
-
     public void OnRecordButtonClicked()
     {
         Debug.Log("record 버튼 클릭!!");
@@ -50,8 +40,7 @@ public class ProfileCameraManager : MonoBehaviour
         {
             Transform xrRigTransform = xrOrigin.transform;
 
-            xrRigTransform.position = position;
-            xrRigTransform.rotation = rotation;
+            xrRigTransform.SetPositionAndRotation(position, rotation);
         }
         else
         {
@@ -65,7 +54,6 @@ public class ProfileCameraManager : MonoBehaviour
         // 모든 UI를 비활성화
         myProfileUI.SetActive(false);
         cartUI.SetActive(false);
-        // characterUI.SetActive(false);
         // recordUI.SetActive(false);
 
         // 전달받은 UI를 활성화

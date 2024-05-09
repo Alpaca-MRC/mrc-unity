@@ -1,7 +1,14 @@
 fileFormatVersion: 2
-guid: 31ef66509f1ea6a489f5b37ae4167e87
-PrefabImporter:
-  externalObjects: {}
+guid: 26d28edf5ad4dcb4aac5e11d5d4b1d31
+labels:
+- F1
+- Formula
+- IndyCar
+- RaceCar
+- Racer
+timeCreated: 1507586689
+licenseType: Free
+NativeFormatImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
