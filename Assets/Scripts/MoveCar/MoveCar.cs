@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,17 +7,44 @@ using UnityEngine.InputSystem;
 public class MoveCar : MonoBehaviour
 {
     public InputActionAsset inputActionsAsset;
-
-    private float maxSpeed = 15.0f;
-    private float acceleration = 5.0f; // 초당 가속도
-    private float currentSpeed = 0.0f; // 현재 속도
-    private float turnSpeed = 40f;
+    private float maxSpeed;
+    private float acceleration; // 초당 가속도
+    private float currentSpeed; // 현재 속도
+    private float turnSpeed;
     private float horizontalInput;
     
     private float isAPressed;
     private float isBPressed;
+    [SerializeField]
+    // 0 --> 메인페이지
+    // 1 --> MR 인게임
+    private int gameMode;
 
-    void Start() {}
+    void Start() {
+        switch (gameMode) {
+            // 메인페이지
+            case 0:
+                maxSpeed = 15.0f;
+                acceleration = 5.0f;
+                currentSpeed = 0.0f;
+                turnSpeed = 40f;
+                break;
+            // MR 인게임
+            case 1:
+                maxSpeed = 4.0f;
+                acceleration = 1.5f;
+                currentSpeed = 0.0f;
+                turnSpeed = 80f;
+                break;
+            // 실수로 gamemode 입력하지 않았을때는 MR을 기준으로 함
+            default:
+                maxSpeed = 2.0f;
+                acceleration = 0.7f;
+                currentSpeed = 0.0f;
+                turnSpeed = 60f;
+                break;
+        }
+    }
 
     void Update()
     {
@@ -24,6 +52,7 @@ public class MoveCar : MonoBehaviour
         isBPressed = inputActionsAsset.actionMaps[10].actions[1].ReadValue<float>();
 
         horizontalInput = Input.GetAxis("Horizontal"); 
+        Debug.Log(horizontalInput);
 
         // 전진 또는 후진 버튼이 눌렀을 경우
         if (isAPressed == 1 || isBPressed == 1) {
