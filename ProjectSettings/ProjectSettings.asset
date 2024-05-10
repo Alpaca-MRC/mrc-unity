@@ -141,9 +141,8 @@ PlayerSettings:
   tvOSBundleVersion: 1.0
   bundleVersion: 0.1.0
   preloadedAssets:
-  - {fileID: 11400000, guid: 2c119fe56bec22f488b885560cf82457, type: 2}
   - {fileID: -1995607395857041542, guid: 68e54bac4ecc116459df5457c77c6c2b, type: 2}
-  - {fileID: 11400000, guid: 70bb8e84b2ce18c4caca74cf1467d044, type: 2}
+  - {fileID: 11400000, guid: e04d6f0111694f9489c3a12923227fe4, type: 2}
   - {fileID: -1061741025896557331, guid: fdfdfa1c7b76c4e43a5ef3926f41508a, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -175,9 +174,9 @@ PlayerSettings:
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 31
-  AndroidTargetSdkVersion: 33
-  AndroidPreferredInstallLocation: 0
+  AndroidMinSdkVersion: 32
+  AndroidTargetSdkVersion: 0
+  AndroidPreferredInstallLocation: 1
   aotOptions: 
   stripEngineCode: 1
   iPhoneStrippingLevel: 0
@@ -268,8 +267,12 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
+  AndroidKeystoreName: '{inproject}: user.keystore'
+  AndroidKeyaliasName: user
   AndroidKeystoreName: '{inproject}: google.keystore'
   AndroidKeyaliasName: google
+  AndroidKeystoreName: '{inproject}: oculus.keystore'
+  AndroidKeyaliasName: oculus
   AndroidEnableArmv9SecurityFeatures: 0
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
@@ -533,9 +536,9 @@ PlayerSettings:
   m_BuildTargetVRSettings: []
   m_DefaultShaderChunkSizeInMB: 16
   m_DefaultShaderChunkCount: 0
-  openGLRequireES31: 1
-  openGLRequireES31AEP: 1
-  openGLRequireES32: 1
+  openGLRequireES31: 0
+  openGLRequireES31AEP: 0
+  openGLRequireES32: 0
   m_TemplateCustomTags: {}
   mobileMTRendering:
     Android: 1
