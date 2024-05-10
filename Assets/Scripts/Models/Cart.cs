@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum Grade {
-    Normal,
-    Rare,
-    Unique,
-    Legendary
+    NORMAL,
+    RARE,
+    UNIQUE,
+    LEGENDARY
 }
 
 public class Cart

@@ -1,14 +1,12 @@
 fileFormatVersion: 2
-guid: 1906757b16caf4d44b9a47d2f9eca1a0
+guid: 3668d06dcc6b18d4198ae241b0ea9375
 labels:
-- Circuit
-- Compact
-- HotHatch
+- F1
+- Formula
+- IndyCar
+- RaceCar
 - Racer
-- Rally
-- Track
-- Tuning
-timeCreated: 1507569487
+timeCreated: 1507586914
 licenseType: Free
 NativeFormatImporter:
   userData: 
