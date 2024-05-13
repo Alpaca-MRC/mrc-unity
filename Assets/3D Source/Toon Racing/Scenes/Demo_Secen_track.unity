@@ -86716,6 +86716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputActionsAsset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
+  gameMode: 0
 --- !u!1 &1884955600
 GameObject:
   m_ObjectHideFlags: 0
