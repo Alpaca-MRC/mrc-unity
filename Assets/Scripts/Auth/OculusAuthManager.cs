@@ -17,15 +17,15 @@ public class OculusAuthManager : MonoBehaviour
         Debug.Log("오큘러스 인증 매니저 시작!!");
     }
 
-    // Oculus 로그인
-    public void OculusAuth()
-    {
-        // Oculus 플랫폼 비동기 초기화
-        Debug.Log("오큘러스 인증 초기화 시작!!");
-        // Core.AsyncInitialize().OnComplete(OnInitializationCallback);
-    }
+    // // Oculus 로그인
+    // public void OculusAuth()
+    // {
+    //     // Oculus 플랫폼 비동기 초기화
+    //     Debug.Log("오큘러스 인증 초기화 시작!!");
+    //     Core.AsyncInitialize().OnComplete(OnInitializationCallback);
+    // }
 
-    // Oculus 플랫폼 초기화 콜백 함수
+    // // Oculus 플랫폼 초기화 콜백 함수
     // private void OnInitializationCallback(Message<PlatformInitialize> msg)
     // {
     //     if (msg.IsError)
