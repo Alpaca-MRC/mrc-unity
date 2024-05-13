@@ -10,7 +10,7 @@ public class AuthManager : MonoBehaviour
     // [SerializeField] private OculusAuthManager oculusAuthManager;
 
     [SerializeField] private Button googleButton;
-    [SerializeField] private Button oculusButton;
+    // [SerializeField] private Button oculusButton;
 
     private void Awake()
     {
@@ -25,13 +25,13 @@ public class AuthManager : MonoBehaviour
                 {
                     Debug.Log("오큘러스 접속, 오큘러스 매니저 활성화");
                     googleButton.gameObject.SetActive(false);
-                    oculusButton.gameObject.SetActive(true);
+                    // oculusButton.gameObject.SetActive(true);
                 }
                 else
                 {
                     Debug.Log("모바일 접속, 구글 매니저 활성화");
                     googleButton.gameObject.SetActive(true);
-                    oculusButton.gameObject.SetActive(false);
+                    // oculusButton.gameObject.SetActive(false);
                 }
 
                 // // 모바일 앱을 통해 접속한 경우
