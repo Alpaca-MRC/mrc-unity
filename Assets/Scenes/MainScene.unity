@@ -50316,7 +50316,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1384740099}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1892148372}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: GoProfileScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1384740099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65037,6 +65049,8 @@ GameObject:
   - component: {fileID: 1892148368}
   - component: {fileID: 1892148367}
   - component: {fileID: 1892148366}
+  - component: {fileID: 1892148372}
+  - component: {fileID: 1892148371}
   m_Layer: 5
   m_Name: XR Canvas
   m_TagString: Untagged
@@ -65146,6 +65160,34 @@ RectTransform:
   m_AnchoredPosition: {x: -77.17307, y: 12.934251}
   m_SizeDelta: {x: 1325.8922, y: 1563.9282}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1892148371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892148365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4fc821671446c74d9a0843bc071131e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 0}
+  fadein: 0
+  fadeout: 0
+  TimeToFade: 0
+--- !u!114 &1892148372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892148365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b688242fc7ba6ec43a7fc74b9a3b11d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1893445546
 PrefabInstance:
   m_ObjectHideFlags: 0

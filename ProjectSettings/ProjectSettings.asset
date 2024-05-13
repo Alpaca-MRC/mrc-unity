@@ -141,9 +141,11 @@ PlayerSettings:
   tvOSBundleVersion: 1.0
   bundleVersion: 0.1.0
   preloadedAssets:
+  - {fileID: 11400000, guid: 2c119fe56bec22f488b885560cf82457, type: 2}
   - {fileID: -1995607395857041542, guid: 68e54bac4ecc116459df5457c77c6c2b, type: 2}
   - {fileID: 11400000, guid: e04d6f0111694f9489c3a12923227fe4, type: 2}
-  - {fileID: -1061741025896557331, guid: fdfdfa1c7b76c4e43a5ef3926f41508a, type: 2}
+  - {fileID: 11400000, guid: 2639c040549cdc24e83f60a256554dad, type: 2}
+  - {fileID: -1248184968069480642, guid: fdfdfa1c7b76c4e43a5ef3926f41508a, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -267,8 +269,8 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: '{inproject}: user.keystore'
-  AndroidKeyaliasName: user
+  AndroidKeystoreName: '{inproject}: google.keystore'
+  AndroidKeyaliasName: google
   AndroidEnableArmv9SecurityFeatures: 0
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
