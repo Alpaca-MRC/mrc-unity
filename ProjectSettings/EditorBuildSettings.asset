@@ -13,6 +13,8 @@ EditorBuildSettings:
       type: 2}
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 2a3b8d9e66f638043b2d6c4cbc18a35f,
       type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000,
+      guid: 8d80653d3eeb89948b08550134a907ea, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: e04d6f0111694f9489c3a12923227fe4,
       type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 68e54bac4ecc116459df5457c77c6c2b,

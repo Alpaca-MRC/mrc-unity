@@ -477,7 +477,7 @@ GameObject:
   - component: {fileID: 5253222345930985882}
   - component: {fileID: 1436956642668694963}
   - component: {fileID: 8687639763621162813}
-  - component: {fileID: -9057535986300723104}
+  - component: {fileID: 4522717770683636001}
   m_Layer: 6
   m_Name: Friendly_Car
   m_TagString: Untagged
@@ -541,7 +541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2327afb39bb12734ba81dbbaa09ace75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 0.1
+  fireRate: 1
   FirePoint: {fileID: 9189108643027614603}
   inputActionsAsset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
@@ -549,7 +549,7 @@ MonoBehaviour:
   Prefabs:
   - {fileID: 1698648575761504, guid: cf263124cbe15f448b6a2ec0ef11bd54, type: 3}
   myCar: {fileID: 1399408944216986053}
---- !u!65 &-9057535986300723104
+--- !u!65 &4522717770683636001
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -564,7 +564,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

@@ -10,7 +10,7 @@ public class ShootingCar : MonoBehaviour
     [Header("Fire rate")]
     private int Prefab;
     [Range(0.0f, 1.0f)]
-    public float fireRate = 0.1f;
+    public float fireRate = 1.0f;
     private float fireCountdown = 0f;
     public GameObject FirePoint;
     public InputActionAsset inputActionsAsset;
@@ -26,7 +26,7 @@ public class ShootingCar : MonoBehaviour
         FirePoint.transform.rotation = myCar.transform.rotation;
 
         // 단발
-        // if (Input.GetButtonDown("Fire1"))
+        // if (Input.GetButtonDown("Fire1"))  // 마우스 클릭으로 총 발사 (디버깅 용)
         if (inputActionsAsset.actionMaps[5].actions[3].ReadValue<float>() > 0.3f)
         {
             Instantiate(Prefabs[Prefab], FirePoint.transform.position, FirePoint.transform.rotation);

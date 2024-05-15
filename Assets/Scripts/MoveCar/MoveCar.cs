@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
 
 public class MoveCar : MonoBehaviour
 {
@@ -83,9 +85,38 @@ public class MoveCar : MonoBehaviour
             }
         }
 
-        // 전진 또는 후진 실행
-        transform.Translate(Vector3.forward * Time.deltaTime * currentSpeed);
+        RaycastHit hit;
 
+        // 앞이 박는다면
+        if(Physics.Raycast(transform.position, transform.forward, out hit, 0.4f)) 
+        {
+            if (hit.transform.GetComponent<ARPlane>().classification == PlaneClassification.Wall) 
+            {
+                // 후진은 허용 (앞이 박았으므로)
+                if (currentSpeed < 0) 
+                {
+                    transform.Translate(Vector3.forward * Time.deltaTime * currentSpeed);
+                }
+            }
+        }
+        // 뒤가 박는다면
+        else if (Physics.Raycast(transform.position, transform.forward * -1f, out hit, 0.4f)) 
+        {
+            if (hit.transform.GetComponent<ARPlane>().classification == PlaneClassification.Wall) 
+            {
+                // 전진은 허용 (뒤가 박았으므로)
+                if (currentSpeed > 0) 
+                {
+                    transform.Translate(Vector3.forward * Time.deltaTime * currentSpeed);
+                }
+            }
+        } 
+        else 
+        {
+            // 전진 또는 후진 실행
+            transform.Translate(Vector3.forward * Time.deltaTime * currentSpeed);
+        }
+        
         // 회전
         transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
     }

@@ -74,9 +74,9 @@ public class HS_ProjectileMover : MonoBehaviour
     //https ://docs.unity3d.com/ScriptReference/Rigidbody.OnCollisionEnter.html
     protected virtual void OnCollisionEnter(Collision collision)
     {
-        // if (collision.gameObject.name.Equals("FireTool") || collision.gameObject.name.Equals("Projectile 1 nature(Clone)")) {
-        //     return;
-        // }
+        if (collision.gameObject.name.Equals("FireTool") || collision.gameObject.name.Equals("Projectile 1 nature(Clone)")) {
+            return;
+        }
 
         //Lock all axes movement and rotation
         rb.constraints = RigidbodyConstraints.FreezeAll;
@@ -122,8 +122,6 @@ public class HS_ProjectileMover : MonoBehaviour
             else
                 Destroy(gameObject, 1);
         }
-
-        
 
         Debug.Log("그래도 " + collision.gameObject.name + "이(가) 박았어요?!");
     }

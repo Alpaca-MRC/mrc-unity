@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2327afb39bb12734ba81dbbaa09ace75
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - FirePoint: {fileID: 920218023678652241, guid: 982deadc7e4fbed41b53f920b6d42f00,
+      type: 3}
+  - inputActionsAsset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  - myCar: {fileID: 1399408944216986053, guid: c06bdda61db9b8f4f9e099d97efc7855, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
