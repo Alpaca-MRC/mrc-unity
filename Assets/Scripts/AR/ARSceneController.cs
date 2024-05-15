@@ -16,8 +16,6 @@ public class ARSceneController : MonoBehaviour
     [SerializeField]
     private InputActionReference _leftActivateAction;
     [SerializeField]
-    private InputActionReference _rightActivateAction;
-    [SerializeField]
     private XRRayInteractor _leftRayInteractor;
     [SerializeField]
     private GameObject _grabbableCube;
@@ -51,7 +49,6 @@ public class ARSceneController : MonoBehaviour
         _planeManager.planesChanged += OnPlanesChanged;
         _anchorManager.anchorsChanged += OnAnchorsChanged;
         _leftActivateAction.action.performed += OnLeftActivateAction;
-        _rightActivateAction.action.performed += OnRightActivateAction;
     }
 
     private void OnAnchorsChanged(ARAnchorsChangedEventArgs args)
@@ -77,8 +74,6 @@ public class ARSceneController : MonoBehaviour
             if (hitPlane != null && hitPlane.classification == PlaneClassification.Floor && !_isCartExist) {
                 // 물체 생성
                 // 회전각 결정
-                // Quaternion rotation = Quaternion.LookRotation(hit.normal, Vector3.up); // 카트가 수직으로 섬 (x로 90)
-                // Quaternion rotation = Quaternion.identity; // 수직으로 고정
                 Quaternion rotation = Quaternion.Euler(0, 0, 0);
                 GameObject instance = Instantiate(_prefab, hit.point, rotation);
                 _isCartExist = true;
@@ -100,15 +95,7 @@ public class ARSceneController : MonoBehaviour
         }
     }
 
-    private void OnRightActivateAction(InputAction.CallbackContext context)
-    {
-        SpawnGrabbableCube();
-    }
-
-    void Update()
-    {
-        
-    }
+    void Update(){}
 
     private void OnTogglePlanesAction(InputAction.CallbackContext obj) {
         //_isVisible = !_isVisible; // 토글 기능 꺼두기
@@ -145,11 +132,23 @@ public class ARSceneController : MonoBehaviour
         }
     }
 
+    // private void OnPlanesChanged(ARPlanesChangedEventArgs args) {
+    //     if (args.added.Count > 0 ) {
+    //         _numPlanesAddedOccurred++;
+
+    //         foreach (var plane in _planeManager.trackables) {
+    //             PrintPlaneLabel(plane);
+    //         }
+    //     }
+    // }
+    
     private void OnPlanesChanged(ARPlanesChangedEventArgs args) {
         if (args.added.Count > 0 ) {
             _numPlanesAddedOccurred++;
 
-            foreach (var plane in _planeManager.trackables) {
+            foreach (var plane in args.added) {
+                // 새로운 plane에 대해서 alpha 값을 0으로 설정
+                SetPlaneAlpha(plane, 0f, 0f);
                 PrintPlaneLabel(plane);
             }
         }
@@ -166,21 +165,21 @@ public class ARSceneController : MonoBehaviour
         _planeManager.planesChanged -= OnPlanesChanged;
         _anchorManager.anchorsChanged -= OnAnchorsChanged;
         _leftActivateAction.action.performed -= OnLeftActivateAction;
-        _rightActivateAction.action.performed -= OnRightActivateAction;
     }
 
-    private void SpawnGrabbableCube() {
-        Vector3 spawnPosition;
+    // 큐브 생성 코드 -> 이후 랜덤 아이템 생성 위해 코드 남겨둠
+    // private void SpawnGrabbableCube() {
+    //     Vector3 spawnPosition;
 
-        // 장면(Scene)속 인식된 각 물체를 순회
-        foreach (var plane in _planeManager.trackables) {
-            // 만약 해당 물체가 책상(Table)로 인식된다면, 큐브를 소환
-            if (plane.classification == PlaneClassification.Table) {
-                spawnPosition = plane.transform.position;
-                spawnPosition.y += 0.3f;
-                // 해당 위치(spawnPosition)에 큐브를 소환
-                Instantiate(_grabbableCube, spawnPosition, Quaternion.identity);
-            }
-        }
-    }
+    //     // 장면(Scene)속 인식된 각 물체를 순회
+    //     foreach (var plane in _planeManager.trackables) {
+    //         // 만약 해당 물체가 책상(Table)로 인식된다면, 큐브를 소환
+    //         if (plane.classification == PlaneClassification.Table) {
+    //             spawnPosition = plane.transform.position;
+    //             spawnPosition.y += 0.3f;
+    //             // 해당 위치(spawnPosition)에 큐브를 소환
+    //             Instantiate(_grabbableCube, spawnPosition, Quaternion.identity);
+    //         }
+    //     }
+    // }
 }

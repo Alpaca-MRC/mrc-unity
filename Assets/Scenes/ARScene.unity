@@ -1540,12 +1540,10 @@ MonoBehaviour:
     type: 3}
   _leftActivateAction: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  _rightActivateAction: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f,
-    type: 3}
   _leftRayInteractor: {fileID: 1076668720}
   _grabbableCube: {fileID: 8544878163839126957, guid: 3a894709967163843948237e883625a5,
     type: 3}
-  _prefab: {fileID: 1399408944216986053, guid: f9307ba2bfab1514f9091e1f23429f65, type: 3}
+  _prefab: {fileID: 1399408944216986053, guid: c06bdda61db9b8f4f9e099d97efc7855, type: 3}
 --- !u!114 &1824340069
 MonoBehaviour:
   m_ObjectHideFlags: 0
