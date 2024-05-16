@@ -52,7 +52,7 @@ public class MoveCar : MonoBehaviour
         isBPressed = inputActionsAsset.actionMaps[10].actions[1].ReadValue<float>();
 
         horizontalInput = Input.GetAxis("Horizontal"); 
-        Debug.Log(horizontalInput);
+        // Debug.Log(horizontalInput);
 
         // 전진 또는 후진 버튼이 눌렀을 경우
         if (isAPressed == 1 || isBPressed == 1) {
