@@ -15,7 +15,6 @@ public class KartSelectManager : MonoBehaviour
         cartUIManager.GetCartInfo(curIndex);
     }
 
-
     // 오른쪽 버튼 클릭 시 발생하는 이벤트 메서드(다음 캐릭터로 변경)
     public void OnRightButtonClicked()
     {

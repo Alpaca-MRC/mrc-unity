@@ -10,7 +10,7 @@ public class SceneChanger : MonoBehaviour
     void Start()
     {
         fade = FindAnyObjectByType<FadeInOut>();
-        // StartCoroutine(FadeIn());
+        // StartCoroutine(fade.FadeIn());
     }
 
     public void GoStartScene()
@@ -26,6 +26,11 @@ public class SceneChanger : MonoBehaviour
     public void GoProfileScene()
     {
         StartCoroutine(ChangeScene("Scenes/ProfileScene"));
+    }
+
+    public void GoMainScene()
+    {
+        StartCoroutine(ChangeScene("Scenes/MainScene"));
     }
 
     // 씬 전환 함수
