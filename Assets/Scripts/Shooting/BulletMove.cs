@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HS_ProjectileMover : MonoBehaviour
+public class BulletMove : MonoBehaviour
 {
     [SerializeField] protected float speed = 15f;
     [SerializeField] protected float hitOffset = 0f;
@@ -123,10 +123,9 @@ public class HS_ProjectileMover : MonoBehaviour
                 Destroy(gameObject, 1);
         }
 
-        Debug.Log("그래도 " + collision.gameObject.name + "이(가) 박았어요?!");
+        Debug.Log("아군의 총알에 " + collision.gameObject.name + "이(가) 박았어요!");
     }
 
     void OnTriggerEnter(Collider other) {
-        Debug.Log(other.gameObject.name + "이(가) 박았어요?!");
     }
 }

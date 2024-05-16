@@ -1,11 +1,11 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters;
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class ShootingCar : MonoBehaviour
+public class CarShooting : MonoBehaviour
 {
     [Header("Fire rate")]
     private int Prefab;
@@ -19,7 +19,6 @@ public class ShootingCar : MonoBehaviour
     public GameObject[] Prefabs;
     public GameObject myCar;
     void Start(){}
-
     void Update()
     {
         // RC카가 바라보는 방향을 총의 방향으로 설정

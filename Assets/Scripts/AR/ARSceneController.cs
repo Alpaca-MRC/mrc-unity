@@ -68,7 +68,6 @@ public class ARSceneController : MonoBehaviour
     private void CheckIfRayHitsCollider() {
         // 만약 Ray가 Collider를 친다면
         if (_leftRayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit hit)) {
-            Debug.Log("--> 충돌 감지! 이름: " + hit.transform.name);
             // 닿은 물체가 바닥일때만 기능 및 카드가 존재하지 않을때 기능
             ARPlane hitPlane = hit.transform.GetComponent<ARPlane>();
             if (hitPlane != null && hitPlane.classification == PlaneClassification.Floor && !_isCartExist) {
@@ -149,15 +148,8 @@ public class ARSceneController : MonoBehaviour
             foreach (var plane in args.added) {
                 // 새로운 plane에 대해서 alpha 값을 0으로 설정
                 SetPlaneAlpha(plane, 0f, 0f);
-                PrintPlaneLabel(plane);
             }
         }
-    }
-
-    private void PrintPlaneLabel(ARPlane plane) {
-        string label = plane.classification.ToString();
-        string log = $"Plane ID: {plane.trackableId}, Label: {label}";
-        Debug.Log(log);
     }
 
     void OnDestroy() {

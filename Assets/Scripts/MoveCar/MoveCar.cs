@@ -21,8 +21,15 @@ public class MoveCar : MonoBehaviour
     // 0 --> 메인페이지
     // 1 --> MR 인게임
     private int gameMode;
+    private Vector3 initialPosition;
+    private Quaternion initialRotation;
+
 
     void Start() {
+        // 초기 위치와 회전 상태를 저장
+        initialPosition = transform.position;
+        initialRotation = transform.rotation;
+
         switch (gameMode) {
             // 메인페이지
             case 0:
@@ -88,29 +95,42 @@ public class MoveCar : MonoBehaviour
         RaycastHit hit;
 
         // 앞이 박는다면
-        if(Physics.Raycast(transform.position, transform.forward, out hit, 0.4f)) 
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 0.4f))
         {
-            if (hit.transform.GetComponent<ARPlane>().classification == PlaneClassification.Wall) 
+            var arPlane = hit.transform.GetComponent<ARPlane>();
+             Debug.Log("arPlane = " + arPlane);
+            // 만약 친것이 arPlane의 어떤것이라면
+            if (arPlane != null)
             {
-                // 후진은 허용 (앞이 박았으므로)
-                if (currentSpeed < 0) 
+                if (arPlane.classification == PlaneClassification.Wall)
                 {
-                    transform.Translate(Vector3.forward * Time.deltaTime * currentSpeed);
+                    // 후진은 허용 (앞이 박았으므로)
+                    if (currentSpeed < 0)
+                    {
+                        transform.Translate(Vector3.forward * Time.deltaTime * currentSpeed);
+                    }
                 }
             }
         }
+
         // 뒤가 박는다면
-        else if (Physics.Raycast(transform.position, transform.forward * -1f, out hit, 0.4f)) 
+        else if (Physics.Raycast(transform.position, transform.forward * -1f, out hit, 0.4f))
         {
-            if (hit.transform.GetComponent<ARPlane>().classification == PlaneClassification.Wall) 
+            // 만약 친것이 arPlane의 어떤것이라면
+            var arPlane = hit.transform.GetComponent<ARPlane>();
+            Debug.Log("arPlane = " + arPlane);
+            if (arPlane != null)
             {
-                // 전진은 허용 (뒤가 박았으므로)
-                if (currentSpeed > 0) 
+                if (arPlane.classification == PlaneClassification.Wall)
                 {
-                    transform.Translate(Vector3.forward * Time.deltaTime * currentSpeed);
+                    // 전진은 허용 (뒤가 박았으므로)
+                    if (currentSpeed > 0)
+                    {
+                        transform.Translate(Vector3.forward * Time.deltaTime * currentSpeed);
+                    }
                 }
             }
-        } 
+        }
         else 
         {
             // 전진 또는 후진 실행
@@ -119,5 +139,9 @@ public class MoveCar : MonoBehaviour
         
         // 회전
         transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
+    }
+
+    void OnCollisionEnter(Collision other) {
+        Debug.Log("Collision으로 "+ other.collider.name +"를 박긴 했네요");
     }
 }
