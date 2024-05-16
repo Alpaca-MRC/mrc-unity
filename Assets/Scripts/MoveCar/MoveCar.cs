@@ -97,7 +97,6 @@ public class MoveCar : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out hit, 0.4f))
         {
             var arPlane = hit.transform.GetComponent<ARPlane>();
-             Debug.Log("arPlane = " + arPlane);
             // 만약 친것이 arPlane의 어떤것이라면
             if (arPlane != null)
             {
@@ -117,7 +116,6 @@ public class MoveCar : MonoBehaviour
         {
             // 만약 친것이 arPlane의 어떤것이라면
             var arPlane = hit.transform.GetComponent<ARPlane>();
-            Debug.Log("arPlane = " + arPlane);
             if (arPlane != null)
             {
                 if (arPlane.classification == PlaneClassification.Wall)
