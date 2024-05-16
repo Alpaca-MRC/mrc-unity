@@ -119,7 +119,7 @@ public class EnemyController : MonoBehaviour
 
     
     // 1. 체력 소진
-    void Exhaustion()
+    public void Exhaustion()
     {
         // 1초 스턴(테스트 상황에 따라 추가 구현)
         StartCoroutine(Stun(1f));
@@ -135,6 +135,7 @@ public class EnemyController : MonoBehaviour
     // 스턴 상태를 해제하는 코루틴
     IEnumerator Stun(float time)
     {
+        Debug.Log("스턴 ㅠㅠㅠㅠ");
         movingState = MovingState.Stunned;
 
         // 주어진 시간만큼 대기
@@ -155,7 +156,7 @@ public class EnemyController : MonoBehaviour
         flagDirection.y = 0f;
 
         // 적 카트가 플래그 방향으로 일정한 속도로 이동하도록 설정
-        float moveSpeed = 5f;
+        float moveSpeed = 20f;
         transform.position += flagDirection * moveSpeed * Time.deltaTime;
 
         // 적 카트가 플래그를 향해 정면이 보이도록 회전
@@ -171,7 +172,7 @@ public class EnemyController : MonoBehaviour
         playerDirection.y = 0f;
 
         // 적 카트가 플레이어 방향으로 일정한 속도로 이동하도록 설정
-        float moveSpeed = 5f;
+        float moveSpeed = 20f;
         transform.position += playerDirection * moveSpeed * Time.deltaTime;
 
         // 적 카트가 플레이어를 향해 정면이 보이도록 회전
@@ -194,7 +195,7 @@ public class EnemyController : MonoBehaviour
         goalDirection.y = 0f;
 
         // 적 카트가 골대 방향으로 일정한 속도로 이동하도록 설정
-        float moveSpeed = 5f;
+        float moveSpeed = 20f;
         transform.position += goalDirection * moveSpeed * Time.deltaTime;
 
         // 적 카트가 골대를 향해 정면이 보이도록 회전

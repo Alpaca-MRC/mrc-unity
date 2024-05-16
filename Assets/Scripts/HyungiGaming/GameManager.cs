@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI playerScoreText;
     public TextMeshProUGUI enemyScoreText;
 
+    public EnemyController enemyController;
+
     void Start()
     {
         // 랩타임 초기화
@@ -87,6 +89,12 @@ public class GameManager : MonoBehaviour
         while (timer > 0 && gameState == GameState.InProgress)
         {
             timer -= Time.deltaTime;
+
+            // if (timer < 5f)
+            // {
+            //     enemyController.Exhaustion();
+            // }
+
             UpdateLapTime(timer);
             yield return null;
         }

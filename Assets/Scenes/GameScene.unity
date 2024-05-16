@@ -1090,6 +1090,7 @@ MonoBehaviour:
   enemyScore: 0
   playerScoreText: {fileID: 1786971831}
   enemyScoreText: {fileID: 1701113706}
+  enemyController: {fileID: 410066671}
 --- !u!4 &587595311
 Transform:
   m_ObjectHideFlags: 0
@@ -3151,7 +3152,7 @@ Transform:
   m_GameObject: {fileID: 1718071497}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 3.5, z: 0.45000005}
+  m_LocalPosition: {x: -0.847, y: 2.27, z: 0.45000005}
   m_LocalScale: {x: 0.05, y: 7, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
