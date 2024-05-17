@@ -1243,8 +1243,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000013341044032}
-  - component: {fileID: 8324955720703689410}
   - component: {fileID: 7506326609051564792}
+  - component: {fileID: -3475126603285120193}
+  - component: {fileID: -2171653459145489592}
+  - component: {fileID: 6953616370953605756}
+  - component: {fileID: -923772294880588482}
+  - component: {fileID: -2486033482861587950}
   m_Layer: 7
   m_Name: Enemy_Car
   m_TagString: Untagged
@@ -1281,21 +1285,6 @@ Transform:
   - {fileID: 4000011512971534}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8324955720703689410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000012657452956}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9969dc3f7ed92a4a8e0ae82fce6040d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputActionsAsset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f,
-    type: 3}
-  gameMode: 1
 --- !u!65 &7506326609051564792
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1317,6 +1306,117 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-3475126603285120193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000012657452956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d41d22a55fde7b4395afc193cd2453e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCart: {fileID: 0}
+  flag: {fileID: 0}
+  playerGoal: {fileID: 0}
+  enemyGoal: {fileID: 0}
+  flagManager: {fileID: 0}
+  movingState: 0
+  isPlayerInRange: 0
+  isLowHealth: 0
+  isGameStarted: 0
+  isShooting: 0
+  gameManager: {fileID: 0}
+--- !u!114 &-2171653459145489592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000012657452956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ffeb7fa7ff04504a8b35d36a6f5a206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 0.1
+  FirePoint: {fileID: 0}
+  MaxLength: 0
+  Prefabs: []
+  myCar: {fileID: 0}
+  playerCart: {fileID: 0}
+  gameManager: {fileID: 0}
+  isShoot: 0
+  shootingAngleThreshold: 30
+--- !u!114 &6953616370953605756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000012657452956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b1f01d6b8c3c7c47b32b3b841b296d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameTimeInSeconds: 10
+  gameState: 0
+  countdownText: {fileID: 0}
+  lapTimeText: {fileID: 0}
+  mainCamera: {fileID: 0}
+  playerScore: 0
+  enemyScore: 0
+  playerScoreText: {fileID: 0}
+  enemyScoreText: {fileID: 0}
+  enemyController: {fileID: 0}
+  infoText: {fileID: 0}
+  _leftActivateAction: {fileID: 0}
+  _leftRayInteractor: {fileID: 0}
+  _gatePrefabs: []
+  flagManager: {fileID: 0}
+  gateOnePosition: {fileID: 0}
+  gateTwoPosition: {fileID: 0}
+  _cartExamplePrefab: {fileID: 0}
+  _readyToGoBtn: {fileID: 0}
+  _friendlyCartPrefab: {fileID: 0}
+  friendlyCart: {fileID: 0}
+  _enemyCartPrefab: {fileID: 0}
+  enemyCart: {fileID: 0}
+--- !u!114 &-923772294880588482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000012657452956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 352b21999138aad498c82f3469ddedc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flagState: 0
+  enemyController: {fileID: -3475126603285120193}
+  gameManager: {fileID: 6953616370953605756}
+  _flagPrefab: {fileID: 1253502270666672, guid: b9d294838ca8d8d409c24de0a2ec7106,
+    type: 3}
+  flag: {fileID: 0}
+--- !u!114 &-2486033482861587950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000012657452956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a9ca3fd2eec0841859a159a2a31bb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputActionsAsset: {fileID: 0}
+  gameMode: 0
 --- !u!1 &1000012726857630
 GameObject:
   m_ObjectHideFlags: 0

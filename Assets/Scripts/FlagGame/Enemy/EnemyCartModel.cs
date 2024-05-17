@@ -8,21 +8,21 @@ public class EnemyCartModel
     public int curHealth;         // 현재 체력
     public bool hasFlag;            // 플래그 소유 여부
 
-    // 적의 경우
     public float curSpeed;
-    public float maxSpeed = 15.0f;
+    public float maxSpeed = 4.0f;
 
     public enum CartState { Normal, Stunned }
-    public CartState currentState = CartState.Normal;   // 상태(정상, 기절)
+    public CartState currentState;   // 상태(정상, 기절)
 
     public EnemyCartModel()
     {
-        maxHealth = 10;
-        curHealth = 10;
+        maxHealth = 50;
+        curHealth = 50;
         hasFlag = false;
 
         // 적
         curSpeed = 0f;
+        currentState = CartState.Normal;
     }
 
     // 풀피 채우기

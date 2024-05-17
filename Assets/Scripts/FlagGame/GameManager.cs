@@ -70,6 +70,8 @@ public class GameManager : MonoBehaviour
     // 예시 카트 포탈 위치 저장
     private Vector3 examplePosition;
     private Quaternion exampleRotation;
+    private Vector3 enemyCartPosition;
+
 
     void Start()
     {
@@ -161,20 +163,26 @@ public class GameManager : MonoBehaviour
     {
         // 눌린 버튼 비활성화
         _readyToGoBtn.gameObject.SetActive(false);
+       
         // 레이 끄기
         _leftRayInteractor.enabled = false;
+        
         // 예시 카트 및 포탈 파괴
         Destroy(cartExample);
+        
         // 플레이어 카트 생성
         friendlyCart = Instantiate(_friendlyCartPrefab, examplePosition, exampleRotation);
+       
         // 플레이어 카트 이동 및 사격 제한
         friendlyCart.gameObject.GetComponent<MoveCar>().enabled = false;
         friendlyCart.gameObject.GetComponent<FriendlyShootingCar>().enabled = false;
+        
         // 적 카트 생성
-        Vector3 enemyPosition = gateTwoPosition.position + (gateOnePosition.position - gateTwoPosition.position).normalized / 2f;
-        enemyPosition.y = -0.02f;
-        enemyCart = Instantiate(_enemyCartPrefab, enemyPosition, Quaternion.identity);
+        enemyCartPosition = gateTwoPosition.position + (gateOnePosition.position - gateTwoPosition.position).normalized / 2f;
+        enemyCartPosition.y = -0.02f;
+        enemyCart = Instantiate(_enemyCartPrefab, enemyCartPosition, Quaternion.identity);
         enemyCart.transform.LookAt(gateOnePosition);
+       
         // 플래그 생성
         StartCoroutine(GenerateFlag());
     }

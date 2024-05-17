@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4991633209424270}
   - component: {fileID: 33479184424680208}
   - component: {fileID: 23068909604547320}
+  - component: {fileID: 7818435492951085540}
   m_Layer: 0
   m_Name: Flag
   m_TagString: Untagged
@@ -83,3 +84,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7818435492951085540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253502270666672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 352b21999138aad498c82f3469ddedc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flagState: 0
+  enemyController: {fileID: -3475126603285120193, guid: 1b82079bbc5064ef78676a5a00cc0d69,
+    type: 3}
+  gameManager: {fileID: 0}
+  _flagPrefab: {fileID: 1253502270666672}
+  flag: {fileID: 0}
