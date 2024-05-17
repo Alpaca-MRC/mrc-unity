@@ -49,8 +49,9 @@ public class FlagManager : MonoBehaviour
     public void GenerateFlag()
     {    
         if (flag != null) flag.transform.SetParent(null);
-        flag = Instantiate(_flagPrefab, spawnPosition, Quaternion.Euler(0, 0, 0));
         
+        flag = Instantiate(_flagPrefab, spawnPosition, Quaternion.Euler(0, 0, 0));
+        Debug.Log("생성했찌롱" + flag.transform.position);
     }    
 
     // 플래그의 접촉 이벤트

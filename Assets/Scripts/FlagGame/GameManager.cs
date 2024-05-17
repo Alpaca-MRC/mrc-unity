@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -42,6 +43,11 @@ public class GameManager : MonoBehaviour
     public GameObject infoCreateFlagModalGameObject;
     public GameObject readyGameObject;
     public GameObject countDownGameObject;
+    public GameObject startGameObject;
+    public GameObject oneGameObject;
+    public GameObject twoGameObject;
+    public GameObject threeGameObject;
+
     public GameObject winGameObject;
     public GameObject loseGameObject;
 
@@ -170,6 +176,7 @@ public class GameManager : MonoBehaviour
         gameReadyText.text = "잠시후 게임을 시작합니다.";
         yield return new WaitForSecondsRealtime(1.0f);
         readyGameObject.SetActive(false);
+        ActivateUI(countDownGameObject);
         StartGame();
     }
 
@@ -208,7 +215,7 @@ public class GameManager : MonoBehaviour
     public void OnClickCompleteReady()
     {
         // 눌린 버튼 비활성화
-        _readyToGoBtn.gameObject.SetActive(false);
+        ActivateUI(infoCreateFlagModalGameObject);
        
         // 레이 끄기
         _leftRayInteractor.enabled = false;
@@ -325,13 +332,25 @@ public class GameManager : MonoBehaviour
         // 3초 카운트 다운
         for (int i = 3; i > 0; i--)
         {
-            countdownText.text = i.ToString();
+            // countdownText.text = i.ToString();
+            if (i == 3) threeGameObject.SetActive(true);
+            if (i == 2) {
+                threeGameObject.SetActive(false);
+                twoGameObject.SetActive(true);
+            }
+            if (i == 1) {
+                twoGameObject.SetActive(false);
+                oneGameObject.SetActive(true);
+            }
             yield return new WaitForSeconds(1f);
         }
 
-        countdownText.text = "GO!";
+        oneGameObject.SetActive(false);
+        startGameObject.SetActive(true);
+        // countdownText.text = "GO!";
         yield return new WaitForSeconds(1f);
-        countdownText.gameObject.SetActive(false);
+        // countdownText.gameObject.SetActive(false);
+        ActivateUI(null);
 
         // 게임 시작
         gameState = GameState.InProgress;
