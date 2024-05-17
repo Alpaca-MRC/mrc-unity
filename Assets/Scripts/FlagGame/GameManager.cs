@@ -48,6 +48,8 @@ public class GameManager : MonoBehaviour
     private List<ARAnchor> _anchors = new();
     private bool _gateInstallLock = true;
     private int _infoStatus = 0; // 0일때 1번 골대 설치 > 1일때 2번 골대 설치
+    public GameObject gateOne;
+    public GameObject gateTwo;
 
     // 플래그 매니저
     public FlagManager flagManager;
@@ -142,13 +144,23 @@ public class GameManager : MonoBehaviour
     // 아군 골대 앞 카트 위치 생성(포탈)
     IEnumerator GenerateCartPortal()
     {
+        // 1번골대가 2번 골대를 바라보게 하기
+        gateOne.transform.LookAt(gateTwoPosition);
+        gateOne.transform.rotation = Quaternion.Euler(0f, gateOne.transform.eulerAngles.y, 0f);
+        gateOnePosition = gateOne.transform;
+        // 2번 골대가 1번 골대를 바라보게 하기
+        gateTwo.transform.LookAt(gateOnePosition);
+        gateTwo.transform.rotation = Quaternion.Euler(0f, gateTwo.transform.eulerAngles.y, 0f);
+        gateTwoPosition = gateTwo.transform;
         infoText.text = "적군 골대 지정이 완료되었습니다";
         yield return new WaitForSecondsRealtime(1.5f);
         // 골대 앞 포탈 생성
         examplePosition = gateOnePosition.position + (gateTwoPosition.position - gateOnePosition.position).normalized / 2f;
-        examplePosition.y = -0.02f;
+        examplePosition.y = 0f;
         cartExample = Instantiate(_cartExamplePrefab, examplePosition, Quaternion.identity);
         cartExample.transform.LookAt(gateTwoPosition);
+        // 방향 설정
+        cartExample.transform.rotation = Quaternion.Euler(0f, cartExample.transform.rotation.eulerAngles.y, 0f);
         exampleRotation = cartExample.transform.rotation;
         // 배치 완료 버튼 출력
         infoText.text = "초록색 포탈에 올려진 카트와 동일한 모양으로 RC카를 옮겨주세요";
@@ -172,9 +184,11 @@ public class GameManager : MonoBehaviour
         friendlyCart.gameObject.GetComponent<FriendlyShootingCar>().enabled = false;
         // 적 카트 생성
         Vector3 enemyPosition = gateTwoPosition.position + (gateOnePosition.position - gateTwoPosition.position).normalized / 2f;
-        enemyPosition.y = -0.02f;
+        enemyPosition.y = 0f;
         enemyCart = Instantiate(_enemyCartPrefab, enemyPosition, Quaternion.identity);
         enemyCart.transform.LookAt(gateOnePosition);
+        // rotation 재조정
+        enemyCart.transform.rotation = Quaternion.Euler(0f, enemyCart.transform.rotation.eulerAngles.y, 0f);
         // 플래그 생성
         StartCoroutine(GenerateFlag());
     }
@@ -204,25 +218,27 @@ public class GameManager : MonoBehaviour
                 _infoStatus += 1;
                 _leftRayInteractor.enabled = false;
 
-                // 골대는 이동 불가한 Object이므로 Anchor 생성
-                if (instance.GetComponent<ARAnchor>() == null) {
-                    ARAnchor anchor = instance.AddComponent<ARAnchor>();
+                // 골대의 Rotation 변화(서로 바라보아야 함)를 위해 anchor 주석 처리
+                // if (instance.GetComponent<ARAnchor>() == null) {
+                //     ARAnchor anchor = instance.AddComponent<ARAnchor>();
 
-                    if (anchor != null) {
-                        _anchors.Add(anchor);
-                    }
-                    else {
-                        Debug.LogError("Anchor가 없어요...");
-                    }
-                }
+                //     if (anchor != null) {
+                //         _anchors.Add(anchor);
+                //     }
+                //     else {
+                //         Debug.LogError("Anchor가 없어요...");
+                //     }
+                // }
 
                 if (_infoStatus == 1) {
+                    gateOne = instance;
                     gateOnePosition = instance.transform;
                     // 2번 골대 생성부터 시작
                     StartCoroutine(InfoInstallGateTwo());
                 }
 
                 if (_infoStatus == 2) {
+                    gateTwo = instance;
                     gateTwoPosition = instance.transform;
                     // 카트 지정
                     StartCoroutine(GenerateCartPortal());

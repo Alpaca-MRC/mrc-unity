@@ -546,7 +546,7 @@ MonoBehaviour:
   FirePoint: {fileID: 2406250359457325267}
   inputActionsAsset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  MaxLength: 20
+  MaxLength: 40
   Prefabs:
   - {fileID: 1698648575761504, guid: cf263124cbe15f448b6a2ec0ef11bd54, type: 3}
   myCar: {fileID: 1399408944216986053}
@@ -560,7 +560,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -569,8 +569,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.8, y: 1, z: 5.5}
+  m_Center: {x: 0, y: 0.6, z: 0.4}
 --- !u!54 &-7898238886717718934
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -597,7 +597,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &1425228534828673350
 GameObject:
   m_ObjectHideFlags: 0
