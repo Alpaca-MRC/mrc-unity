@@ -2438,6 +2438,12 @@ MonoBehaviour:
   _cartExamplePrefab: {fileID: 4633003584346431320, guid: 02c21349a9a4be8468cc5d616d013192,
     type: 3}
   _readyToGoBtn: {fileID: 1039542527}
+  _friendlyCartPrefab: {fileID: 1399408944216986053, guid: c06bdda61db9b8f4f9e099d97efc7855,
+    type: 3}
+  friendlyCart: {fileID: 0}
+  _enemyCartPrefab: {fileID: 1000012657452956, guid: 1b82079bbc5064ef78676a5a00cc0d69,
+    type: 3}
+  enemyCart: {fileID: 0}
 --- !u!114 &1824340070
 MonoBehaviour:
   m_ObjectHideFlags: 0

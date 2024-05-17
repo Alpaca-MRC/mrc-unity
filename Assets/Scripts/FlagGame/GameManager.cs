@@ -56,7 +56,20 @@ public class GameManager : MonoBehaviour
 
     // 카트 배치용 prefab
     public GameObject _cartExamplePrefab;
+    private GameObject cartExample;
     public Button _readyToGoBtn;
+
+    // 플레이어 카트 prefab
+    public GameObject _friendlyCartPrefab;
+    public GameObject friendlyCart;
+
+    // 적 카트 prefab
+    public GameObject _enemyCartPrefab;
+    public GameObject enemyCart;
+
+    // 예시 카트 포탈 위치 저장
+    private Vector3 examplePosition;
+    private Quaternion exampleRotation;
 
     void Start()
     {
@@ -132,10 +145,11 @@ public class GameManager : MonoBehaviour
         infoText.text = "적군 골대 지정이 완료되었습니다";
         yield return new WaitForSecondsRealtime(1.5f);
         // 골대 앞 포탈 생성
-        Vector3 middlePoint = gateOnePosition.position + (gateTwoPosition.position - gateOnePosition.position).normalized / 2f;
-        middlePoint.y = -0.05f;
-        GameObject cartExample = Instantiate(_cartExamplePrefab, middlePoint, Quaternion.identity);
+        examplePosition = gateOnePosition.position + (gateTwoPosition.position - gateOnePosition.position).normalized / 2f;
+        examplePosition.y = -0.02f;
+        cartExample = Instantiate(_cartExamplePrefab, examplePosition, Quaternion.identity);
         cartExample.transform.LookAt(gateTwoPosition);
+        exampleRotation = cartExample.transform.rotation;
         // 배치 완료 버튼 출력
         infoText.text = "초록색 포탈에 올려진 카트와 동일한 모양으로 RC카를 옮겨주세요";
         _leftRayInteractor.enabled = true;
@@ -149,6 +163,18 @@ public class GameManager : MonoBehaviour
         _readyToGoBtn.gameObject.SetActive(false);
         // 레이 끄기
         _leftRayInteractor.enabled = false;
+        // 예시 카트 및 포탈 파괴
+        Destroy(cartExample);
+        // 플레이어 카트 생성
+        friendlyCart = Instantiate(_friendlyCartPrefab, examplePosition, exampleRotation);
+        // 플레이어 카트 이동 및 사격 제한
+        friendlyCart.gameObject.GetComponent<MoveCar>().enabled = false;
+        friendlyCart.gameObject.GetComponent<FriendlyShootingCar>().enabled = false;
+        // 적 카트 생성
+        Vector3 enemyPosition = gateTwoPosition.position + (gateOnePosition.position - gateTwoPosition.position).normalized / 2f;
+        enemyPosition.y = -0.02f;
+        enemyCart = Instantiate(_enemyCartPrefab, enemyPosition, Quaternion.identity);
+        enemyCart.transform.LookAt(gateOnePosition);
         // 플래그 생성
         StartCoroutine(GenerateFlag());
     }
@@ -254,6 +280,10 @@ public class GameManager : MonoBehaviour
 
         // 게임 시작
         gameState = GameState.InProgress;
+        // 플레이어 카트 이동 및 사격 허용
+        friendlyCart.gameObject.GetComponent<MoveCar>().enabled = true;
+        friendlyCart.gameObject.GetComponent<FriendlyShootingCar>().enabled = true;
+        // 적 카트 이동 및 사격
         StartCoroutine(GameTimer());
     }
 
