@@ -26,7 +26,7 @@ public class FlagManager : MonoBehaviour
 
     void Start()
     {
-        Initialization();
+        
     }
     
     void Update()
@@ -35,7 +35,7 @@ public class FlagManager : MonoBehaviour
     }
 
     // 초기화
-    void Initialization()
+    public void Initialization()
     {
         flagState = FlagState.OnBoard;
         canCollide = true;
@@ -50,6 +50,7 @@ public class FlagManager : MonoBehaviour
     {    
         if (flag != null) flag.transform.SetParent(null);
         flag = Instantiate(_flagPrefab, spawnPosition, Quaternion.Euler(0, 0, 0));
+        
     }    
 
     // 플래그의 접촉 이벤트
