@@ -108,6 +108,12 @@ public class MoveCar : MonoBehaviour
                         transform.Translate(Vector3.forward * Time.deltaTime * currentSpeed);
                     }
                 }
+                // 바닥이랑 박은 것이라면 설정 문제이므로 정상 진행
+                else if (arPlane.classification == PlaneClassification.Floor)
+                {
+                    // 전진 또는 후진 실행
+                    transform.Translate(Vector3.forward * Time.deltaTime * currentSpeed);
+                } 
             }
         }
 
@@ -126,6 +132,12 @@ public class MoveCar : MonoBehaviour
                         transform.Translate(Vector3.forward * Time.deltaTime * currentSpeed);
                     }
                 }
+                // 바닥이랑 박은 것이라면 설정 문제이므로 정상 진행
+                else if (arPlane.classification == PlaneClassification.Floor)
+                {
+                    // 전진 또는 후진 실행
+                    transform.Translate(Vector3.forward * Time.deltaTime * currentSpeed);
+                } 
             }
         }
         else 
@@ -136,9 +148,5 @@ public class MoveCar : MonoBehaviour
         
         // 회전
         transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
-    }
-
-    void OnCollisionEnter(Collision other) {
-        Debug.Log("Collision으로 "+ other.collider.name +"를 박긴 했네요");
     }
 }

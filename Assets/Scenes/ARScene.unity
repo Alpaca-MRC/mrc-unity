@@ -563,7 +563,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1000011928778752, guid: bac85bcbcdc58924f840d203376147c2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114000013861403066, guid: bac85bcbcdc58924f840d203376147c2,
         type: 3}
@@ -2432,6 +2432,8 @@ MonoBehaviour:
   _gatePrefabs:
   - {fileID: 87215776536517964, guid: 9616566c4df416c49886fbe0be22cc52, type: 3}
   - {fileID: 8544985869220824952, guid: 7ddb3d7bc34bc3741b1d2a54bb0add55, type: 3}
+  gateOne: {fileID: 0}
+  gateTwo: {fileID: 0}
   flagManager: {fileID: 1824340071}
   gateOnePosition: {fileID: 0}
   gateTwoPosition: {fileID: 0}

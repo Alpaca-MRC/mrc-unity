@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
+
 
 public class BulletManager : MonoBehaviour
 {
@@ -74,11 +77,15 @@ public class BulletManager : MonoBehaviour
     // 충돌 시 호출되는 메서드
     protected virtual void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name.Equals("FireTool") || collision.gameObject.name.Equals("Projectile 1 nature(Clone)")) {
+        // 총알이 총구를 때려서 터지지 않게
+        if (collision.gameObject.name.Equals("FireTool")) {
+            return;
+        }
+        // 총알이 총알을 때려서 터지지 않게 (기본적으로 Friendly끼리는 물리 적용 안됨)
+        if (collision.gameObject.name.Equals("Projectile 1 nature(Clone)")) {
             return;
         }
 
-        //Lock all axes movement and rotation
         // 모든 축의 이동과 회전을 제한
         rb.constraints = RigidbodyConstraints.FreezeAll;
         //speed = 0;
@@ -124,7 +131,11 @@ public class BulletManager : MonoBehaviour
                 Destroy(gameObject, 1); // 1초 후 파괴
         }
 
-        Debug.Log("아군의 총알에 " + collision.gameObject.name + "이(가) 박았어요!");
+        Debug.Log("아군의 총알에 " + collision.gameObject.name + "이(가) 맞았어요!");
+        var arPlane = collision.transform.GetComponent<ARPlane>();
+        if (arPlane != null) {
+            Debug.Log("총에 맞은게 " + arPlane.classification + "이네용~");
+        } 
     }
 
     void OnTriggerEnter(Collider other) {

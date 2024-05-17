@@ -10,7 +10,7 @@ public class FriendlyShootingCar : MonoBehaviour
     [Header("Fire rate")]
     private int Prefab;
     [Range(0.0f, 1.0f)]
-    public float fireRate = 1.0f;
+    public float fireRate = 0.5f;
     private float fireCountdown = 0f;
     public GameObject FirePoint;
     public InputActionAsset inputActionsAsset;
