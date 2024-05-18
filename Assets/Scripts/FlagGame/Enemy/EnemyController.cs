@@ -245,6 +245,4 @@ public class EnemyController : MonoBehaviour
             Exhaustion();
         }
     }
-    
-    
 }
