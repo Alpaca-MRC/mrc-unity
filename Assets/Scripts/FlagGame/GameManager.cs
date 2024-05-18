@@ -174,7 +174,7 @@ public class GameManager : MonoBehaviour
         
         // 플레이어 카트 생성
         friendlyCart = Instantiate(_friendlyCartPrefab, examplePosition, exampleRotation);
-       
+        // Debug.Log("friendlyCart의 rotation이에요: " + exampleRotation);
         // 플레이어 카트 이동 및 사격 제한
         friendlyCart.GetComponent<MoveCar>().enabled = false;
         friendlyCart.GetComponent<FriendlyShootingCar>().enabled = false;

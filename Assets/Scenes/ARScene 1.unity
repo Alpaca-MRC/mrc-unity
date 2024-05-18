@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.21621795, g: 0.46963447, b: 0.55821115, a: 1}
+  m_IndirectSpecularColor: {r: 0.2162183, g: 0.4696353, b: 0.5582129, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1812,6 +1812,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 6309082833128935604, guid: f9a7c71201434c041ad850b9d6391cff,
+        type: 3}
+      propertyPath: m_margin.w
+      value: 95.32114
+      objectReference: {fileID: 0}
     - target: {fileID: 6549998933869944658, guid: f9a7c71201434c041ad850b9d6391cff,
         type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -1875,7 +1880,7 @@ PrefabInstance:
     - target: {fileID: 8443957106692108976, guid: f9a7c71201434c041ad850b9d6391cff,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.035003662
+      value: 0.03503418
       objectReference: {fileID: 0}
     - target: {fileID: 8447571024247526354, guid: f9a7c71201434c041ad850b9d6391cff,
         type: 3}
@@ -3848,7 +3853,9 @@ MonoBehaviour:
   selectFirstGateModalGameObject: {fileID: 2067672941}
   selectSecondGateModalGameObject: {fileID: 551814110}
   infoMoveYourCartModalGameObject: {fileID: 182017977}
+  playerScoreText: {fileID: 0}
   infoCreateFlagModalGameObject: {fileID: 697702080}
+  enemyScoreText: {fileID: 0}
   readyGameObject: {fileID: 589110064}
   countDownGameObject: {fileID: 1441286276}
   startGameObject: {fileID: 1345167086}
@@ -3857,20 +3864,20 @@ MonoBehaviour:
   threeGameObject: {fileID: 1959022619}
   winGameObject: {fileID: 946954639}
   loseGameObject: {fileID: 1756277782}
-  infoText: {fileID: 1546643580}
+  _leftActivateAction: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
   selectFirstGateText: {fileID: 1584417949}
+  infoText: {fileID: 1546643580}
   selectSecondGateText: {fileID: 671947506}
   moveCartText: {fileID: 802929447}
   createFlagText: {fileID: 1313985993}
   gameReadyText: {fileID: 765910710}
-  playerScoreText: {fileID: 0}
-  enemyScoreText: {fileID: 0}
-  _leftActivateAction: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f,
-    type: 3}
   _leftRayInteractor: {fileID: 1076668720}
   _gatePrefabs:
   - {fileID: 87215776536517964, guid: 9616566c4df416c49886fbe0be22cc52, type: 3}
   - {fileID: 8544985869220824952, guid: 7ddb3d7bc34bc3741b1d2a54bb0add55, type: 3}
+  gateOne: {fileID: 0}
+  gateTwo: {fileID: 0}
   _flagPrefab: {fileID: 1253502270666672, guid: b9d294838ca8d8d409c24de0a2ec7106,
     type: 3}
   flag: {fileID: 0}
