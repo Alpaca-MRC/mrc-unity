@@ -81,10 +81,6 @@ public class BulletManager : MonoBehaviour
         if (collision.gameObject.name.Equals("FireTool")) {
             return;
         }
-        // 총알이 총알을 때려서 터지지 않게 (기본적으로 Friendly끼리는 물리 적용 안됨)
-        if (collision.gameObject.name.Equals("Projectile 1 nature(Clone)")) {
-            return;
-        }
 
         // 모든 축의 이동과 회전을 제한
         rb.constraints = RigidbodyConstraints.FreezeAll;
@@ -130,14 +126,5 @@ public class BulletManager : MonoBehaviour
             else
                 Destroy(gameObject, 1); // 1초 후 파괴
         }
-
-        Debug.Log("아군의 총알에 " + collision.gameObject.name + "이(가) 맞았어요!");
-        var arPlane = collision.transform.GetComponent<ARPlane>();
-        if (arPlane != null) {
-            Debug.Log("총에 맞은게 " + arPlane.classification + "이네용~");
-        } 
-    }
-
-    void OnTriggerEnter(Collider other) {
     }
 }

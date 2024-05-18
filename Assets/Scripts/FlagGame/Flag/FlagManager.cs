@@ -11,18 +11,21 @@ public enum FlagState
 
 public class FlagManager : MonoBehaviour
 {
+    // 상태관리
+    public GameManager gameManager;
+
     private bool canCollide = true; // 충돌 여부를 제어하는 변수
     public FlagState flagState;     // 플래그 상태
 
     private float dropDistance;     // 플래그 드랍 거리
     private float dropHeight;       // 플래그 드랍 높이
+    public Vector3 spawnPosition;  // 초기 위치
 
-    public EnemyController enemyController; // 적 카트 컨트롤러
-    public GameManager gameManager;         // 게임 매니저
-    
-    public GameObject _flagPrefab;
-    public GameObject flag;
-    private Vector3 spawnPosition;
+
+    void Start()
+    {
+        Initialization();
+    }
 
     void Update()
     {
@@ -34,73 +37,97 @@ public class FlagManager : MonoBehaviour
     {
         flagState = FlagState.OnBoard;
         canCollide = true;
-        dropDistance = 15f;
-        dropHeight = 5f;
-        Debug.Log("gateOnePosition.position" + gameManager.gateOnePosition.position);
-        Debug.Log("gateTwoPosition.position" + gameManager.gateTwoPosition.position);
-        spawnPosition = (gameManager.gateOnePosition.position + gameManager.gateTwoPosition.position) / 2f;
-        spawnPosition.y = 0f;
+        dropDistance = 2f;
+        dropHeight = 1f;
     }
 
     // 두 골대 중간에 위치에 플래그 생성
-    public void GenerateFlag()
-    {    
-        if (flag != null) flag.transform.SetParent(null);
-        
-        flag = Instantiate(_flagPrefab, spawnPosition, Quaternion.Euler(0, 0, 0));
-        Debug.Log("생성했찌롱" + flag.transform.position);
+    public void RespawnFlag()
+    {   
+        // flag가 카트에 달려있을 경우 부모 해제
+        if (gameObject != null) 
+        {
+            gameObject.transform.SetParent(null);
+        }
+        // 초기 위치로 flag 위치 재설정
+        gameObject.transform.position = spawnPosition;
+        Debug.Log("진짜 떨어진 위치: " + gameObject.transform.position);
     }    
 
     // 플래그의 접촉 이벤트
     // 카트위에 있을 때 일어나는 접촉의 경우 추가 처리가 필요
     private void OnTriggerEnter(Collider other)
-    {        
-        // 충돌이 가능한 상태인지 확인
+    {   
+        // 충돌이 가능한 상태에서만 혀용
         if (!canCollide) return;
 
-        // 플레이어 카트와 접촉
-        if (other.CompareTag("Player"))
+        // Flag가 바닥에 있다면 (플레이어와 접촉이 허용됨)
+        if (flagState == FlagState.OnBoard) 
         {
-            if (flagState == FlagState.OnPlayer) return;
+            // 플레이어 카트와 접촉
+            if (other.CompareTag("Player"))
+            {
+                // 이미 플레이어 소유면 무시
+                if (flagState == FlagState.OnPlayer) return;
 
-            // 카트의 위치로 플래그 이동
-            flag.transform.SetParent(other.transform);
-            // 원점이 아니라 카트의 위로 이동
-            flag.transform.position = other.transform.position;
-            flagState = FlagState.OnPlayer;
-            canCollide = false;
+                // 플레이어 카트의 자식으로 설정
+                gameObject.transform.SetParent(other.transform);
 
+                // 원점이 아니라 카트의 위로 이동
+                gameObject.transform.position = other.transform.position + new Vector3(0f, 0.05f, 0f);
+                flagState = FlagState.OnPlayer;
+                canCollide = false;
+            }
+            // 적 카트와 접촉
+            else if (other.CompareTag("Enemy"))
+            {
+                Debug.Log("적이 먹었지롱ㅋ");
+                // 이미 적 소유면 무시
+                if (flagState == FlagState.OnEnemy) return;
+
+                // 적 카트의 자식으로 설정
+                gameObject.transform.SetParent(other.transform);
+
+                // 원점이 아니라 카트의 위로 이동
+                gameObject.transform.position = other.transform.position + new Vector3(0f, 0.05f, 0f);
+                flagState = FlagState.OnEnemy;
+                canCollide = false;
+            }
         }
-        // 적 카트와 접촉
-        else if (other.CompareTag("Enemy"))
-        {
-            if (flagState == FlagState.OnEnemy) return;
-            flag.transform.SetParent(other.transform);
-            flag.transform.position = other.transform.position;
-            flagState = FlagState.OnEnemy;
-            canCollide = false;
-        }
-        // 골대와 접촉
-        else if (other.CompareTag("Goal"))
-        {
-            if (flagState == FlagState.OnBoard) return;
-            flagState = FlagState.OnBoard;
-            gameManager.IncreaseScore("enemy");
-            canCollide = false;
-
-            // 카트에서 떨어지고 위치 초기화
-            GenerateFlag();
-        } 
+        // Flag가 플레이어 혹은 적에게 있다면 (골대와의 접촉이 허용됨)
         else
         {
-            // Debug.Log("누구랑 부딪혔나? : " + other.tag);
+            // 골대와 접촉
+            if (other.CompareTag("Goal"))
+            {
+                // 플레이어의 골이면
+                // 플레이어 골대와 접촉했을 때만 골로 인정됨 (layer 6번 --> Friendly)
+                if (flagState == FlagState.OnPlayer && other.gameObject.layer == 6)
+                {
+                    Debug.Log("야호 플레이어 골");
+                    flagState = FlagState.OnBoard;
+                    gameManager.IncreaseScore(0);
+                    canCollide = false;
+                    // 카트에서 떨어지고 위치 초기화
+                    RespawnFlag();
+                }
+
+                // 적의 골이면
+                // 적 골대와 접촉했을 때만 골로 인정됨 (layer 7번 --> Enemy)
+                else if (flagState == FlagState.OnEnemy && other.gameObject.layer == 7)
+                {
+                    Debug.Log("야호 적 골");
+                    flagState = FlagState.OnBoard;
+                    gameManager.IncreaseScore(1);
+                    canCollide = false;
+                    // 카트에서 떨어지고 위치 초기화
+                    RespawnFlag();
+                }
+            } 
         }
 
+        // canCollide True로 설정 (골대와 충돌 가능하도록)
         if(!canCollide) StartCoroutine(ResetCollision());
-    }
-
-    private void OnTriggerExit(Collider other) {
-        StartCoroutine(ResetCollision());
     }
 
     // 일정 시간 후 충돌을 다시 활성화
@@ -118,7 +145,7 @@ public class FlagManager : MonoBehaviour
         Transform cart = transform.parent;
 
         // 카트에서 플래그를 제거하고 부모를 초기화하여 플래그를 카트에서 분리
-        flag.transform.SetParent(null);
+        gameObject.transform.SetParent(null);
 
         // 플래그의 낙하 지점
         Vector3 dropPosition = cart.position - cart.forward * dropDistance;
@@ -128,6 +155,7 @@ public class FlagManager : MonoBehaviour
         StartCoroutine(DropAnimation(dropPosition, 0.5f));
         flagState = FlagState.OnBoard;
         StartCoroutine(ResetCollision());
+        Debug.Log("일로왔지롱: " + gameObject.transform.position);
     } 
 
     // 플래그가 낙하하는 애니메이션
@@ -142,10 +170,12 @@ public class FlagManager : MonoBehaviour
             float t = timer / duration;
             Vector3 newPosition = Vector3.Lerp(initialPosition, dropPosition, t) + dropHeight * Mathf.Sin(t * Mathf.PI) * Vector3.up;
             // 플래그 위치 설정
-            flag.transform.position = newPosition;
+            gameObject.transform.position = newPosition;
+            Debug.Log("일로줬지롱: " + gameObject.transform.position);
             // 시간 업데이트
             timer += Time.deltaTime;
             yield return null;
         }
+        transform.position = dropPosition;
     }
 }

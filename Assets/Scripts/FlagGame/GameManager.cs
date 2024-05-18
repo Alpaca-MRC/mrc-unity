@@ -25,77 +25,83 @@ public enum GameState
 
 public class GameManager : MonoBehaviour
 {
-    public float gameTimeInSeconds = 10f; // 게임 시간(5분)
+    private float gameTimeInSeconds = 10f; // 게임 시간(5분)
     public GameState gameState = GameState.BeforeStart;
-    public TextMeshProUGUI timer;
-    public Camera mainCamera;
+
+    // 예시 카트 포탈 prefab
+    public GameObject _cartExamplePrefab;
+    private GameObject cartExample;
+
+    // 예시 카트 포탈 위치
+    private Vector3 examplePosition;
+    private Quaternion exampleRotation;
+
+    // 플레이어 카트 prefab
+    // public GameObject _friendlyCartPrefab;
+    public GameObject friendlyCart;
+
+    // 적 카트 prefab
+    // public GameObject _enemyCartPrefab;
+    public GameObject enemyCart;
+
+    // 왼쪽 컨트롤러
+    [SerializeField]
+    private InputActionReference _leftActivateAction;
+
+    [SerializeField]
+    private XRRayInteractor _leftRayInteractor; // 왼쪽 컨트롤러 ray 설정
+
+    // 골대
+    // 골대 생성 controller
+    public GameObject[] _gatePrefabs;       // 게이트 prefabs
+    private bool _gateInstallLock = true;   // 게이트 중복 생성 방지
+    private int _infoStatus = 0;        // 0일때 1번 골대 설치 > 1일때 2번 골대 설치
+    public GameObject gateOne;          // 플레이어 게이트 instance
+    public GameObject gateTwo;          // 적 게이트 instance
+    public Transform gateOnePosition;   // 플레이어 게이트 위치
+    public Transform gateTwoPosition;   // 적 게이트 위치
+
+    // 플래그 
+    public FlagManager flagManager;     // 플래그 매니저
+    // public GameObject _flagPrefab;      // 플래그 prefab
+    public GameObject flag;             // 플래그 인스턴스
+
+    // 앵커
+    private ARAnchorManager _anchorManager;
+    private List<ARAnchor> _anchors = new();
+
+    // 게임 UI 게임 오브젝트
+    public GameObject infoGameProcessGameObject;        // 환영합니다. 게임을 준비하겠습니다.
+    public TextMeshProUGUI infoText;
+    public GameObject selectFirstGateModalGameObject;   // 아군 골대 위치를 지정해주세요.
+    public TextMeshProUGUI selectFirstGateText;         
+    public GameObject selectSecondGateModalGameObject;  // 적군 골대 위치를 지정해주세요.
+    public TextMeshProUGUI selectSecondGateText;
+    public GameObject infoMoveYourCartModalGameObject;  // 카트를 포탈 위치로 이동해주세요.
+    public TextMeshProUGUI moveCartText;
+
+    public GameObject infoCreateFlagModalGameObject;    // 플래그가 생성됩니다.
+    public TextMeshProUGUI createFlagText;
+
+    public GameObject readyGameObject;                  // 카트 이동 완료
+    public Button _readyToGoBtn;                        // 카트 이동 완료 버튼
+    public TextMeshProUGUI gameReadyText;
+    public GameObject countDownGameObject;              // 카운트 다운
+    public GameObject startGameObject;                  // Start
+    public GameObject oneGameObject;                    // 1
+    public GameObject twoGameObject;                    // 2 
+    public GameObject threeGameObject;                  // 3
+    public GameObject winGameObject;                    // win
+    public GameObject loseGameObject;                   // lose
+    
+    // 게임 UI 텍스트
+    public TextMeshProUGUI timer;                       // 타이머
+    public TextMeshProUGUI playerScoreText;             // 아군 점수
+    public TextMeshProUGUI enemyScoreText;              // 적군 점수
 
     // 게임 스코어
     public int playerScore;
     public int enemyScore;
-
-    // 게임 진행 UI 텍스트
-    public GameObject infoGameProcessGameObject;
-    public GameObject selectFirstGateModalGameObject;
-    public GameObject selectSecondGateModalGameObject;
-    public GameObject infoMoveYourCartModalGameObject;
-    public TextMeshProUGUI playerScoreText;
-    public GameObject infoCreateFlagModalGameObject;
-    public TextMeshProUGUI enemyScoreText;
-    public GameObject readyGameObject;
-    public GameObject countDownGameObject;
-    public GameObject startGameObject;
-    public GameObject oneGameObject;
-    public GameObject twoGameObject;
-    public GameObject threeGameObject;
-
-    public GameObject winGameObject;
-    public GameObject loseGameObject;
-
-    // public EnemyController enemyController;
-
-    // 골대 생성 controller
-    [SerializeField]
-    private InputActionReference _leftActivateAction;
-    public TextMeshProUGUI selectFirstGateText;
-    public TextMeshProUGUI infoText;
-    public TextMeshProUGUI selectSecondGateText;
-    public TextMeshProUGUI moveCartText;
-    public TextMeshProUGUI createFlagText;
-    public TextMeshProUGUI gameReadyText;
-    [SerializeField]
-    private XRRayInteractor _leftRayInteractor;
-    public GameObject[] _gatePrefabs;
-    private ARAnchorManager _anchorManager;
-    private List<ARAnchor> _anchors = new();
-    private bool _gateInstallLock = true;
-    private int _infoStatus = 0; // 0일때 1번 골대 설치 > 1일때 2번 골대 설치
-    public GameObject gateOne;
-    public GameObject gateTwo;
-
-    // 플래그 매니저
-    // public FlagManager flagManager;
-    public GameObject _flagPrefab;
-    public GameObject flag;
-    public Transform gateOnePosition;
-    public Transform gateTwoPosition;
-
-    // 카트 배치용 prefab
-    public GameObject _cartExamplePrefab;
-    private GameObject cartExample;
-    public Button _readyToGoBtn;
-
-    // 플레이어 카트 prefab
-    public GameObject _friendlyCartPrefab;
-    public GameObject friendlyCart;
-
-    // 적 카트 prefab
-    public GameObject _enemyCartPrefab;
-    public GameObject enemyCart;
-
-    // 예시 카트 포탈 위치 저장
-    private Vector3 examplePosition;
-    private Quaternion exampleRotation;
 
     void Start()
     {
@@ -104,8 +110,15 @@ public class GameManager : MonoBehaviour
 
         // 준비완료 버튼 끄기
         _readyToGoBtn.gameObject.SetActive(false);
+        friendlyCart.SetActive(false);
+        enemyCart.SetActive(false);
+        flag.SetActive(false);
+
+        // 사용하지 않는 ui 비활성화
+        ActivateUI(infoGameProcessGameObject);
 
         // 시작시 안내멘트 출력
+        
         StartCoroutine(InforBeforeGameStart());
 
         // 골대 생성
@@ -115,8 +128,6 @@ public class GameManager : MonoBehaviour
             Debug.LogError("--> 'ARAnchorManager'를 찾을 수 없음");
         }
 
-        // 사용하지 않는 ui 비활성화
-        ActivateUI(infoGameProcessGameObject);
 
         _anchorManager.anchorsChanged += OnAnchorsChanged;
         _leftActivateAction.action.performed += OnLeftActivateAction;
@@ -125,6 +136,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator InforBeforeGameStart() 
     {
+        Debug.Log("게임 시작됐나?");
         infoText.text = "환영합니다";
         yield return new WaitForSecondsRealtime(2.0f);
         infoText.text = "게임을 준비하겠습니다";
@@ -165,6 +177,7 @@ public class GameManager : MonoBehaviour
     // 카트 이동 완료 버튼
     public void OnClickCompleteReady()
     {
+        Debug.Log(1);
         // 눌린 버튼 비활성화
         // 레이 끄기
         _leftRayInteractor.enabled = false;
@@ -173,18 +186,20 @@ public class GameManager : MonoBehaviour
         Destroy(cartExample);
         
         // 플레이어 카트 생성
-        friendlyCart = Instantiate(_friendlyCartPrefab, examplePosition, exampleRotation);
+        // friendlyCart = Instantiate(_friendlyCartPrefab, examplePosition, exampleRotation);
+        friendlyCart.SetActive(true);
+        friendlyCart.transform.SetPositionAndRotation(examplePosition, exampleRotation);
         // Debug.Log("friendlyCart의 rotation이에요: " + exampleRotation);
         // 플레이어 카트 이동 및 사격 제한
-        friendlyCart.GetComponent<MoveCar>().enabled = false;
+        friendlyCart.GetComponent<FriendlyCarMove>().enabled = false;
         friendlyCart.GetComponent<FriendlyShootingCar>().enabled = false;
-        
         // 적 카트 생성
         Vector3 enemyPosition = gateTwoPosition.position + (gateOnePosition.position - gateTwoPosition.position).normalized / 2f;
         enemyPosition.y = 0f;
-        enemyCart = Instantiate(_enemyCartPrefab, enemyPosition, Quaternion.identity);
+        // enemyCart = Instantiate(_enemyCartPrefab, enemyPosition, Quaternion.identity);
+        enemyCart.SetActive(true);
+        enemyCart.transform.position = enemyPosition;
         enemyCart.transform.LookAt(gateOnePosition);
-        
         // rotation 재조정
         enemyCart.transform.rotation = Quaternion.Euler(0f, enemyCart.transform.rotation.eulerAngles.y, 0f);
         // 플래그 생성
@@ -192,21 +207,22 @@ public class GameManager : MonoBehaviour
     }
 
     // 골대 사이에 플래그 생성
-    IEnumerator GenerateFlag() {
-
+    IEnumerator GenerateFlag() 
+    {
         ActivateUI(infoCreateFlagModalGameObject);
         createFlagText.text = "플래그가 생성됩니다.";
         Vector3 flagPosition = (gateOnePosition.position + gateTwoPosition.position) / 2f;
         flagPosition.y = 0f;
-        flag = Instantiate(_flagPrefab, flagPosition, Quaternion.identity);
-        
-        // flagManager.Initialization();
-        // flagManager.GenerateFlag();
+        flagManager.spawnPosition = flagPosition;
+        Debug.Log("설정한 spawnPosition: " + flagManager.spawnPosition);
+        // flag = Instantiate(_flagPrefab, flagPosition, Quaternion.identity);
+        flag.SetActive(true);
+        flag.transform.position = flagPosition;
+        flag.transform.rotation = Quaternion.identity;
         yield return new WaitForSecondsRealtime(2.0f);
         ActivateUI(readyGameObject);
         gameReadyText.text = "잠시후 게임을 시작합니다.";
         yield return new WaitForSecondsRealtime(1.0f);
-        // readyGameObject.SetActive(false);
         StartGame();
     }
 
@@ -219,8 +235,6 @@ public class GameManager : MonoBehaviour
         StartCoroutine(StartCountdown());
         // 게임 설정 초기화
         InitializationGameSetting();
-        // 게임 상태 변경
-        gameState = GameState.InProgress;
     }
 
     // 아군 골대 앞 카트 위치 생성(포탈)
@@ -265,7 +279,8 @@ public class GameManager : MonoBehaviour
         if (_leftRayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit hit)) {
             // 닿은 물체가 바닥일때만 기능 및 카드가 존재하지 않을때 기능
             ARPlane hitPlane = hit.transform.GetComponent<ARPlane>();
-            if (hitPlane != null && hitPlane.classification == PlaneClassification.Floor && !_gateInstallLock) {
+            // if (hitPlane != null && hitPlane.classification == PlaneClassification.Floor && !_gateInstallLock) {
+            if (!_gateInstallLock) {
                 // 회전각 결정
                 Quaternion rotation = Quaternion.Euler(0, 0, 0);
                 // 물체 생성
@@ -343,6 +358,10 @@ public class GameManager : MonoBehaviour
     IEnumerator StartCountdown()
     {
         ActivateUI(countDownGameObject);
+        startGameObject.SetActive(false);
+        threeGameObject.SetActive(false);
+        twoGameObject.SetActive(false);
+        oneGameObject.SetActive(false);
         // 3초 카운트 다운
         for (int i = 3; i > 0; i--)
         {
@@ -367,7 +386,7 @@ public class GameManager : MonoBehaviour
         // 게임 시작
         gameState = GameState.InProgress;
         // 플레이어 카트 이동 및 사격 허용
-        friendlyCart.gameObject.GetComponent<MoveCar>().enabled = true;
+        friendlyCart.gameObject.GetComponent<FriendlyCarMove>().enabled = true;
         friendlyCart.gameObject.GetComponent<FriendlyShootingCar>().enabled = true;
         // 적 카트 이동 및 사격
         StartCoroutine(GameTimer());
@@ -401,19 +420,28 @@ public class GameManager : MonoBehaviour
         Debug.Log("게임 종료");
     }
 
-    public void IncreaseScore(String player)
+    /// <summary>
+    /// 0: 플레이어 / 1: 적군
+    /// </summary>
+    /// <param name="role"></param>
+    public void IncreaseScore(int role)
     {
-        if (player == "player")
+        switch (role)
         {
-            playerScore++;
-            playerScoreText.text = playerScore.ToString();
-        }
-        if (player == "enemy")
-        {
-            enemyScore++;
-            Debug.Log("enemyScore : " + enemyScore);
-            enemyScoreText.text = enemyScore.ToString();
+            // 플레이어 승리시
+            case 0:
+                playerScore++;
+                playerScoreText.text = playerScore.ToString();
+                break;
+                
+            // 적군 승리시
+            case 1:
+                enemyScore++;
+                enemyScoreText.text = enemyScore.ToString();
+                break;
+            
+            default:
+                break;
         }
     }
-
 }

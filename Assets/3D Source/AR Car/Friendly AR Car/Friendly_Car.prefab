@@ -475,13 +475,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5253222345930985882}
-  - component: {fileID: 1436956642668694963}
+  - component: {fileID: 1797700537850752269}
   - component: {fileID: -8391485407494520597}
   - component: {fileID: 4522717770683636001}
   - component: {fileID: -7898238886717718934}
   m_Layer: 6
   m_Name: Friendly_Car
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -515,7 +515,7 @@ Transform:
   - {fileID: 7960680331312921149}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1436956642668694963
+--- !u!114 &1797700537850752269
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -524,12 +524,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1399408944216986053}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9969dc3f7ed92a4a8e0ae82fce6040d, type: 3}
+  m_Script: {fileID: 11500000, guid: cd301c94de2cd04449815242b6649a65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flagManager: {fileID: 4461071782106265470, guid: b9d294838ca8d8d409c24de0a2ec7106,
+    type: 3}
   inputActionsAsset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  gameMode: 1
 --- !u!114 &-8391485407494520597
 MonoBehaviour:
   m_ObjectHideFlags: 0

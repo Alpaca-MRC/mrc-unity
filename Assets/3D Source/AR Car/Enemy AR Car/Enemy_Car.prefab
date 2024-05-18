@@ -1245,9 +1245,11 @@ GameObject:
   - component: {fileID: 4000013341044032}
   - component: {fileID: 7506326609051564792}
   - component: {fileID: -8000527510642660648}
+  - component: {fileID: 5189315508058353996}
+  - component: {fileID: -3198181649396152092}
   m_Layer: 7
   m_Name: Enemy_Car
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1329,6 +1331,42 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &5189315508058353996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000012657452956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d41d22a55fde7b4395afc193cd2453e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flagManager: {fileID: 4461071782106265470, guid: b9d294838ca8d8d409c24de0a2ec7106,
+    type: 3}
+  gameManager: {fileID: 0}
+  enemyShootingCar: {fileID: -3198181649396152092}
+  isPlayerInRange: 0
+  isShooting: 0
+--- !u!114 &-3198181649396152092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000012657452956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ffeb7fa7ff04504a8b35d36a6f5a206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 0.1
+  FirePoint: {fileID: 6766407591042065732}
+  Prefabs: []
+  gameManager: {fileID: 8190636432445191920, guid: 4cf82701bb0219b4680dbabffee6b4af,
+    type: 3}
+  shootingAngleThreshold: 30
 --- !u!1 &1000012726857630
 GameObject:
   m_ObjectHideFlags: 0
