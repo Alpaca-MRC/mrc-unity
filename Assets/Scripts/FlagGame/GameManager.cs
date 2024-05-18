@@ -128,15 +128,12 @@ public class GameManager : MonoBehaviour
             Debug.LogError("--> 'ARAnchorManager'를 찾을 수 없음");
         }
 
-
         _anchorManager.anchorsChanged += OnAnchorsChanged;
         _leftActivateAction.action.performed += OnLeftActivateAction;
     }
-    private Vector3 enemyCartPosition;
 
     IEnumerator InforBeforeGameStart() 
     {
-        Debug.Log("게임 시작됐나?");
         infoText.text = "환영합니다";
         yield return new WaitForSecondsRealtime(2.0f);
         infoText.text = "게임을 준비하겠습니다";
@@ -214,8 +211,7 @@ public class GameManager : MonoBehaviour
         Vector3 flagPosition = (gateOnePosition.position + gateTwoPosition.position) / 2f;
         flagPosition.y = 0f;
         flagManager.spawnPosition = flagPosition;
-        Debug.Log("설정한 spawnPosition: " + flagManager.spawnPosition);
-        // flag = Instantiate(_flagPrefab, flagPosition, Quaternion.identity);
+        flagManager.dropDistance = Vector3.Distance(gateOnePosition.position, gateTwoPosition.position) / 8f;
         flag.SetActive(true);
         flag.transform.position = flagPosition;
         flag.transform.rotation = Quaternion.identity;

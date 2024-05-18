@@ -17,6 +17,8 @@ public class EnemyController : MonoBehaviour
     private GameManager gameManager;     // 게임 매니저
     [SerializeField]
     private EnemyShootingCar enemyShootingCar;  // 사격 매니저
+    [SerializeField]
+    private HpBarScript hpBarScript;        // HP 바 관리
 
     // 카트 상태 관리
     private int maxHealth;  // 최대 체력
@@ -26,6 +28,11 @@ public class EnemyController : MonoBehaviour
     // 게임 상태 관리
     public bool isPlayerInRange;        // 플레이어 카트의 사격 범위 안에 있는지 여부
     public bool isShooting;             // 사격 중인지 여부
+
+    // 스턴 효과
+    [SerializeField]
+    private GameObject _stunEffectPrefab;
+    private GameObject stunEffect;
 
     private void Start()
     {
@@ -42,7 +49,7 @@ public class EnemyController : MonoBehaviour
     void InitializationGameSetting()
     {
         // 상태 초기화
-        maxHealth = 100;
+        maxHealth = 70;
         curHealth = maxHealth;
         isStun = false;
         isPlayerInRange = false;
@@ -76,10 +83,16 @@ public class EnemyController : MonoBehaviour
 
         // 충돌한 물체가 아군이면서 총알이면
         if (other.gameObject.layer == 6 && other.collider.name.Contains("Bullet")) {
+
+            // 이미 스턴 상태라면 피를 깎지 않음
+            if (isStun) return;
+
             // 피를 1 깎는다
             curHealth -= 1;
+            float hpPercentage = (float) curHealth / maxHealth;
+            hpBarScript.UpdateHealthBar(hpPercentage);
             // 피가 0이 된다면
-            if (curHealth <= 0) {
+            if (curHealth == 0) {
                 Exhaustion();
             }
         }
@@ -96,9 +109,6 @@ public class EnemyController : MonoBehaviour
             // 플래그 떨어뜨리기
             flagManager.Drop();
         } 
-        
-        // 체력 다시 채워주기
-        curHealth = maxHealth;
     }
 
     // 2. 스턴
@@ -106,6 +116,7 @@ public class EnemyController : MonoBehaviour
     {
         // 스턴 상태 설정
         isStun = true;
+        stunEffect = Instantiate(_stunEffectPrefab, gameObject.transform.position, gameObject.transform.rotation);
         
         // 적이 플래그 소유했을 경우 떨어뜨림
         if (flagManager.flagState == FlagState.OnEnemy)
@@ -118,6 +129,11 @@ public class EnemyController : MonoBehaviour
 
         // 스턴 상태를 해제
         isStun = false;
+        Destroy(stunEffect);
+
+        // 체력 다시 채워주기
+        curHealth = maxHealth;
+        hpBarScript.UpdateHealthBar(1f);
     }
 
 
@@ -131,7 +147,7 @@ public class EnemyController : MonoBehaviour
         flagDirection.y = 0f;
 
         // 적 카트가 플래그 방향으로 일정한 속도로 이동하도록 설정
-        float moveSpeed = 0.24f;
+        float moveSpeed = 0.5f;
         transform.position += moveSpeed * Time.deltaTime * flagDirection;
 
         // 적 카트가 플래그를 향해 정면이 보이도록 회전
@@ -147,7 +163,7 @@ public class EnemyController : MonoBehaviour
         playerDirection.y = 0f;
 
         // 적 카트가 플레이어 방향으로 일정한 속도로 이동하도록 설정
-        float moveSpeed = 0.24f;
+        float moveSpeed = 0.5f;
         transform.position += moveSpeed * Time.deltaTime * playerDirection;
 
         // 적 카트가 플레이어를 향해 정면이 보이도록 회전
@@ -169,7 +185,7 @@ public class EnemyController : MonoBehaviour
         goalDirection.y = 0f;
 
         // 적 카트가 골대 방향으로 일정한 속도로 이동하도록 설정
-        float moveSpeed = 0.24f;
+        float moveSpeed = 0.5f;
         transform.position += moveSpeed * Time.deltaTime * goalDirection;
 
         // 적 카트가 골대를 향해 정면이 보이도록 회전

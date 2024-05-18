@@ -12,6 +12,8 @@ public class FriendlyCarMove : MonoBehaviour
     // 게임 상태 관리
     [SerializeField]
     private FlagManager flagManager;     // 플래그 상태 관리
+    [SerializeField]
+    private HpBarScript hpBarScript;
 
     // 아군 차량 상태
     private int maxHealth;  // 최대 체력
@@ -32,6 +34,11 @@ public class FriendlyCarMove : MonoBehaviour
     private Vector3 initialPosition;
     private Quaternion initialRotation;
 
+    // 스턴 효과
+    [SerializeField]
+    private GameObject _stunEffectPrefab;
+    private GameObject stunEffect;
+
 
     void Start() 
     {
@@ -46,7 +53,7 @@ public class FriendlyCarMove : MonoBehaviour
         turnSpeed = 80f;
 
         // 상태 초기화
-        maxHealth = 50;
+        maxHealth = 70;
         curHealth = maxHealth;
         isStun = false;
     }
@@ -164,8 +171,14 @@ public class FriendlyCarMove : MonoBehaviour
     void OnCollisionEnter(Collision other) {
         // 충돌한 물체가 적이면서 총알이면
         if (other.gameObject.layer == 7 && other.collider.name.Contains("Bullet")) {
+            
+            // 이미 스턴 상태라면 피를 깎지 않음
+            if (isStun) return;
+
             // 피를 1 깎는다
             curHealth -= 1;
+            float hpPercentage = (float) curHealth / maxHealth;
+            hpBarScript.UpdateHealthBar(hpPercentage);
             // 피가 0이 된다면
             if (curHealth <= 0) {
                 Exhaustion();
@@ -180,9 +193,6 @@ public class FriendlyCarMove : MonoBehaviour
 
         // 플래그 떨어뜨리기
         flagManager.Drop();
-        
-        // 체력 다시 채워주기
-        curHealth = maxHealth;
     }
 
     // 2. 스턴
@@ -190,6 +200,7 @@ public class FriendlyCarMove : MonoBehaviour
     {
         // 스턴 상태 설정
         isStun = true;
+        stunEffect = Instantiate(_stunEffectPrefab, gameObject.transform.position, gameObject.transform.rotation);
 
         // 플레이어가 플래그 소유했을 경우 떨어뜨림
         if (flagManager.flagState == FlagState.OnPlayer)
@@ -202,6 +213,11 @@ public class FriendlyCarMove : MonoBehaviour
 
         // 스턴 상태를 해제
         isStun = false;
+        Destroy(stunEffect);
+
+        // 체력 다시 채워주기
+        curHealth = maxHealth;
+        hpBarScript.UpdateHealthBar(1f);
     }
 }
 

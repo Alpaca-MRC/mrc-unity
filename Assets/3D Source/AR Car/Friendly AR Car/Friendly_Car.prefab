@@ -531,6 +531,8 @@ MonoBehaviour:
     type: 3}
   inputActionsAsset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
+  _stunEffectPrefab: {fileID: 7131401307255788800, guid: a29f903bd122508488dbbc7a9daf954b,
+    type: 3}
 --- !u!114 &-8391485407494520597
 MonoBehaviour:
   m_ObjectHideFlags: 0

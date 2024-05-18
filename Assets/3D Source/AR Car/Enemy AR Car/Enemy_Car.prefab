@@ -1349,6 +1349,8 @@ MonoBehaviour:
   enemyShootingCar: {fileID: -3198181649396152092}
   isPlayerInRange: 0
   isShooting: 0
+  _stunEffectPrefab: {fileID: 7131401307255788800, guid: a29f903bd122508488dbbc7a9daf954b,
+    type: 3}
 --- !u!114 &-3198181649396152092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1366,6 +1368,7 @@ MonoBehaviour:
   Prefabs: []
   gameManager: {fileID: 8190636432445191920, guid: 4cf82701bb0219b4680dbabffee6b4af,
     type: 3}
+  flagManager: {fileID: 0}
   shootingAngleThreshold: 30
 --- !u!1 &1000012726857630
 GameObject:
