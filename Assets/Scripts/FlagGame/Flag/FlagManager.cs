@@ -24,11 +24,6 @@ public class FlagManager : MonoBehaviour
     public GameObject flag;
     private Vector3 spawnPosition;
 
-    void Start()
-    {
-        
-    }
-    
     void Update()
     {
         if (canCollide == false) canCollide = true;
@@ -41,6 +36,8 @@ public class FlagManager : MonoBehaviour
         canCollide = true;
         dropDistance = 15f;
         dropHeight = 5f;
+        Debug.Log("gateOnePosition.position" + gameManager.gateOnePosition.position);
+        Debug.Log("gateTwoPosition.position" + gameManager.gateTwoPosition.position);
         spawnPosition = (gameManager.gateOnePosition.position + gameManager.gateTwoPosition.position) / 2f;
         spawnPosition.y = 0f;
     }
