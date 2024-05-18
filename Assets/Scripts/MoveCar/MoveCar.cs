@@ -149,4 +149,8 @@ public class MoveCar : MonoBehaviour
         // 회전
         transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
     }
+
+    void OnCollisionEnter(Collision other) {
+        Debug.Log("Collision으로 "+ other.collider.name +"를 박긴 했네요");
+    }
 }

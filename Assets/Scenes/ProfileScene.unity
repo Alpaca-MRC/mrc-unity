@@ -430,8 +430,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Grade name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e214aff3970272f43aae29ab5c9394ed, type: 2}
-  m_sharedMaterial: {fileID: 1511661302528141075, guid: e214aff3970272f43aae29ab5c9394ed,
+  m_fontAsset: {fileID: 11400000, guid: 49d9df1de7073ab409a94a3e6cfee4bc, type: 2}
+  m_sharedMaterial: {fileID: -2644734458101766986, guid: 49d9df1de7073ab409a94a3e6cfee4bc,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5253,10 +5253,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Status : '
+  m_text: "\uC0C1\uD0DC : "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e214aff3970272f43aae29ab5c9394ed, type: 2}
-  m_sharedMaterial: {fileID: 1511661302528141075, guid: e214aff3970272f43aae29ab5c9394ed,
+  m_fontAsset: {fileID: 11400000, guid: 49d9df1de7073ab409a94a3e6cfee4bc, type: 2}
+  m_sharedMaterial: {fileID: -2644734458101766986, guid: 49d9df1de7073ab409a94a3e6cfee4bc,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -15069,12 +15069,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Go!
-
-    EveryWhere'
+  m_text: "\uC120\uD0DD\uC644\uB8CC"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e214aff3970272f43aae29ab5c9394ed, type: 2}
-  m_sharedMaterial: {fileID: 1511661302528141075, guid: e214aff3970272f43aae29ab5c9394ed,
+  m_fontAsset: {fileID: 11400000, guid: 49d9df1de7073ab409a94a3e6cfee4bc, type: 2}
+  m_sharedMaterial: {fileID: -2644734458101766986, guid: 49d9df1de7073ab409a94a3e6cfee4bc,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -15099,8 +15097,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.59
-  m_fontSizeBase: 0.59
+  m_fontSize: 0.4
+  m_fontSizeBase: 0.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -21355,10 +21353,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Go!  Cart
+  m_text: "\uCE74\uD2B8 \uC120\uD0DD"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e214aff3970272f43aae29ab5c9394ed, type: 2}
-  m_sharedMaterial: {fileID: 1511661302528141075, guid: e214aff3970272f43aae29ab5c9394ed,
+  m_fontAsset: {fileID: 11400000, guid: 49d9df1de7073ab409a94a3e6cfee4bc, type: 2}
+  m_sharedMaterial: {fileID: -2644734458101766986, guid: 49d9df1de7073ab409a94a3e6cfee4bc,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -28693,10 +28691,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: MY PROFILE
+  m_text: "\uB0B4 \uD504\uB85C\uD544"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 49d9df1de7073ab409a94a3e6cfee4bc, type: 2}
+  m_sharedMaterial: {fileID: -2644734458101766986, guid: 49d9df1de7073ab409a94a3e6cfee4bc,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -29562,7 +29561,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1267914352
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29902,8 +29901,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Kart name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e214aff3970272f43aae29ab5c9394ed, type: 2}
-  m_sharedMaterial: {fileID: 1511661302528141075, guid: e214aff3970272f43aae29ab5c9394ed,
+  m_fontAsset: {fileID: 11400000, guid: 49d9df1de7073ab409a94a3e6cfee4bc, type: 2}
+  m_sharedMaterial: {fileID: -2644734458101766986, guid: 49d9df1de7073ab409a94a3e6cfee4bc,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -34805,8 +34804,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Status
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e214aff3970272f43aae29ab5c9394ed, type: 2}
-  m_sharedMaterial: {fileID: 1511661302528141075, guid: e214aff3970272f43aae29ab5c9394ed,
+  m_fontAsset: {fileID: 11400000, guid: 49d9df1de7073ab409a94a3e6cfee4bc, type: 2}
+  m_sharedMaterial: {fileID: -2644734458101766986, guid: 49d9df1de7073ab409a94a3e6cfee4bc,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -35309,7 +35308,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.03, y: -0.16}
+  m_AnchoredPosition: {x: 0.03, y: -0.48}
   m_SizeDelta: {x: 6.1655, y: 1.0877}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1678482554
@@ -36943,10 +36942,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Grade : '
+  m_text: "\uB4F1\uAE09 : "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e214aff3970272f43aae29ab5c9394ed, type: 2}
-  m_sharedMaterial: {fileID: 1511661302528141075, guid: e214aff3970272f43aae29ab5c9394ed,
+  m_fontAsset: {fileID: 11400000, guid: 49d9df1de7073ab409a94a3e6cfee4bc, type: 2}
+  m_sharedMaterial: {fileID: -2644734458101766986, guid: 49d9df1de7073ab409a94a3e6cfee4bc,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -41924,7 +41923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.25485048, g: 0.7830189, b: 0.30388674, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
