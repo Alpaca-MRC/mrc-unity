@@ -164,7 +164,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 m_MaxDistance = m_MaxDistance > 0f ? Mathf.Min(m_InitialPosition.magnitude, m_MaxDistance) : m_InitialPosition.magnitude;
                 m_BindingsGroup.AddBinding(m_TransformTweenableVariable.Subscribe(OnTransformTweenableVariableUpdated));
                 m_BindingsGroup.AddBinding(m_PokeStrengthTweenableVariable.Subscribe(OnPokeStrengthChanged));
-                m_BindingsGroup.AddBinding(m_PokeDataProvider.pokeStateData.SubscribeAndUpdate(OnPokeStateDataUpdated));
+                // m_BindingsGroup.AddBinding(m_PokeDataProvider.pokeStateData.SubscribeAndUpdate(OnPokeStateDataUpdated));
             }
             else
             {
