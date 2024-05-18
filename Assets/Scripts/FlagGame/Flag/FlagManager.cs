@@ -14,45 +14,41 @@ public class FlagManager : MonoBehaviour
     private bool canCollide = true; // 충돌 여부를 제어하는 변수
     public FlagState flagState;     // 플래그 상태
 
-    private float dropDistance;
-    private float dropHeight;
+    private float dropDistance;     // 플래그 드랍 거리
+    private float dropHeight;       // 플래그 드랍 높이
 
     public EnemyController enemyController; // 적 카트 컨트롤러
     public GameManager gameManager;         // 게임 매니저
     
     public GameObject _flagPrefab;
     public GameObject flag;
+    private Vector3 spawnPosition;
 
-    void Start()
-    {
-        Initialization();
-    }
-    
     void Update()
     {
-        if (canCollide == false)
-        {
-            canCollide = true;
-        }
+        if (canCollide == false) canCollide = true;
     }
 
-    void Initialization()
+    // 초기화
+    public void Initialization()
     {
+        flagState = FlagState.OnBoard;
         canCollide = true;
         dropDistance = 15f;
         dropHeight = 5f;
-
-        // 골대 지정
+        Debug.Log("gateOnePosition.position" + gameManager.gateOnePosition.position);
+        Debug.Log("gateTwoPosition.position" + gameManager.gateTwoPosition.position);
+        spawnPosition = (gameManager.gateOnePosition.position + gameManager.gateTwoPosition.position) / 2f;
+        spawnPosition.y = 0f;
     }
 
     // 두 골대 중간에 위치에 플래그 생성
     public void GenerateFlag()
     {    
         if (flag != null) flag.transform.SetParent(null);
-
-        Vector3 newPosition = (gameManager.gateOnePosition.position + gameManager.gateTwoPosition.position) / 2;
-        newPosition.y = 0f;
-        flag = Instantiate(_flagPrefab, newPosition, Quaternion.Euler(0, 0, 0));
+        
+        flag = Instantiate(_flagPrefab, spawnPosition, Quaternion.Euler(0, 0, 0));
+        Debug.Log("생성했찌롱" + flag.transform.position);
     }    
 
     // 플래그의 접촉 이벤트
@@ -79,20 +75,15 @@ public class FlagManager : MonoBehaviour
         else if (other.CompareTag("Enemy"))
         {
             if (flagState == FlagState.OnEnemy) return;
-
             flag.transform.SetParent(other.transform);
             flag.transform.position = other.transform.position;
             flagState = FlagState.OnEnemy;
             canCollide = false;
-            // Drop();
         }
         // 골대와 접촉
         else if (other.CompareTag("Goal"))
         {
             if (flagState == FlagState.OnBoard) return;
-
-            Debug.Log("골인!!!!!!!!!!!!");
-
             flagState = FlagState.OnBoard;
             gameManager.IncreaseScore("enemy");
             canCollide = false;
@@ -105,10 +96,7 @@ public class FlagManager : MonoBehaviour
             // Debug.Log("누구랑 부딪혔나? : " + other.tag);
         }
 
-        if(!canCollide)
-        {
-            StartCoroutine(ResetCollision());
-        }
+        if(!canCollide) StartCoroutine(ResetCollision());
     }
 
     private void OnTriggerExit(Collider other) {
@@ -132,19 +120,13 @@ public class FlagManager : MonoBehaviour
         // 카트에서 플래그를 제거하고 부모를 초기화하여 플래그를 카트에서 분리
         flag.transform.SetParent(null);
 
-        Debug.Log("드롭!!!!!");
-                
-        // 카트 뒤에 떨어뜨리기
-
         // 플래그의 낙하 지점
         Vector3 dropPosition = cart.position - cart.forward * dropDistance;
         dropPosition.y = 0f;
 
         // 플래그가 낙하하는 애니메이션
         StartCoroutine(DropAnimation(dropPosition, 0.5f));
-
         flagState = FlagState.OnBoard;
-
         StartCoroutine(ResetCollision());
     } 
 
@@ -159,16 +141,11 @@ public class FlagManager : MonoBehaviour
             // 포물선을 그리며 낙하하는 동안의 위치 계산
             float t = timer / duration;
             Vector3 newPosition = Vector3.Lerp(initialPosition, dropPosition, t) + dropHeight * Mathf.Sin(t * Mathf.PI) * Vector3.up;
-
             // 플래그 위치 설정
             flag.transform.position = newPosition;
-
             // 시간 업데이트
             timer += Time.deltaTime;
             yield return null;
         }
-
-        // 최종 낙하 지점에 위치 설정
-        // transform.position = dropPosition;
     }
 }
