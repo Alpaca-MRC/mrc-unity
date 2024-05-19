@@ -16986,8 +16986,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 725006375}
+  m_Children: [{fileID: 725006375}]
   m_Father: {fileID: 100272690}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &482688721
@@ -52289,19 +52288,11 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1384740099}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 823728090}
-        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: GoARScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: [{m_Target: {fileID: 823728090}, m_TargetAssemblyTypeName: 'SceneChanger,
+            Assembly-CSharp', m_MethodName: GoARScene, m_Mode: 1, m_Arguments: {m_ObjectArgument: {
+              fileID: 0}, m_ObjectArgumentAssemblyTypeName: 'UnityEngine.Object, UnityEngine',
+            m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: '', m_BoolArgument: 0},
+          m_CallState: 2}]
 --- !u!114 &1384740099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53782,6 +53773,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ProfilePortal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7799892455275266116, guid: 172848b785f885044bcb5d01746e3ba4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7799892455455013445, guid: 172848b785f885044bcb5d01746e3ba4,
         type: 3}
@@ -67069,15 +67065,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4000010795186232, guid: bcd9ada952ed249879f2149c2266f8a6,
-        type: 3}
-      insertIndex: 0
-      addedObject: {fileID: 616026285}
-    - targetCorrespondingSourceObject: {fileID: 4000010795186232, guid: bcd9ada952ed249879f2149c2266f8a6,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 620020913}
+    m_AddedGameObjects: [{targetCorrespondingSourceObject: {fileID: 4000010795186232,
+          guid: bcd9ada952ed249879f2149c2266f8a6, type: 3}, insertIndex: 0, addedObject: {
+          fileID: 616026285}}, {targetCorrespondingSourceObject: {fileID: 4000010795186232,
+          guid: bcd9ada952ed249879f2149c2266f8a6, type: 3}, insertIndex: -1, addedObject: {
+          fileID: 620020913}}]
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1000012781010458, guid: bcd9ada952ed249879f2149c2266f8a6,
         type: 3}

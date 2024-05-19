@@ -9,7 +9,7 @@ public class ButtonManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        button.interactable = false; // 버튼 비활성화
+        button.interactable = true; // 버튼 비활성화
     }
 
     public void EnableButton()
