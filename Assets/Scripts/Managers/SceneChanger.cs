@@ -32,6 +32,10 @@ public class SceneChanger : MonoBehaviour
     {
         StartCoroutine(ChangeScene("Scenes/MainScene"));
     }
+    public void GoARScene()
+    {
+        StartCoroutine(ChangeScene("Scenes/ARScene"));
+    }
 
     // 씬 전환 함수
     public IEnumerator ChangeScene(string sceneName)

@@ -40,10 +40,10 @@ public class MoveCar : MonoBehaviour
                 break;
             // MR 인게임
             case 1:
-                maxSpeed = 4.0f;
-                acceleration = 1.5f;
+                maxSpeed = 1.0f;
+                acceleration = 0.1f;
                 currentSpeed = 0.0f;
-                turnSpeed = 80f;
+                turnSpeed = 20f;
                 break;
             // 실수로 gamemode 입력하지 않았을때는 MR을 기준으로 함
             default:
@@ -92,6 +92,33 @@ public class MoveCar : MonoBehaviour
         }
 
         RaycastHit hit;
+        // VR용 앞이 길게 박는다면
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 3.5f)) {
+            if (hit.collider.name.Contains("Fence")) {
+                // 후진은 허용 (앞이 박았으므로)
+                if (currentSpeed < 0)
+                {
+                    transform.Translate(Vector3.forward * Time.deltaTime * currentSpeed);
+                }
+                // 회전
+                transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
+                return;
+            }
+        }
+
+        // VR용 뒤가 길게 박는다면
+        if (Physics.Raycast(transform.position, transform.forward * -1f, out hit, 3.5f)) {
+            if (hit.collider.name.Contains("Fence")) {
+                // 전진은 허용 (뒤가 박았으므로)
+                if (currentSpeed > 0)
+                {
+                    transform.Translate(Vector3.forward * Time.deltaTime * currentSpeed);
+                }
+                // 회전
+                transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
+                return;
+            }
+        }
 
         // 앞이 박는다면
         if (Physics.Raycast(transform.position, transform.forward, out hit, 0.4f))
@@ -114,6 +141,11 @@ public class MoveCar : MonoBehaviour
                     // 전진 또는 후진 실행
                     transform.Translate(Vector3.forward * Time.deltaTime * currentSpeed);
                 } 
+            }
+            else 
+            {   
+                // 전진 또는 후진 실행
+                transform.Translate(Vector3.forward * Time.deltaTime * currentSpeed);
             }
         }
 
@@ -139,6 +171,11 @@ public class MoveCar : MonoBehaviour
                     transform.Translate(Vector3.forward * Time.deltaTime * currentSpeed);
                 } 
             }
+            else 
+            {   
+                // 전진 또는 후진 실행
+                transform.Translate(Vector3.forward * Time.deltaTime * currentSpeed);
+            }
         }
         else 
         {
@@ -148,9 +185,5 @@ public class MoveCar : MonoBehaviour
         
         // 회전
         transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
-    }
-
-    void OnCollisionEnter(Collision other) {
-        Debug.Log("Collision으로 "+ other.collider.name +"를 박긴 했네요");
     }
 }

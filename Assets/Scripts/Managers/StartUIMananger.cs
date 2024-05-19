@@ -15,6 +15,8 @@ public class StartUIManager : MonoBehaviour
     public GameObject startUI, connectingUI, SucessConnectingUI, FailedConnectingUI;
     public ButtonManager buttonManager;
 
+    private bool checkSuccess;
+
     void Start()
     {
         startUI.SetActive(true);
@@ -27,19 +29,20 @@ public class StartUIManager : MonoBehaviour
 
     void Update()
     {
+        if(checkSuccess)
+        {
+            StartCoroutine(OnTaskCompleted(SucessConnectingUI, 3.0f));
+        }
 
     }
 
     public void OnClickConnectBtn()
     {
+        StartCoroutine(OnTaskCompleted(connectingUI, 3.0f));
         try
         {
-            connectingUI.SetActive(true);
-            NetworkManager.Instance.ConnectToUDPServer();
-            // await NetworkManager.Instance.ConnectToTCPServer();
-            connectingUI.SetActive(false);
-            StartCoroutine(OnTaskCompleted(SucessConnectingUI, 3.0f));
-            buttonManager.EnableButton(); // 시작 버튼 활성화
+            NetworkManager.Instance.ConnectToControlUDPServer();
+            NetworkManager.Instance.ConnectToCameraUDPServer();
         }
         catch (Exception e)
         {
@@ -66,5 +69,14 @@ public class StartUIManager : MonoBehaviour
         yield return new WaitForSeconds(displayTime);
         // UI 비활성화
         uiElement.SetActive(false);
+
+        if (uiElement == SucessConnectingUI)
+        {
+            checkSuccess = false;
+            buttonManager.EnableButton(); // 시작 버튼 활성화
+        } else if (uiElement == connectingUI)
+        {
+            checkSuccess = true;
+        }
     }
 }

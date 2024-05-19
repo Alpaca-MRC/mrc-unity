@@ -34477,19 +34477,27 @@ MonoBehaviour:
   m_RepeatRate: 0.1
   m_TrackedDeviceDragThresholdMultiplier: 1.4
   m_TrackedScrollDeltaMultiplier: 5
-  m_ActiveInputMode: 0
+  m_ActiveInputMode: 1
   m_MaxTrackedDeviceRaycastDistance: 1000
   m_EnableXRInput: 1
   m_EnableMouseInput: 1
   m_EnableTouchInput: 1
-  m_PointAction: {fileID: 0}
-  m_LeftClickAction: {fileID: 0}
-  m_MiddleClickAction: {fileID: 0}
-  m_RightClickAction: {fileID: 0}
-  m_ScrollWheelAction: {fileID: 0}
-  m_NavigateAction: {fileID: 0}
-  m_SubmitAction: {fileID: 0}
-  m_CancelAction: {fileID: 0}
+  m_PointAction: {fileID: 2869410428622933342, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
+  m_LeftClickAction: {fileID: 1855836014308820768, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
+  m_MiddleClickAction: {fileID: -6289560987278519447, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
+  m_RightClickAction: {fileID: -2562941478296515153, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
+  m_ScrollWheelAction: {fileID: 5825226938762934180, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
+  m_NavigateAction: {fileID: -7967456002180160679, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
+  m_SubmitAction: {fileID: 3994978066732806534, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
+  m_CancelAction: {fileID: 2387711382375263438, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
   m_EnableBuiltinActionsAsFallback: 1
   m_EnableGamepadInput: 1
   m_EnableJoystickInput: 1
@@ -51744,15 +51752,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1384740099}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: [{m_Target: {fileID: 823728090}, m_TargetAssemblyTypeName: 'SceneChanger,
-            Assembly-CSharp', m_MethodName: GoARScene, m_Mode: 1, m_Arguments: {m_ObjectArgument: {
-              fileID: 0}, m_ObjectArgumentAssemblyTypeName: 'UnityEngine.Object, UnityEngine',
-            m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: '', m_BoolArgument: 0},
-          m_CallState: 2}, {m_Target: {fileID: 1892148372}, m_TargetAssemblyTypeName: 'SceneChanger,
-            Assembly-CSharp', m_MethodName: GoProfileScene, m_Mode: 1, m_Arguments: {
-            m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: 'UnityEngine.Object,
-              UnityEngine', m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: '',
-            m_BoolArgument: 0}, m_CallState: 2}]
+      m_Calls:
+      - m_Target: {fileID: 823728090}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: GoARScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1384740099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66659,7 +66671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010795186232, guid: bcd9ada952ed249879f2149c2266f8a6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.034251
+      value: 12.03
       objectReference: {fileID: 0}
     - target: {fileID: 4000010795186232, guid: bcd9ada952ed249879f2149c2266f8a6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -66681,20 +66693,34 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 4000010904795208, guid: bcd9ada952ed249879f2149c2266f8a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010904795208, guid: bcd9ada952ed249879f2149c2266f8a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010904795208, guid: bcd9ada952ed249879f2149c2266f8a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0015821978
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010904795208, guid: bcd9ada952ed249879f2149c2266f8a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0.181
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: [{targetCorrespondingSourceObject: {fileID: 4000010795186232,
-          guid: bcd9ada952ed249879f2149c2266f8a6, type: 3}, insertIndex: -1, addedObject: {
-          fileID: 620020913}}]
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4000010795186232, guid: bcd9ada952ed249879f2149c2266f8a6,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 620020913}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1000012781010458, guid: bcd9ada952ed249879f2149c2266f8a6,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1884078560}
-    - targetCorrespondingSourceObject: {fileID: 1000012781010458, guid: bcd9ada952ed249879f2149c2266f8a6,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1884078563}
     - targetCorrespondingSourceObject: {fileID: 1000012781010458, guid: bcd9ada952ed249879f2149c2266f8a6,
         type: 3}
       insertIndex: -1
@@ -66777,28 +66803,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1884078563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1884078559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6ddbcf71804d5e448b2bba237905b9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireRate: 0.1
-  FirePoint: {fileID: 0}
-  inputActionsAsset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f,
-    type: 3}
-  MaxLength: 40
-  Prefabs:
-  - {fileID: 1698648575761504, guid: cf263124cbe15f448b6a2ec0ef11bd54, type: 3}
-  myCar: {fileID: 1884078559}
+  m_Size: {x: 2, y: 0.6, z: 6.9}
+  m_Center: {x: 0, y: 0.6, z: 0.3}
 --- !u!1 &1884955600
 GameObject:
   m_ObjectHideFlags: 0
