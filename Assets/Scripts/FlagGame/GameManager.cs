@@ -288,6 +288,7 @@ public class GameManager : MonoBehaviour
         // 플레이어 카트 생성
         friendlyCart.SetActive(true);
         friendlyCart.transform.SetPositionAndRotation(examplePosition, exampleRotation);
+        
         // 플레이어 카트 이동 및 사격 제한
         friendlyCart.GetComponent<FriendlyCarMove>().enabled = false;
         friendlyCart.GetComponent<FriendlyShootingCar>().enabled = false;
