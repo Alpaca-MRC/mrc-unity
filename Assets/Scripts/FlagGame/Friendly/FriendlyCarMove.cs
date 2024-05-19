@@ -53,7 +53,7 @@ public class FriendlyCarMove : MonoBehaviour
         turnSpeed = 80f;
 
         // 상태 초기화
-        maxHealth = 120;
+        maxHealth = 40;
         curHealth = maxHealth;
         isStun = false;
     }
@@ -179,7 +179,7 @@ public class FriendlyCarMove : MonoBehaviour
             curHealth -= 1;
             float hpPercentage = (float) curHealth / maxHealth;
             hpBarScript.UpdateHealthBar(hpPercentage);
-            
+
             // 피가 0이 된다면
             if (curHealth <= 0) {
                 Exhaustion();

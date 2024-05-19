@@ -9,27 +9,47 @@ public class EnemyShootingCar : MonoBehaviour
 {
     [Header("Fire rate")]
     private int Prefab;
-    [Range(0.0f, 1.0f)]
-    public float fireRate = 0f;
+    // 연사 속도
+    private float fireRate = 0.05f;
     private float fireCountdown = 0f;
     public GameObject FirePoint;
     public GameObject[] Prefabs;
     public GameManager gameManager;
     public FlagManager flagManager;
 
+    // 최대 탄약 수
+    public float maxMagazine;
+    // 남은 탄약 수
+    public float curMagazine;
 
     // 플레이어 카트를 바라보는 각도 범위
     public float shootingAngleThreshold = 30f;
 
+    void Start(){
+        maxMagazine = 200f;
+        curMagazine = maxMagazine;
+    }
+
     void Update()
     {
+        // 남아있는 탄약이 없으면 총을 쏘지 않음
+        if (curMagazine == 0)
+        {
+            return;
+        }
+        // 예외처리 : 잔량이 0 미만으로 떨어졌다면 0으로 설정함
+        else if (curMagazine < 0)
+        {
+            curMagazine = 0;
+            return;
+        }
+
         // RC카가 바라보는 방향을 총의 방향으로 설정
         FirePoint.transform.rotation = transform.rotation;
 
-        // 연사
+        // 사격
         if (fireCountdown <= 0f && CanShootPlayer() && flagManager.flagState == FlagState.OnPlayer && gameManager.gameState == GameState.InProgress)
         {
-            // Debug.Log("슈팅");
             Instantiate(Prefabs[Prefab], FirePoint.transform.position, FirePoint.transform.rotation);
             fireCountdown = 0;
             fireCountdown += fireRate;

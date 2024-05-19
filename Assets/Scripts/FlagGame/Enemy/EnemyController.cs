@@ -49,7 +49,7 @@ public class EnemyController : MonoBehaviour
     void InitializationGameSetting()
     {
         // 상태 초기화
-        maxHealth = 130;  // 적 피가 좀 더 많음
+        maxHealth = 30;  // 적 피가 좀 더 적음
         curHealth = maxHealth;
         isStun = false;
         isPlayerInRange = false;
