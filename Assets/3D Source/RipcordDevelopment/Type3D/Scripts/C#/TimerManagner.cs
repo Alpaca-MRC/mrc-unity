@@ -17,7 +17,7 @@ namespace Type3D
             int minutes = (int)Mathf.Floor(_time / 60);
             string seconds = Mathf.Floor(_time % 60).ToString("00");
             string hundredths = Mathf.Floor((_time * 100) % 100).ToString("00");
-
+            if(minutes < 0) return;
             timerDigits[4].GetComponent<MeshFilter>().mesh = numbers[minutes];
             timerDigits[3].GetComponent<MeshFilter>().mesh = numbers[Convert.ToInt32(seconds.Substring(0, 1))];
             timerDigits[2].GetComponent<MeshFilter>().mesh = numbers[Convert.ToInt32(seconds.Substring(1, 1))];

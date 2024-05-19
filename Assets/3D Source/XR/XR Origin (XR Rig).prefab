@@ -531,6 +531,9 @@ MonoBehaviour:
     type: 3}
   _leftRayInteractor: {fileID: 3757804698442645337, guid: 30c7c65d9dbaf3a439f8ac531340e114,
     type: 3}
+  timerManager: {fileID: 0}
+  friendlyScoreManager: {fileID: 0}
+  enemyScoreManager: {fileID: 0}
   _gatePrefabs:
   - {fileID: 87215776536517964, guid: 9616566c4df416c49886fbe0be22cc52, type: 3}
   - {fileID: 8544985869220824952, guid: 7ddb3d7bc34bc3741b1d2a54bb0add55, type: 3}
@@ -538,6 +541,8 @@ MonoBehaviour:
   gateTwo: {fileID: 0}
   gateOnePosition: {fileID: 0}
   gateTwoPosition: {fileID: 0}
+  lineFireworksParticle: {fileID: 0}
+  fanFireworksParticle: {fileID: 0}
   flagManager: {fileID: 4461071782106265470, guid: b9d294838ca8d8d409c24de0a2ec7106,
     type: 3}
   flag: {fileID: 0}
@@ -579,15 +584,9 @@ MonoBehaviour:
     type: 3}
   winGameObject: {fileID: 5679867811898144088, guid: 5c5cff8d9cd392a459525b93c9ce662f,
     type: 3}
+  InGameGameObject: {fileID: 0}
   loseGameObject: {fileID: 6739584480251884428, guid: e7563411b30fdd04ebb02a2ed2303d89,
     type: 3}
-  timer: {fileID: 3122861402189292142, guid: d020668920029fd48ba65f79cc7e8d9f, type: 3}
-  playerScoreText: {fileID: 5160691674443425126, guid: 756286b3cae420c4c877dd96313581bd,
-    type: 3}
-  enemyScoreText: {fileID: 7652250790697829379, guid: 4ba0fcd702109284fbb62817c261dfee,
-    type: 3}
-  playerScore: 0
-  enemyScore: 0
 --- !u!1 &7244690944645723575
 GameObject:
   m_ObjectHideFlags: 0
