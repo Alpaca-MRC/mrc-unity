@@ -12,54 +12,34 @@ using UnityEngine.UI;
 public class StartUIManager : MonoBehaviour
 {
     SceneChanger sceneChanger;
-    public GameObject startUI, connectingUI, SucessConnectingUI, FailedConnectingUI;
-    public ButtonManager buttonManager;
+    public GameObject startButton, spinner, completeUI;
 
-    private bool checkSuccess;
+    private bool isStartButtonClicked = false;
 
     void Start()
     {
-        startUI.SetActive(true);
-        connectingUI.SetActive(false);
-        SucessConnectingUI.SetActive(false);
-        FailedConnectingUI.SetActive(false);
         sceneChanger = FindAnyObjectByType<SceneChanger>();
-        buttonManager = FindAnyObjectByType<ButtonManager>();
+        startButton.SetActive(true);
+        spinner.SetActive(false);
+        completeUI.SetActive(false);
     }
 
     void Update()
     {
-        if(checkSuccess)
-        {
-            StartCoroutine(OnTaskCompleted(SucessConnectingUI, 3.0f));
-        }
 
     }
 
     public void OnClickConnectBtn()
     {
-        StartCoroutine(OnTaskCompleted(connectingUI, 3.0f));
-        try
-        {
-            NetworkManager.Instance.ConnectToControlUDPServer();
-            NetworkManager.Instance.ConnectToCameraUDPServer();
-        }
-        catch (Exception e)
-        {
-            connectingUI.SetActive(false);
-            StartCoroutine(OnTaskCompleted(FailedConnectingUI, 3.0f));  
-            Debug.Log("TCP connection error2: " + e);
-        }
+        StartCoroutine(ChangeSceneAfterTasks());
     }
-
-    public void OnClickStart() {
-        // 연결이 성공했다면 메인 씬으로 전환시키기
-        sceneChanger.GoMainScene();
-    }
-    
-    public void OnClickOption() {
-        Debug.Log("옵션");
-    }
+    private IEnumerator ChangeSceneAfterTasks()
+{
+    yield return StartCoroutine(OnTaskCompleted(startButton, 1.0f));
+    yield return StartCoroutine(OnTaskCompleted(spinner, 3.0f));
+    yield return StartCoroutine(OnTaskCompleted(completeUI, 1.0f));
+    sceneChanger.GoMainScene();
+}
 
     private IEnumerator OnTaskCompleted(GameObject uiElement, float displayTime)
     {
@@ -69,14 +49,5 @@ public class StartUIManager : MonoBehaviour
         yield return new WaitForSeconds(displayTime);
         // UI 비활성화
         uiElement.SetActive(false);
-
-        if (uiElement == SucessConnectingUI)
-        {
-            checkSuccess = false;
-            buttonManager.EnableButton(); // 시작 버튼 활성화
-        } else if (uiElement == connectingUI)
-        {
-            checkSuccess = true;
-        }
     }
 }

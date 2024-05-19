@@ -28335,7 +28335,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &772726371
 RectTransform:
   m_ObjectHideFlags: 0
@@ -51975,11 +51975,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1384740099}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: [{m_Target: {fileID: 823728090}, m_TargetAssemblyTypeName: 'SceneChanger,
-            Assembly-CSharp', m_MethodName: GoARScene, m_Mode: 1, m_Arguments: {m_ObjectArgument: {
-              fileID: 0}, m_ObjectArgumentAssemblyTypeName: 'UnityEngine.Object, UnityEngine',
-            m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: '', m_BoolArgument: 0},
-          m_CallState: 2}]
+      m_Calls:
+      - m_Target: {fileID: 823728090}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: GoARScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1384740099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53527,6 +53535,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ProfilePortal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7799892455275266116, guid: 172848b785f885044bcb5d01746e3ba4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7799892455455013445, guid: 172848b785f885044bcb5d01746e3ba4,
         type: 3}
@@ -57342,8 +57355,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uAC8C\uC784 \uC2DC\uC791"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e214aff3970272f43aae29ab5c9394ed, type: 2}
-  m_sharedMaterial: {fileID: 1511661302528141075, guid: e214aff3970272f43aae29ab5c9394ed,
+  m_fontAsset: {fileID: 11400000, guid: 49d9df1de7073ab409a94a3e6cfee4bc, type: 2}
+  m_sharedMaterial: {fileID: -2644734458101766986, guid: 49d9df1de7073ab409a94a3e6cfee4bc,
     type: 2}
   m_fontSharedMaterials:
   - {fileID: 1511661302528141075, guid: e214aff3970272f43aae29ab5c9394ed, type: 2}
@@ -66926,9 +66939,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: [{targetCorrespondingSourceObject: {fileID: 4000010795186232,
-          guid: bcd9ada952ed249879f2149c2266f8a6, type: 3}, insertIndex: -1, addedObject: {
-          fileID: 620020913}}]
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4000010795186232, guid: bcd9ada952ed249879f2149c2266f8a6,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 620020913}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1000012781010458, guid: bcd9ada952ed249879f2149c2266f8a6,
         type: 3}
