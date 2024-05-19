@@ -57,4 +57,8 @@ public class FriendlyShootingCar : MonoBehaviour
 
         fireCountdown -= Time.deltaTime;
     }
+
+    public void SetCurrentMagazineToFull() {
+        curMagazine = maxMagazine;
+    }
 }
