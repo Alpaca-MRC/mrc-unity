@@ -60,8 +60,8 @@ public class NetworkManager : MonoBehaviour
     {
         if (isControllerInputEnabled)
         {
-            CheckControllerInput();
-            CheckCameraData();
+            // CheckControllerInput();
+            // CheckCameraData();
         }
     }
 
@@ -83,12 +83,12 @@ public class NetworkManager : MonoBehaviour
         isControllerInputEnabled = scene.name == "ARScene"; // MR 씬에서만 컨트롤러 값 전송
         if (scene.name == "ARScene")
         {
-            Cube = GameObject.Find("Cube");
-            StartToReceiveData();
-            if (Cube == null)
-            {
-                Debug.LogError("Cube not found in the scene.");
-            }
+            // Cube = GameObject.Find("Cube");
+            // StartToReceiveData();
+            // if (Cube == null)
+            // {
+            //     Debug.LogError("Cube not found in the scene.");
+            // }
         }
     }
 

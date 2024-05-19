@@ -52,6 +52,7 @@ public class ARSceneController : MonoBehaviour
     }
 
     void OnDestroy() {
+        if (_planeManager == null) return;
         _planeManager.planesChanged -= OnPlanesChanged;
     }
 }

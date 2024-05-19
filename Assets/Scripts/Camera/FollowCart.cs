@@ -10,7 +10,30 @@ public class FollowCart : MonoBehaviour
     public float lookAtForwardOffset = 2f; // 카메라가 플레이어의 어느 정도 앞을 바라보게 할지
     public float rightOffset = 0.5f;     // 카메라를 오른쪽으로 이동시키는 거리
 
-    void Start() {}
+    void Start() 
+    {
+        // xr origin 활성화 확인하고 비활성화 시 활성화 하기
+        // XR Origin 오브젝트 찾기
+        GameObject xrOrigin = GameObject.Find("XR Origin (XR Rig)");
+
+        // XR Origin이 비활성화된 경우 활성화
+        if (xrOrigin != null)
+        {
+            if (!xrOrigin.activeSelf)
+            {
+                xrOrigin.SetActive(true);
+                Debug.Log("XR Origin 활성화됨");
+            }
+            else
+            {
+                Debug.Log("XR Origin 이미 활성화됨");
+            }
+        }
+        else
+        {
+            Debug.LogError("XR Origin 오브젝트를 찾을 수 없음");
+        }
+    }
 
     // 1프레임마다 실행
     void LateUpdate()
