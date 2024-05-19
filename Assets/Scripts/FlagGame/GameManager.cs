@@ -100,9 +100,11 @@ public class GameManager : MonoBehaviour
     public GameObject twoGameObject;                    // 2 
     public GameObject threeGameObject;                  // 3
     public GameObject winGameObject;                    // win
+    public GameObject loseGameObject;                   // lose
+    public GameObject drawGameObject;                   // draw
+
     [SerializeField]
     private GameObject InGameGameObject;
-    public GameObject loseGameObject;                   // lose
 
     void Start()
     {
@@ -161,6 +163,7 @@ public class GameManager : MonoBehaviour
         countDownGameObject.SetActive(false);
         winGameObject.SetActive(false);
         loseGameObject.SetActive(false);
+        drawGameObject.SetActive(false);
         InGameGameObject.SetActive(false);
 
         if (UIGameObject != null) UIGameObject.SetActive(true);
@@ -286,7 +289,6 @@ public class GameManager : MonoBehaviour
         StartCoroutine(StartCountdown());
         // 게임 설정 초기화
         InitializationGameSetting();
-        ActivateUI(InGameGameObject);
     }
 
     // 아군 골대 앞 카트 위치 생성(포탈)
@@ -342,18 +344,6 @@ public class GameManager : MonoBehaviour
                 // 잠갔다면 infoStatus 하나 올리기
                 _infoStatus += 1;
                 _leftRayInteractor.enabled = false;
-
-                // 골대의 Rotation 변화(서로 바라보아야 함)를 위해 anchor 주석 처리
-                // if (instance.GetComponent<ARAnchor>() == null) {
-                //     ARAnchor anchor = instance.AddComponent<ARAnchor>();
-
-                //     if (anchor != null) {
-                //         _anchors.Add(anchor);
-                //     }
-                //     else {
-                //         Debug.LogError("Anchor가 없어요...");
-                //     }
-                // }
 
                 if (_infoStatus == 1) {
                     gateOne = instance;
@@ -422,15 +412,31 @@ public class GameManager : MonoBehaviour
         // 플레이어 카트 이동 및 사격 허용
         friendlyCart.gameObject.GetComponent<FriendlyCarMove>().enabled = true;
         friendlyCart.gameObject.GetComponent<FriendlyShootingCar>().enabled = true;
+
+        ActivateUI(InGameGameObject);
+
         // 적 카트 이동 및 사격
         StartCoroutine(timerManager.GameTimer(gameTimeInSeconds));
     }
 
-    void EndGame()
+    public void EndGame()
     {
         // 게임 종료 처리 구현
         gameState = GameState.End;
-        Debug.Log("게임 종료");
+
+        // 왼쪽 컨트롤러 활성화
+        _leftRayInteractor.enabled = true;
+
+        // 이동, 사격 제한
+        friendlyCart.GetComponent<FriendlyCarMove>().enabled = false;
+        friendlyCart.GetComponent<FriendlyShootingCar>().enabled = false;
+
+        // 승패에 따라 UI 띄우기
+        int friendlyScore = friendlyScoreManager.score;
+        int enemyScore = enemyScoreManager.score;
+        if (friendlyScore > enemyScore) ActivateUI(winGameObject);
+        else if (friendlyScore < enemyScore) ActivateUI(loseGameObject);
+        else ActivateUI(drawGameObject);
     }
 
     /// <summary>

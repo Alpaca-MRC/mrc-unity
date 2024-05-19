@@ -10,7 +10,7 @@ namespace Type3D
         public GameObject[] scoreDigits;			// 점수의 각 자리 숫자를 표시할 게임 오브젝트 배열
         public bool animateOnUpdate;				// 점수 업데이트 시 애니메이션 효과를 적용할지 여부
 
-        [HideInInspector]	public int score;		// 타입3D 문자로 변환될 점수 값
+        [HideInInspector] public int score;		// 타입3D 문자로 변환될 점수 값
 
         public void UpdateScore ()
         {

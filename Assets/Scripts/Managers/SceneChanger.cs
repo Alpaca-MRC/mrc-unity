@@ -30,7 +30,14 @@ public class SceneChanger : MonoBehaviour
 
     public void GoMainScene()
     {
+        Debug.Log("메인 씬으로 이동");
         StartCoroutine(ChangeScene("Scenes/MainScene"));
+    }
+
+    public void GoARScene()
+    {
+        Debug.Log("AR 씬으로 이동");
+        StartCoroutine(ChangeScene("Scenes/ARScene"));
     }
 
     // 씬 전환 함수
