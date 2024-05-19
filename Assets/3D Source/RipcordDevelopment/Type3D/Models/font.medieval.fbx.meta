@@ -1,0 +1,425 @@
+fileFormatVersion: 2
+guid: d2e64c2fc5dc43a4ba2fcf0449975ee6
+timeCreated: 1516637693
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: MESH medieval.punc.apostrophe
+    100004: MESH medieval.punc.colon
+    100006: MESH medieval.punc.comma
+    100008: MESH medieval.punc.exclamation
+    100010: MESH medieval.punc.period
+    100012: MESH medieval.punc.question
+    100014: MESH medieval.punc.quotation
+    100016: MESH medieval.punc.semiColon
+    100018: MESH medieval.symbol.ampersand
+    100020: MESH medieval.symbol.asterisk
+    100022: MESH medieval.symbol.at
+    100024: MESH medieval.symbol.bracket.left
+    100026: MESH medieval.symbol.bracket.right
+    100028: MESH medieval.symbol.dollar
+    100030: MESH medieval.symbol.equal
+    100032: MESH medieval.symbol.minus
+    100034: MESH medieval.symbol.number
+    100036: MESH medieval.symbol.percent
+    100038: MESH medieval.symbol.plus
+    100040: MESH medieval.symbol.slash001
+    100042: MESH medieval.upper.a
+    100044: MESH medieval.upper.b
+    100046: MESH medieval.upper.c
+    100048: MESH medieval.upper.d
+    100050: MESH medieval.upper.e
+    100052: MESH medieval.upper.f
+    100054: MESH medieval.upper.g
+    100056: MESH medieval.upper.h
+    100058: MESH medieval.upper.i
+    100060: MESH medieval.upper.j
+    100062: MESH medieval.upper.k
+    100064: MESH medieval.upper.l
+    100066: MESH medieval.upper.m
+    100068: MESH medieval.upper.v
+    100070: MESH medieval.upper.x
+    100072: MESH medieval.upper.z
+    100074: Object003
+    100076: Object004
+    100078: Object005
+    100080: Object006
+    100082: MESH medieval.symbol.slash
+    100084: MESH medieval.upper.u
+    100086: MESH medieval.upper.n
+    100088: MESH medieval.upper.o
+    100090: MESH medieval.upper.p
+    100092: MESH medieval.upper.q
+    100094: MESH medieval.upper.r
+    100096: MESH medieval.upper.s
+    100098: MESH medieval.upper.t
+    100100: MESH medieval.upper.w
+    100102: MESH medieval.upper.y
+    100104: MESH medieval.number.009
+    100106: MESH medieval.number.010
+    100108: MESH medieval.number.011
+    100110: MESH medieval.number.012
+    100112: MESH medieval.number.013
+    100114: MESH medieval.number.014
+    100116: MESH medieval.number.015
+    100118: MESH medieval.number.3
+    100120: MESH medieval.number.6
+    100122: MESH medieval.number.9
+    100124: MESH medieval.number.0
+    100126: MESH medieval.number.1
+    100128: MESH medieval.number.2
+    100130: MESH medieval.number.4
+    100132: MESH medieval.number.5
+    100134: MESH medieval.number.7
+    100136: MESH medieval.number.8
+    100138: MESH medieval.replacement
+    400000: //RootNode
+    400002: MESH medieval.punc.apostrophe
+    400004: MESH medieval.punc.colon
+    400006: MESH medieval.punc.comma
+    400008: MESH medieval.punc.exclamation
+    400010: MESH medieval.punc.period
+    400012: MESH medieval.punc.question
+    400014: MESH medieval.punc.quotation
+    400016: MESH medieval.punc.semiColon
+    400018: MESH medieval.symbol.ampersand
+    400020: MESH medieval.symbol.asterisk
+    400022: MESH medieval.symbol.at
+    400024: MESH medieval.symbol.bracket.left
+    400026: MESH medieval.symbol.bracket.right
+    400028: MESH medieval.symbol.dollar
+    400030: MESH medieval.symbol.equal
+    400032: MESH medieval.symbol.minus
+    400034: MESH medieval.symbol.number
+    400036: MESH medieval.symbol.percent
+    400038: MESH medieval.symbol.plus
+    400040: MESH medieval.symbol.slash001
+    400042: MESH medieval.upper.a
+    400044: MESH medieval.upper.b
+    400046: MESH medieval.upper.c
+    400048: MESH medieval.upper.d
+    400050: MESH medieval.upper.e
+    400052: MESH medieval.upper.f
+    400054: MESH medieval.upper.g
+    400056: MESH medieval.upper.h
+    400058: MESH medieval.upper.i
+    400060: MESH medieval.upper.j
+    400062: MESH medieval.upper.k
+    400064: MESH medieval.upper.l
+    400066: MESH medieval.upper.m
+    400068: MESH medieval.upper.v
+    400070: MESH medieval.upper.x
+    400072: MESH medieval.upper.z
+    400074: Object003
+    400076: Object004
+    400078: Object005
+    400080: Object006
+    400082: MESH medieval.symbol.slash
+    400084: MESH medieval.upper.u
+    400086: MESH medieval.upper.n
+    400088: MESH medieval.upper.o
+    400090: MESH medieval.upper.p
+    400092: MESH medieval.upper.q
+    400094: MESH medieval.upper.r
+    400096: MESH medieval.upper.s
+    400098: MESH medieval.upper.t
+    400100: MESH medieval.upper.w
+    400102: MESH medieval.upper.y
+    400104: MESH medieval.number.009
+    400106: MESH medieval.number.010
+    400108: MESH medieval.number.011
+    400110: MESH medieval.number.012
+    400112: MESH medieval.number.013
+    400114: MESH medieval.number.014
+    400116: MESH medieval.number.015
+    400118: MESH medieval.number.3
+    400120: MESH medieval.number.6
+    400122: MESH medieval.number.9
+    400124: MESH medieval.number.0
+    400126: MESH medieval.number.1
+    400128: MESH medieval.number.2
+    400130: MESH medieval.number.4
+    400132: MESH medieval.number.5
+    400134: MESH medieval.number.7
+    400136: MESH medieval.number.8
+    400138: MESH medieval.replacement
+    2300000: MESH medieval.punc.apostrophe
+    2300002: MESH medieval.punc.colon
+    2300004: MESH medieval.punc.comma
+    2300006: MESH medieval.punc.exclamation
+    2300008: MESH medieval.punc.period
+    2300010: MESH medieval.punc.question
+    2300012: MESH medieval.punc.quotation
+    2300014: MESH medieval.punc.semiColon
+    2300016: MESH medieval.symbol.ampersand
+    2300018: MESH medieval.symbol.asterisk
+    2300020: MESH medieval.symbol.at
+    2300022: MESH medieval.symbol.bracket.left
+    2300024: MESH medieval.symbol.bracket.right
+    2300026: MESH medieval.symbol.dollar
+    2300028: MESH medieval.symbol.equal
+    2300030: MESH medieval.symbol.minus
+    2300032: MESH medieval.symbol.number
+    2300034: MESH medieval.symbol.percent
+    2300036: MESH medieval.symbol.plus
+    2300038: MESH medieval.symbol.slash001
+    2300040: MESH medieval.upper.a
+    2300042: MESH medieval.upper.b
+    2300044: MESH medieval.upper.c
+    2300046: MESH medieval.upper.d
+    2300048: MESH medieval.upper.e
+    2300050: MESH medieval.upper.f
+    2300052: MESH medieval.upper.g
+    2300054: MESH medieval.upper.h
+    2300056: MESH medieval.upper.i
+    2300058: MESH medieval.upper.j
+    2300060: MESH medieval.upper.k
+    2300062: MESH medieval.upper.l
+    2300064: MESH medieval.upper.m
+    2300066: MESH medieval.upper.v
+    2300068: MESH medieval.upper.x
+    2300070: MESH medieval.upper.z
+    2300072: Object003
+    2300074: Object004
+    2300076: Object005
+    2300078: Object006
+    2300080: MESH medieval.symbol.slash
+    2300082: MESH medieval.upper.u
+    2300084: MESH medieval.upper.n
+    2300086: MESH medieval.upper.o
+    2300088: MESH medieval.upper.p
+    2300090: MESH medieval.upper.q
+    2300092: MESH medieval.upper.r
+    2300094: MESH medieval.upper.s
+    2300096: MESH medieval.upper.t
+    2300098: MESH medieval.upper.w
+    2300100: MESH medieval.upper.y
+    2300102: MESH medieval.number.009
+    2300104: MESH medieval.number.010
+    2300106: MESH medieval.number.011
+    2300108: MESH medieval.number.012
+    2300110: MESH medieval.number.013
+    2300112: MESH medieval.number.014
+    2300114: MESH medieval.number.015
+    2300116: MESH medieval.number.3
+    2300118: MESH medieval.number.6
+    2300120: MESH medieval.number.9
+    2300122: MESH medieval.number.0
+    2300124: MESH medieval.number.1
+    2300126: MESH medieval.number.2
+    2300128: MESH medieval.number.4
+    2300130: MESH medieval.number.5
+    2300132: MESH medieval.number.7
+    2300134: MESH medieval.number.8
+    2300136: MESH medieval.replacement
+    3300000: MESH medieval.punc.apostrophe
+    3300002: MESH medieval.punc.colon
+    3300004: MESH medieval.punc.comma
+    3300006: MESH medieval.punc.exclamation
+    3300008: MESH medieval.punc.period
+    3300010: MESH medieval.punc.question
+    3300012: MESH medieval.punc.quotation
+    3300014: MESH medieval.punc.semiColon
+    3300016: MESH medieval.symbol.ampersand
+    3300018: MESH medieval.symbol.asterisk
+    3300020: MESH medieval.symbol.at
+    3300022: MESH medieval.symbol.bracket.left
+    3300024: MESH medieval.symbol.bracket.right
+    3300026: MESH medieval.symbol.dollar
+    3300028: MESH medieval.symbol.equal
+    3300030: MESH medieval.symbol.minus
+    3300032: MESH medieval.symbol.number
+    3300034: MESH medieval.symbol.percent
+    3300036: MESH medieval.symbol.plus
+    3300038: MESH medieval.symbol.slash001
+    3300040: MESH medieval.upper.a
+    3300042: MESH medieval.upper.b
+    3300044: MESH medieval.upper.c
+    3300046: MESH medieval.upper.d
+    3300048: MESH medieval.upper.e
+    3300050: MESH medieval.upper.f
+    3300052: MESH medieval.upper.g
+    3300054: MESH medieval.upper.h
+    3300056: MESH medieval.upper.i
+    3300058: MESH medieval.upper.j
+    3300060: MESH medieval.upper.k
+    3300062: MESH medieval.upper.l
+    3300064: MESH medieval.upper.m
+    3300066: MESH medieval.upper.v
+    3300068: MESH medieval.upper.x
+    3300070: MESH medieval.upper.z
+    3300072: Object003
+    3300074: Object004
+    3300076: Object005
+    3300078: Object006
+    3300080: MESH medieval.symbol.slash
+    3300082: MESH medieval.upper.u
+    3300084: MESH medieval.upper.n
+    3300086: MESH medieval.upper.o
+    3300088: MESH medieval.upper.p
+    3300090: MESH medieval.upper.q
+    3300092: MESH medieval.upper.r
+    3300094: MESH medieval.upper.s
+    3300096: MESH medieval.upper.t
+    3300098: MESH medieval.upper.w
+    3300100: MESH medieval.upper.y
+    3300102: MESH medieval.number.009
+    3300104: MESH medieval.number.010
+    3300106: MESH medieval.number.011
+    3300108: MESH medieval.number.012
+    3300110: MESH medieval.number.013
+    3300112: MESH medieval.number.014
+    3300114: MESH medieval.number.015
+    3300116: MESH medieval.number.3
+    3300118: MESH medieval.number.6
+    3300120: MESH medieval.number.9
+    3300122: MESH medieval.number.0
+    3300124: MESH medieval.number.1
+    3300126: MESH medieval.number.2
+    3300128: MESH medieval.number.4
+    3300130: MESH medieval.number.5
+    3300132: MESH medieval.number.7
+    3300134: MESH medieval.number.8
+    3300136: MESH medieval.replacement
+    4300000: MESH medieval.upper.m
+    4300002: MESH medieval.upper.a
+    4300004: MESH medieval.upper.i
+    4300006: MESH medieval.upper.j
+    4300008: MESH medieval.punc.period
+    4300010: MESH medieval.punc.colon
+    4300012: MESH medieval.punc.quotation
+    4300014: MESH medieval.punc.comma
+    4300016: MESH medieval.upper.b
+    4300018: MESH medieval.punc.semiColon
+    4300020: MESH medieval.punc.apostrophe
+    4300022: MESH medieval.symbol.asterisk
+    4300024: MESH medieval.symbol.plus
+    4300026: MESH medieval.symbol.equal
+    4300028: MESH medieval.symbol.minus
+    4300030: MESH medieval.symbol.slash001
+    4300032: MESH medieval.symbol.bracket.right
+    4300034: MESH medieval.symbol.bracket.left
+    4300036: MESH medieval.symbol.number
+    4300038: MESH medieval.symbol.dollar
+    4300040: MESH medieval.punc.exclamation
+    4300042: MESH medieval.punc.question
+    4300044: MESH medieval.symbol.at
+    4300046: MESH medieval.symbol.ampersand
+    4300048: MESH medieval.symbol.percent
+    4300050: Object003
+    4300052: Object004
+    4300054: Object005
+    4300056: Object006
+    4300058: MESH medieval.upper.l
+    4300060: MESH medieval.upper.x
+    4300062: MESH medieval.upper.v
+    4300064: MESH medieval.upper.z
+    4300066: MESH medieval.upper.k
+    4300068: MESH medieval.upper.c
+    4300070: MESH medieval.upper.d
+    4300072: MESH medieval.upper.e
+    4300074: MESH medieval.upper.f
+    4300076: MESH medieval.upper.h
+    4300078: MESH medieval.upper.g
+    4300080: MESH medieval.symbol.slash
+    4300082: MESH medieval.upper.u
+    4300084: MESH medieval.upper.n
+    4300086: MESH medieval.upper.o
+    4300088: MESH medieval.upper.p
+    4300090: MESH medieval.upper.q
+    4300092: MESH medieval.upper.r
+    4300094: MESH medieval.upper.y
+    4300096: MESH medieval.upper.s
+    4300098: MESH medieval.upper.t
+    4300100: MESH medieval.upper.w
+    4300102: MESH medieval.number.009
+    4300104: MESH medieval.number.010
+    4300106: MESH medieval.number.011
+    4300108: MESH medieval.number.3
+    4300110: MESH medieval.number.012
+    4300112: MESH medieval.number.013
+    4300114: MESH medieval.number.6
+    4300116: MESH medieval.number.014
+    4300118: MESH medieval.number.015
+    4300120: MESH medieval.number.9
+    4300122: MESH medieval.number.0
+    4300124: MESH medieval.number.1
+    4300126: MESH medieval.number.2
+    4300128: MESH medieval.number.4
+    4300130: MESH medieval.number.5
+    4300132: MESH medieval.number.7
+    4300134: MESH medieval.number.8
+    4300136: MESH medieval.replacement
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

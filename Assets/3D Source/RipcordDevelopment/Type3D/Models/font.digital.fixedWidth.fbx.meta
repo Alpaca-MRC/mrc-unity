@@ -1,0 +1,552 @@
+fileFormatVersion: 2
+guid: 0cbb2b7c21ebff74e914091b98c2d061
+timeCreated: 1500987618
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: MESH digital.number.0.fixed
+    100004: MESH digital.number.1.fixed
+    100006: MESH digital.number.2.fixed
+    100008: MESH digital.number.3.fixed
+    100010: MESH digital.number.4.fixed
+    100012: MESH digital.number.5.fixed
+    100014: MESH digital.number.6.fixed
+    100016: MESH digital.number.7.fixed
+    100018: MESH digital.number.8.fixed
+    100020: MESH digital.number.9.fixed
+    100022: MESH fixedDigital.lower.a
+    100024: MESH fixedDigital.lower.b
+    100026: MESH fixedDigital.lower.c
+    100028: MESH fixedDigital.lower.d
+    100030: MESH fixedDigital.lower.e
+    100032: MESH fixedDigital.lower.f
+    100034: MESH fixedDigital.lower.g
+    100036: MESH fixedDigital.lower.h
+    100038: MESH fixedDigital.lower.i
+    100040: MESH fixedDigital.lower.j
+    100042: MESH fixedDigital.lower.k
+    100044: MESH fixedDigital.lower.l
+    100046: MESH fixedDigital.lower.m
+    100048: MESH fixedDigital.lower.n
+    100050: MESH fixedDigital.lower.o
+    100052: MESH fixedDigital.lower.p
+    100054: MESH fixedDigital.lower.q
+    100056: MESH fixedDigital.lower.r
+    100058: MESH fixedDigital.lower.s
+    100060: MESH fixedDigital.lower.t
+    100062: MESH fixedDigital.lower.u
+    100064: MESH fixedDigital.lower.v
+    100066: MESH fixedDigital.lower.w
+    100068: MESH fixedDigital.lower.x
+    100070: MESH fixedDigital.lower.y
+    100072: MESH fixedDigital.lower.z
+    100074: MESH fixedDigital.number.0
+    100076: MESH fixedDigital.number.1
+    100078: MESH fixedDigital.number.2
+    100080: MESH fixedDigital.number.3
+    100082: MESH fixedDigital.number.4
+    100084: MESH fixedDigital.number.5
+    100086: MESH fixedDigital.number.6
+    100088: MESH fixedDigital.number.7
+    100090: MESH fixedDigital.number.8
+    100092: MESH fixedDigital.number.9
+    100094: MESH fixedDigital.punc.apostrophe
+    100096: MESH fixedDigital.punc.colon
+    100098: MESH fixedDigital.punc.comma
+    100100: MESH fixedDigital.punc.exclamation
+    100102: MESH fixedDigital.punc.period
+    100104: MESH fixedDigital.punc.question
+    100106: MESH fixedDigital.punc.quotation
+    100108: MESH fixedDigital.punc.semiColon
+    100110: MESH fixedDigital.replacement
+    100112: MESH fixedDigital.symbol.ampersand
+    100114: MESH fixedDigital.symbol.asterisk
+    100116: MESH fixedDigital.symbol.at
+    100118: MESH fixedDigital.symbol.bracket.left
+    100120: MESH fixedDigital.symbol.bracket.right
+    100122: MESH fixedDigital.symbol.dollar
+    100124: MESH fixedDigital.symbol.equals
+    100126: MESH fixedDigital.symbol.minus
+    100128: MESH fixedDigital.symbol.number
+    100130: MESH fixedDigital.symbol.percent
+    100132: MESH fixedDigital.symbol.plus
+    100134: MESH fixedDigital.symbol.slash
+    100136: MESH fixedDigital.upper.a
+    100138: MESH fixedDigital.upper.b
+    100140: MESH fixedDigital.upper.c
+    100142: MESH fixedDigital.upper.d
+    100144: MESH fixedDigital.upper.e
+    100146: MESH fixedDigital.upper.f
+    100148: MESH fixedDigital.upper.g
+    100150: MESH fixedDigital.upper.h
+    100152: MESH fixedDigital.upper.i
+    100154: MESH fixedDigital.upper.j
+    100156: MESH fixedDigital.upper.k
+    100158: MESH fixedDigital.upper.l
+    100160: MESH fixedDigital.upper.m
+    100162: MESH fixedDigital.upper.n
+    100164: MESH fixedDigital.upper.o
+    100166: MESH fixedDigital.upper.p
+    100168: MESH fixedDigital.upper.q
+    100170: MESH fixedDigital.upper.r
+    100172: MESH fixedDigital.upper.s
+    100174: MESH fixedDigital.upper.t
+    100176: MESH fixedDigital.upper.u
+    100178: MESH fixedDigital.upper.v
+    100180: MESH fixedDigital.upper.w
+    100182: MESH fixedDigital.upper.x
+    100184: MESH fixedDigital.upper.y
+    100186: MESH fixedDigital.upper.z
+    100188: MESH fixedDigital.space
+    100190: MESH fixedDigital.symbol.equal
+    400000: //RootNode
+    400002: MESH digital.number.0.fixed
+    400004: MESH digital.number.1.fixed
+    400006: MESH digital.number.2.fixed
+    400008: MESH digital.number.3.fixed
+    400010: MESH digital.number.4.fixed
+    400012: MESH digital.number.5.fixed
+    400014: MESH digital.number.6.fixed
+    400016: MESH digital.number.7.fixed
+    400018: MESH digital.number.8.fixed
+    400020: MESH digital.number.9.fixed
+    400022: MESH fixedDigital.lower.a
+    400024: MESH fixedDigital.lower.b
+    400026: MESH fixedDigital.lower.c
+    400028: MESH fixedDigital.lower.d
+    400030: MESH fixedDigital.lower.e
+    400032: MESH fixedDigital.lower.f
+    400034: MESH fixedDigital.lower.g
+    400036: MESH fixedDigital.lower.h
+    400038: MESH fixedDigital.lower.i
+    400040: MESH fixedDigital.lower.j
+    400042: MESH fixedDigital.lower.k
+    400044: MESH fixedDigital.lower.l
+    400046: MESH fixedDigital.lower.m
+    400048: MESH fixedDigital.lower.n
+    400050: MESH fixedDigital.lower.o
+    400052: MESH fixedDigital.lower.p
+    400054: MESH fixedDigital.lower.q
+    400056: MESH fixedDigital.lower.r
+    400058: MESH fixedDigital.lower.s
+    400060: MESH fixedDigital.lower.t
+    400062: MESH fixedDigital.lower.u
+    400064: MESH fixedDigital.lower.v
+    400066: MESH fixedDigital.lower.w
+    400068: MESH fixedDigital.lower.x
+    400070: MESH fixedDigital.lower.y
+    400072: MESH fixedDigital.lower.z
+    400074: MESH fixedDigital.number.0
+    400076: MESH fixedDigital.number.1
+    400078: MESH fixedDigital.number.2
+    400080: MESH fixedDigital.number.3
+    400082: MESH fixedDigital.number.4
+    400084: MESH fixedDigital.number.5
+    400086: MESH fixedDigital.number.6
+    400088: MESH fixedDigital.number.7
+    400090: MESH fixedDigital.number.8
+    400092: MESH fixedDigital.number.9
+    400094: MESH fixedDigital.punc.apostrophe
+    400096: MESH fixedDigital.punc.colon
+    400098: MESH fixedDigital.punc.comma
+    400100: MESH fixedDigital.punc.exclamation
+    400102: MESH fixedDigital.punc.period
+    400104: MESH fixedDigital.punc.question
+    400106: MESH fixedDigital.punc.quotation
+    400108: MESH fixedDigital.punc.semiColon
+    400110: MESH fixedDigital.replacement
+    400112: MESH fixedDigital.symbol.ampersand
+    400114: MESH fixedDigital.symbol.asterisk
+    400116: MESH fixedDigital.symbol.at
+    400118: MESH fixedDigital.symbol.bracket.left
+    400120: MESH fixedDigital.symbol.bracket.right
+    400122: MESH fixedDigital.symbol.dollar
+    400124: MESH fixedDigital.symbol.equals
+    400126: MESH fixedDigital.symbol.minus
+    400128: MESH fixedDigital.symbol.number
+    400130: MESH fixedDigital.symbol.percent
+    400132: MESH fixedDigital.symbol.plus
+    400134: MESH fixedDigital.symbol.slash
+    400136: MESH fixedDigital.upper.a
+    400138: MESH fixedDigital.upper.b
+    400140: MESH fixedDigital.upper.c
+    400142: MESH fixedDigital.upper.d
+    400144: MESH fixedDigital.upper.e
+    400146: MESH fixedDigital.upper.f
+    400148: MESH fixedDigital.upper.g
+    400150: MESH fixedDigital.upper.h
+    400152: MESH fixedDigital.upper.i
+    400154: MESH fixedDigital.upper.j
+    400156: MESH fixedDigital.upper.k
+    400158: MESH fixedDigital.upper.l
+    400160: MESH fixedDigital.upper.m
+    400162: MESH fixedDigital.upper.n
+    400164: MESH fixedDigital.upper.o
+    400166: MESH fixedDigital.upper.p
+    400168: MESH fixedDigital.upper.q
+    400170: MESH fixedDigital.upper.r
+    400172: MESH fixedDigital.upper.s
+    400174: MESH fixedDigital.upper.t
+    400176: MESH fixedDigital.upper.u
+    400178: MESH fixedDigital.upper.v
+    400180: MESH fixedDigital.upper.w
+    400182: MESH fixedDigital.upper.x
+    400184: MESH fixedDigital.upper.y
+    400186: MESH fixedDigital.upper.z
+    400188: MESH fixedDigital.space
+    400190: MESH fixedDigital.symbol.equal
+    2300000: MESH digital.number.0.fixed
+    2300002: MESH digital.number.1.fixed
+    2300004: MESH digital.number.2.fixed
+    2300006: MESH digital.number.3.fixed
+    2300008: MESH digital.number.4.fixed
+    2300010: MESH digital.number.5.fixed
+    2300012: MESH digital.number.6.fixed
+    2300014: MESH digital.number.7.fixed
+    2300016: MESH digital.number.8.fixed
+    2300018: MESH digital.number.9.fixed
+    2300020: MESH fixedDigital.lower.a
+    2300022: MESH fixedDigital.lower.b
+    2300024: MESH fixedDigital.lower.c
+    2300026: MESH fixedDigital.lower.d
+    2300028: MESH fixedDigital.lower.e
+    2300030: MESH fixedDigital.lower.f
+    2300032: MESH fixedDigital.lower.g
+    2300034: MESH fixedDigital.lower.h
+    2300036: MESH fixedDigital.lower.i
+    2300038: MESH fixedDigital.lower.j
+    2300040: MESH fixedDigital.lower.k
+    2300042: MESH fixedDigital.lower.l
+    2300044: MESH fixedDigital.lower.m
+    2300046: MESH fixedDigital.lower.n
+    2300048: MESH fixedDigital.lower.o
+    2300050: MESH fixedDigital.lower.p
+    2300052: MESH fixedDigital.lower.q
+    2300054: MESH fixedDigital.lower.r
+    2300056: MESH fixedDigital.lower.s
+    2300058: MESH fixedDigital.lower.t
+    2300060: MESH fixedDigital.lower.u
+    2300062: MESH fixedDigital.lower.v
+    2300064: MESH fixedDigital.lower.w
+    2300066: MESH fixedDigital.lower.x
+    2300068: MESH fixedDigital.lower.y
+    2300070: MESH fixedDigital.lower.z
+    2300072: MESH fixedDigital.number.0
+    2300074: MESH fixedDigital.number.1
+    2300076: MESH fixedDigital.number.2
+    2300078: MESH fixedDigital.number.3
+    2300080: MESH fixedDigital.number.4
+    2300082: MESH fixedDigital.number.5
+    2300084: MESH fixedDigital.number.6
+    2300086: MESH fixedDigital.number.7
+    2300088: MESH fixedDigital.number.8
+    2300090: MESH fixedDigital.number.9
+    2300092: MESH fixedDigital.punc.apostrophe
+    2300094: MESH fixedDigital.punc.colon
+    2300096: MESH fixedDigital.punc.comma
+    2300098: MESH fixedDigital.punc.exclamation
+    2300100: MESH fixedDigital.punc.period
+    2300102: MESH fixedDigital.punc.question
+    2300104: MESH fixedDigital.punc.quotation
+    2300106: MESH fixedDigital.punc.semiColon
+    2300108: MESH fixedDigital.replacement
+    2300110: MESH fixedDigital.symbol.ampersand
+    2300112: MESH fixedDigital.symbol.asterisk
+    2300114: MESH fixedDigital.symbol.at
+    2300116: MESH fixedDigital.symbol.bracket.left
+    2300118: MESH fixedDigital.symbol.bracket.right
+    2300120: MESH fixedDigital.symbol.dollar
+    2300122: MESH fixedDigital.symbol.equals
+    2300124: MESH fixedDigital.symbol.minus
+    2300126: MESH fixedDigital.symbol.number
+    2300128: MESH fixedDigital.symbol.percent
+    2300130: MESH fixedDigital.symbol.plus
+    2300132: MESH fixedDigital.symbol.slash
+    2300134: MESH fixedDigital.upper.a
+    2300136: MESH fixedDigital.upper.b
+    2300138: MESH fixedDigital.upper.c
+    2300140: MESH fixedDigital.upper.d
+    2300142: MESH fixedDigital.upper.e
+    2300144: MESH fixedDigital.upper.f
+    2300146: MESH fixedDigital.upper.g
+    2300148: MESH fixedDigital.upper.h
+    2300150: MESH fixedDigital.upper.i
+    2300152: MESH fixedDigital.upper.j
+    2300154: MESH fixedDigital.upper.k
+    2300156: MESH fixedDigital.upper.l
+    2300158: MESH fixedDigital.upper.m
+    2300160: MESH fixedDigital.upper.n
+    2300162: MESH fixedDigital.upper.o
+    2300164: MESH fixedDigital.upper.p
+    2300166: MESH fixedDigital.upper.q
+    2300168: MESH fixedDigital.upper.r
+    2300170: MESH fixedDigital.upper.s
+    2300172: MESH fixedDigital.upper.t
+    2300174: MESH fixedDigital.upper.u
+    2300176: MESH fixedDigital.upper.v
+    2300178: MESH fixedDigital.upper.w
+    2300180: MESH fixedDigital.upper.x
+    2300182: MESH fixedDigital.upper.y
+    2300184: MESH fixedDigital.upper.z
+    2300186: MESH fixedDigital.symbol.equal
+    3300000: MESH digital.number.0.fixed
+    3300002: MESH digital.number.1.fixed
+    3300004: MESH digital.number.2.fixed
+    3300006: MESH digital.number.3.fixed
+    3300008: MESH digital.number.4.fixed
+    3300010: MESH digital.number.5.fixed
+    3300012: MESH digital.number.6.fixed
+    3300014: MESH digital.number.7.fixed
+    3300016: MESH digital.number.8.fixed
+    3300018: MESH digital.number.9.fixed
+    3300020: MESH fixedDigital.lower.a
+    3300022: MESH fixedDigital.lower.b
+    3300024: MESH fixedDigital.lower.c
+    3300026: MESH fixedDigital.lower.d
+    3300028: MESH fixedDigital.lower.e
+    3300030: MESH fixedDigital.lower.f
+    3300032: MESH fixedDigital.lower.g
+    3300034: MESH fixedDigital.lower.h
+    3300036: MESH fixedDigital.lower.i
+    3300038: MESH fixedDigital.lower.j
+    3300040: MESH fixedDigital.lower.k
+    3300042: MESH fixedDigital.lower.l
+    3300044: MESH fixedDigital.lower.m
+    3300046: MESH fixedDigital.lower.n
+    3300048: MESH fixedDigital.lower.o
+    3300050: MESH fixedDigital.lower.p
+    3300052: MESH fixedDigital.lower.q
+    3300054: MESH fixedDigital.lower.r
+    3300056: MESH fixedDigital.lower.s
+    3300058: MESH fixedDigital.lower.t
+    3300060: MESH fixedDigital.lower.u
+    3300062: MESH fixedDigital.lower.v
+    3300064: MESH fixedDigital.lower.w
+    3300066: MESH fixedDigital.lower.x
+    3300068: MESH fixedDigital.lower.y
+    3300070: MESH fixedDigital.lower.z
+    3300072: MESH fixedDigital.number.0
+    3300074: MESH fixedDigital.number.1
+    3300076: MESH fixedDigital.number.2
+    3300078: MESH fixedDigital.number.3
+    3300080: MESH fixedDigital.number.4
+    3300082: MESH fixedDigital.number.5
+    3300084: MESH fixedDigital.number.6
+    3300086: MESH fixedDigital.number.7
+    3300088: MESH fixedDigital.number.8
+    3300090: MESH fixedDigital.number.9
+    3300092: MESH fixedDigital.punc.apostrophe
+    3300094: MESH fixedDigital.punc.colon
+    3300096: MESH fixedDigital.punc.comma
+    3300098: MESH fixedDigital.punc.exclamation
+    3300100: MESH fixedDigital.punc.period
+    3300102: MESH fixedDigital.punc.question
+    3300104: MESH fixedDigital.punc.quotation
+    3300106: MESH fixedDigital.punc.semiColon
+    3300108: MESH fixedDigital.replacement
+    3300110: MESH fixedDigital.symbol.ampersand
+    3300112: MESH fixedDigital.symbol.asterisk
+    3300114: MESH fixedDigital.symbol.at
+    3300116: MESH fixedDigital.symbol.bracket.left
+    3300118: MESH fixedDigital.symbol.bracket.right
+    3300120: MESH fixedDigital.symbol.dollar
+    3300122: MESH fixedDigital.symbol.equals
+    3300124: MESH fixedDigital.symbol.minus
+    3300126: MESH fixedDigital.symbol.number
+    3300128: MESH fixedDigital.symbol.percent
+    3300130: MESH fixedDigital.symbol.plus
+    3300132: MESH fixedDigital.symbol.slash
+    3300134: MESH fixedDigital.upper.a
+    3300136: MESH fixedDigital.upper.b
+    3300138: MESH fixedDigital.upper.c
+    3300140: MESH fixedDigital.upper.d
+    3300142: MESH fixedDigital.upper.e
+    3300144: MESH fixedDigital.upper.f
+    3300146: MESH fixedDigital.upper.g
+    3300148: MESH fixedDigital.upper.h
+    3300150: MESH fixedDigital.upper.i
+    3300152: MESH fixedDigital.upper.j
+    3300154: MESH fixedDigital.upper.k
+    3300156: MESH fixedDigital.upper.l
+    3300158: MESH fixedDigital.upper.m
+    3300160: MESH fixedDigital.upper.n
+    3300162: MESH fixedDigital.upper.o
+    3300164: MESH fixedDigital.upper.p
+    3300166: MESH fixedDigital.upper.q
+    3300168: MESH fixedDigital.upper.r
+    3300170: MESH fixedDigital.upper.s
+    3300172: MESH fixedDigital.upper.t
+    3300174: MESH fixedDigital.upper.u
+    3300176: MESH fixedDigital.upper.v
+    3300178: MESH fixedDigital.upper.w
+    3300180: MESH fixedDigital.upper.x
+    3300182: MESH fixedDigital.upper.y
+    3300184: MESH fixedDigital.upper.z
+    3300186: MESH fixedDigital.symbol.equal
+    4300000: MESH digital.number.0.fixed
+    4300002: MESH digital.number.1.fixed
+    4300004: MESH digital.number.2.fixed
+    4300006: MESH digital.number.3.fixed
+    4300008: MESH digital.number.4.fixed
+    4300010: MESH digital.number.5.fixed
+    4300012: MESH digital.number.6.fixed
+    4300014: MESH digital.number.7.fixed
+    4300016: MESH digital.number.8.fixed
+    4300018: MESH digital.number.9.fixed
+    4300020: MESH fixedDigital.replacement
+    4300022: MESH fixedDigital.punc.exclamation
+    4300024: MESH fixedDigital.upper.b
+    4300026: MESH fixedDigital.upper.c
+    4300028: MESH fixedDigital.upper.d
+    4300030: MESH fixedDigital.upper.e
+    4300032: MESH fixedDigital.upper.f
+    4300034: MESH fixedDigital.upper.g
+    4300036: MESH fixedDigital.upper.h
+    4300038: MESH fixedDigital.upper.i
+    4300040: MESH fixedDigital.upper.j
+    4300042: MESH fixedDigital.upper.k
+    4300044: MESH fixedDigital.upper.l
+    4300046: MESH fixedDigital.upper.m
+    4300048: MESH fixedDigital.symbol.slash
+    4300050: MESH fixedDigital.upper.o
+    4300052: MESH fixedDigital.upper.p
+    4300054: MESH fixedDigital.upper.q
+    4300056: MESH fixedDigital.upper.r
+    4300058: MESH fixedDigital.upper.s
+    4300060: MESH fixedDigital.upper.t
+    4300062: MESH fixedDigital.upper.u
+    4300064: MESH fixedDigital.upper.v
+    4300066: MESH fixedDigital.upper.w
+    4300068: MESH fixedDigital.upper.x
+    4300070: MESH fixedDigital.upper.y
+    4300072: MESH fixedDigital.upper.z
+    4300074: MESH fixedDigital.symbol.minus
+    4300076: MESH fixedDigital.lower.b
+    4300078: MESH fixedDigital.lower.c
+    4300080: MESH fixedDigital.lower.d
+    4300082: MESH fixedDigital.lower.e
+    4300084: MESH fixedDigital.lower.f
+    4300086: MESH fixedDigital.lower.g
+    4300088: MESH fixedDigital.lower.h
+    4300090: MESH fixedDigital.lower.i
+    4300092: MESH fixedDigital.lower.j
+    4300094: MESH fixedDigital.lower.k
+    4300096: MESH fixedDigital.lower.l
+    4300098: MESH fixedDigital.lower.m
+    4300100: MESH fixedDigital.symbol.equals
+    4300102: MESH fixedDigital.lower.o
+    4300104: MESH fixedDigital.lower.p
+    4300106: MESH fixedDigital.lower.q
+    4300108: MESH fixedDigital.lower.r
+    4300110: MESH fixedDigital.lower.s
+    4300112: MESH fixedDigital.lower.t
+    4300114: MESH fixedDigital.lower.u
+    4300116: MESH fixedDigital.lower.v
+    4300118: MESH fixedDigital.lower.w
+    4300120: MESH fixedDigital.lower.x
+    4300122: MESH fixedDigital.lower.y
+    4300124: MESH fixedDigital.lower.z
+    4300126: MESH fixedDigital.number.0
+    4300128: MESH fixedDigital.number.1
+    4300130: MESH fixedDigital.number.2
+    4300132: MESH fixedDigital.number.3
+    4300134: MESH fixedDigital.number.4
+    4300136: MESH fixedDigital.number.5
+    4300138: MESH fixedDigital.number.6
+    4300140: MESH fixedDigital.number.7
+    4300142: MESH fixedDigital.number.8
+    4300144: MESH fixedDigital.number.9
+    4300146: MESH fixedDigital.punc.comma
+    4300148: MESH fixedDigital.punc.question
+    4300150: MESH fixedDigital.punc.colon
+    4300152: MESH fixedDigital.punc.semiColon
+    4300154: MESH fixedDigital.punc.apostrophe
+    4300156: MESH fixedDigital.punc.period
+    4300158: MESH fixedDigital.symbol.at
+    4300160: MESH fixedDigital.symbol.number
+    4300162: MESH fixedDigital.symbol.dollar
+    4300164: MESH fixedDigital.symbol.percent
+    4300166: MESH fixedDigital.symbol.ampersand
+    4300168: MESH fixedDigital.symbol.asterisk
+    4300170: MESH fixedDigital.symbol.bracket.left
+    4300172: MESH fixedDigital.symbol.bracket.right
+    4300174: MESH fixedDigital.symbol.plus
+    4300176: MESH fixedDigital.punc.quotation
+    4300178: MESH fixedDigital.upper.n
+    4300180: MESH fixedDigital.upper.a
+    4300182: MESH fixedDigital.lower.a
+    4300184: MESH fixedDigital.lower.n
+    4300186: MESH fixedDigital.symbol.equal
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

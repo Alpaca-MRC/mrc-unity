@@ -1,0 +1,510 @@
+fileFormatVersion: 2
+guid: bb74d3b3eff286d49990a14e48cdff2f
+timeCreated: 1501251743
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: MESH chiseled.lower.a
+    100004: MESH chiseled.lower.b
+    100006: MESH chiseled.lower.c
+    100008: MESH chiseled.lower.d
+    100010: MESH chiseled.lower.e
+    100012: MESH chiseled.lower.f
+    100014: MESH chiseled.lower.g
+    100016: MESH chiseled.lower.h
+    100018: MESH chiseled.lower.j
+    100020: MESH chiseled.lower.k
+    100022: MESH chiseled.lower.l
+    100024: MESH chiseled.lower.m
+    100026: MESH chiseled.lower.n\
+    100028: MESH chiseled.lower.o
+    100030: MESH chiseled.lower.p
+    100032: MESH chiseled.lower.q
+    100034: MESH chiseled.lower.r
+    100036: MESH chiseled.lower.s
+    100038: MESH chiseled.lower.t
+    100040: MESH chiseled.lower.u
+    100042: MESH chiseled.lower.u001
+    100044: MESH chiseled.lower.v
+    100046: MESH chiseled.lower.w
+    100048: MESH chiseled.lower.x
+    100050: MESH chiseled.lower.y
+    100052: MESH chiseled.lower.z
+    100054: MESH chiseled.number.0
+    100056: MESH chiseled.number.1
+    100058: MESH chiseled.number.2
+    100060: MESH chiseled.number.3
+    100062: MESH chiseled.number.4
+    100064: MESH chiseled.number.5
+    100066: MESH chiseled.number.6
+    100068: MESH chiseled.number.7
+    100070: MESH chiseled.number.8
+    100072: MESH chiseled.number.9
+    100074: MESH chiseled.punc.apostrophe
+    100076: MESH chiseled.punc.colon
+    100078: MESH chiseled.punc.comma
+    100080: MESH chiseled.punc.exclamation
+    100082: MESH chiseled.punc.period
+    100084: MESH chiseled.punc.question
+    100086: MESH chiseled.punc.quotation
+    100088: MESH chiseled.punc.semiColon
+    100090: MESH chiseled.replacement
+    100092: MESH chiseled.symbol.ampersand
+    100094: MESH chiseled.symbol.asterisk
+    100096: MESH chiseled.symbol.at
+    100098: MESH chiseled.symbol.bracket.left
+    100100: MESH chiseled.symbol.bracket.right
+    100102: MESH chiseled.symbol.dollar
+    100104: MESH chiseled.symbol.equals
+    100106: MESH chiseled.symbol.minus
+    100108: MESH chiseled.symbol.number
+    100110: MESH chiseled.symbol.percent
+    100112: MESH chiseled.symbol.plus
+    100114: MESH chiseled.symbol.slash
+    100116: MESH chiseled.upper.a
+    100118: MESH chiseled.upper.b
+    100120: MESH chiseled.upper.c
+    100122: MESH chiseled.upper.d
+    100124: MESH chiseled.upper.e
+    100126: MESH chiseled.upper.f
+    100128: MESH chiseled.upper.g
+    100130: MESH chiseled.upper.h
+    100132: MESH chiseled.upper.i
+    100134: MESH chiseled.upper.j
+    100136: MESH chiseled.upper.k
+    100138: MESH chiseled.upper.l
+    100140: MESH chiseled.upper.m
+    100142: MESH chiseled.upper.n
+    100144: MESH chiseled.upper.o
+    100146: MESH chiseled.upper.p
+    100148: MESH chiseled.upper.q
+    100150: MESH chiseled.upper.r
+    100152: MESH chiseled.upper.s
+    100154: MESH chiseled.upper.t
+    100156: MESH chiseled.upper.u
+    100158: MESH chiseled.upper.v
+    100160: MESH chiseled.upper.w
+    100162: MESH chiseled.upper.x
+    100164: MESH chiseled.upper.y
+    100166: MESH chiseled.upper.z
+    100168: MESH chiseled.lower.i
+    100170: MESH chiseled.lower.n
+    100172: MESH chiseled.symbol.equal
+    400000: //RootNode
+    400002: MESH chiseled.lower.a
+    400004: MESH chiseled.lower.b
+    400006: MESH chiseled.lower.c
+    400008: MESH chiseled.lower.d
+    400010: MESH chiseled.lower.e
+    400012: MESH chiseled.lower.f
+    400014: MESH chiseled.lower.g
+    400016: MESH chiseled.lower.h
+    400018: MESH chiseled.lower.j
+    400020: MESH chiseled.lower.k
+    400022: MESH chiseled.lower.l
+    400024: MESH chiseled.lower.m
+    400026: MESH chiseled.lower.n\
+    400028: MESH chiseled.lower.o
+    400030: MESH chiseled.lower.p
+    400032: MESH chiseled.lower.q
+    400034: MESH chiseled.lower.r
+    400036: MESH chiseled.lower.s
+    400038: MESH chiseled.lower.t
+    400040: MESH chiseled.lower.u
+    400042: MESH chiseled.lower.u001
+    400044: MESH chiseled.lower.v
+    400046: MESH chiseled.lower.w
+    400048: MESH chiseled.lower.x
+    400050: MESH chiseled.lower.y
+    400052: MESH chiseled.lower.z
+    400054: MESH chiseled.number.0
+    400056: MESH chiseled.number.1
+    400058: MESH chiseled.number.2
+    400060: MESH chiseled.number.3
+    400062: MESH chiseled.number.4
+    400064: MESH chiseled.number.5
+    400066: MESH chiseled.number.6
+    400068: MESH chiseled.number.7
+    400070: MESH chiseled.number.8
+    400072: MESH chiseled.number.9
+    400074: MESH chiseled.punc.apostrophe
+    400076: MESH chiseled.punc.colon
+    400078: MESH chiseled.punc.comma
+    400080: MESH chiseled.punc.exclamation
+    400082: MESH chiseled.punc.period
+    400084: MESH chiseled.punc.question
+    400086: MESH chiseled.punc.quotation
+    400088: MESH chiseled.punc.semiColon
+    400090: MESH chiseled.replacement
+    400092: MESH chiseled.symbol.ampersand
+    400094: MESH chiseled.symbol.asterisk
+    400096: MESH chiseled.symbol.at
+    400098: MESH chiseled.symbol.bracket.left
+    400100: MESH chiseled.symbol.bracket.right
+    400102: MESH chiseled.symbol.dollar
+    400104: MESH chiseled.symbol.equals
+    400106: MESH chiseled.symbol.minus
+    400108: MESH chiseled.symbol.number
+    400110: MESH chiseled.symbol.percent
+    400112: MESH chiseled.symbol.plus
+    400114: MESH chiseled.symbol.slash
+    400116: MESH chiseled.upper.a
+    400118: MESH chiseled.upper.b
+    400120: MESH chiseled.upper.c
+    400122: MESH chiseled.upper.d
+    400124: MESH chiseled.upper.e
+    400126: MESH chiseled.upper.f
+    400128: MESH chiseled.upper.g
+    400130: MESH chiseled.upper.h
+    400132: MESH chiseled.upper.i
+    400134: MESH chiseled.upper.j
+    400136: MESH chiseled.upper.k
+    400138: MESH chiseled.upper.l
+    400140: MESH chiseled.upper.m
+    400142: MESH chiseled.upper.n
+    400144: MESH chiseled.upper.o
+    400146: MESH chiseled.upper.p
+    400148: MESH chiseled.upper.q
+    400150: MESH chiseled.upper.r
+    400152: MESH chiseled.upper.s
+    400154: MESH chiseled.upper.t
+    400156: MESH chiseled.upper.u
+    400158: MESH chiseled.upper.v
+    400160: MESH chiseled.upper.w
+    400162: MESH chiseled.upper.x
+    400164: MESH chiseled.upper.y
+    400166: MESH chiseled.upper.z
+    400168: MESH chiseled.lower.i
+    400170: MESH chiseled.lower.n
+    400172: MESH chiseled.symbol.equal
+    2300000: MESH chiseled.lower.a
+    2300002: MESH chiseled.lower.b
+    2300004: MESH chiseled.lower.c
+    2300006: MESH chiseled.lower.d
+    2300008: MESH chiseled.lower.e
+    2300010: MESH chiseled.lower.f
+    2300012: MESH chiseled.lower.g
+    2300014: MESH chiseled.lower.h
+    2300016: MESH chiseled.lower.j
+    2300018: MESH chiseled.lower.k
+    2300020: MESH chiseled.lower.l
+    2300022: MESH chiseled.lower.m
+    2300024: MESH chiseled.lower.n\
+    2300026: MESH chiseled.lower.o
+    2300028: MESH chiseled.lower.p
+    2300030: MESH chiseled.lower.q
+    2300032: MESH chiseled.lower.r
+    2300034: MESH chiseled.lower.s
+    2300036: MESH chiseled.lower.t
+    2300038: MESH chiseled.lower.u
+    2300040: MESH chiseled.lower.u001
+    2300042: MESH chiseled.lower.v
+    2300044: MESH chiseled.lower.w
+    2300046: MESH chiseled.lower.x
+    2300048: MESH chiseled.lower.y
+    2300050: MESH chiseled.lower.z
+    2300052: MESH chiseled.number.0
+    2300054: MESH chiseled.number.1
+    2300056: MESH chiseled.number.2
+    2300058: MESH chiseled.number.3
+    2300060: MESH chiseled.number.4
+    2300062: MESH chiseled.number.5
+    2300064: MESH chiseled.number.6
+    2300066: MESH chiseled.number.7
+    2300068: MESH chiseled.number.8
+    2300070: MESH chiseled.number.9
+    2300072: MESH chiseled.punc.apostrophe
+    2300074: MESH chiseled.punc.colon
+    2300076: MESH chiseled.punc.comma
+    2300078: MESH chiseled.punc.exclamation
+    2300080: MESH chiseled.punc.period
+    2300082: MESH chiseled.punc.question
+    2300084: MESH chiseled.punc.quotation
+    2300086: MESH chiseled.punc.semiColon
+    2300088: MESH chiseled.replacement
+    2300090: MESH chiseled.symbol.ampersand
+    2300092: MESH chiseled.symbol.asterisk
+    2300094: MESH chiseled.symbol.at
+    2300096: MESH chiseled.symbol.bracket.left
+    2300098: MESH chiseled.symbol.bracket.right
+    2300100: MESH chiseled.symbol.dollar
+    2300102: MESH chiseled.symbol.equals
+    2300104: MESH chiseled.symbol.minus
+    2300106: MESH chiseled.symbol.number
+    2300108: MESH chiseled.symbol.percent
+    2300110: MESH chiseled.symbol.plus
+    2300112: MESH chiseled.symbol.slash
+    2300114: MESH chiseled.upper.a
+    2300116: MESH chiseled.upper.b
+    2300118: MESH chiseled.upper.c
+    2300120: MESH chiseled.upper.d
+    2300122: MESH chiseled.upper.e
+    2300124: MESH chiseled.upper.f
+    2300126: MESH chiseled.upper.g
+    2300128: MESH chiseled.upper.h
+    2300130: MESH chiseled.upper.i
+    2300132: MESH chiseled.upper.j
+    2300134: MESH chiseled.upper.k
+    2300136: MESH chiseled.upper.l
+    2300138: MESH chiseled.upper.m
+    2300140: MESH chiseled.upper.n
+    2300142: MESH chiseled.upper.o
+    2300144: MESH chiseled.upper.p
+    2300146: MESH chiseled.upper.q
+    2300148: MESH chiseled.upper.r
+    2300150: MESH chiseled.upper.s
+    2300152: MESH chiseled.upper.t
+    2300154: MESH chiseled.upper.u
+    2300156: MESH chiseled.upper.v
+    2300158: MESH chiseled.upper.w
+    2300160: MESH chiseled.upper.x
+    2300162: MESH chiseled.upper.y
+    2300164: MESH chiseled.upper.z
+    2300166: MESH chiseled.lower.i
+    2300168: MESH chiseled.lower.n
+    2300170: MESH chiseled.symbol.equal
+    3300000: MESH chiseled.lower.a
+    3300002: MESH chiseled.lower.b
+    3300004: MESH chiseled.lower.c
+    3300006: MESH chiseled.lower.d
+    3300008: MESH chiseled.lower.e
+    3300010: MESH chiseled.lower.f
+    3300012: MESH chiseled.lower.g
+    3300014: MESH chiseled.lower.h
+    3300016: MESH chiseled.lower.j
+    3300018: MESH chiseled.lower.k
+    3300020: MESH chiseled.lower.l
+    3300022: MESH chiseled.lower.m
+    3300024: MESH chiseled.lower.n\
+    3300026: MESH chiseled.lower.o
+    3300028: MESH chiseled.lower.p
+    3300030: MESH chiseled.lower.q
+    3300032: MESH chiseled.lower.r
+    3300034: MESH chiseled.lower.s
+    3300036: MESH chiseled.lower.t
+    3300038: MESH chiseled.lower.u
+    3300040: MESH chiseled.lower.u001
+    3300042: MESH chiseled.lower.v
+    3300044: MESH chiseled.lower.w
+    3300046: MESH chiseled.lower.x
+    3300048: MESH chiseled.lower.y
+    3300050: MESH chiseled.lower.z
+    3300052: MESH chiseled.number.0
+    3300054: MESH chiseled.number.1
+    3300056: MESH chiseled.number.2
+    3300058: MESH chiseled.number.3
+    3300060: MESH chiseled.number.4
+    3300062: MESH chiseled.number.5
+    3300064: MESH chiseled.number.6
+    3300066: MESH chiseled.number.7
+    3300068: MESH chiseled.number.8
+    3300070: MESH chiseled.number.9
+    3300072: MESH chiseled.punc.apostrophe
+    3300074: MESH chiseled.punc.colon
+    3300076: MESH chiseled.punc.comma
+    3300078: MESH chiseled.punc.exclamation
+    3300080: MESH chiseled.punc.period
+    3300082: MESH chiseled.punc.question
+    3300084: MESH chiseled.punc.quotation
+    3300086: MESH chiseled.punc.semiColon
+    3300088: MESH chiseled.replacement
+    3300090: MESH chiseled.symbol.ampersand
+    3300092: MESH chiseled.symbol.asterisk
+    3300094: MESH chiseled.symbol.at
+    3300096: MESH chiseled.symbol.bracket.left
+    3300098: MESH chiseled.symbol.bracket.right
+    3300100: MESH chiseled.symbol.dollar
+    3300102: MESH chiseled.symbol.equals
+    3300104: MESH chiseled.symbol.minus
+    3300106: MESH chiseled.symbol.number
+    3300108: MESH chiseled.symbol.percent
+    3300110: MESH chiseled.symbol.plus
+    3300112: MESH chiseled.symbol.slash
+    3300114: MESH chiseled.upper.a
+    3300116: MESH chiseled.upper.b
+    3300118: MESH chiseled.upper.c
+    3300120: MESH chiseled.upper.d
+    3300122: MESH chiseled.upper.e
+    3300124: MESH chiseled.upper.f
+    3300126: MESH chiseled.upper.g
+    3300128: MESH chiseled.upper.h
+    3300130: MESH chiseled.upper.i
+    3300132: MESH chiseled.upper.j
+    3300134: MESH chiseled.upper.k
+    3300136: MESH chiseled.upper.l
+    3300138: MESH chiseled.upper.m
+    3300140: MESH chiseled.upper.n
+    3300142: MESH chiseled.upper.o
+    3300144: MESH chiseled.upper.p
+    3300146: MESH chiseled.upper.q
+    3300148: MESH chiseled.upper.r
+    3300150: MESH chiseled.upper.s
+    3300152: MESH chiseled.upper.t
+    3300154: MESH chiseled.upper.u
+    3300156: MESH chiseled.upper.v
+    3300158: MESH chiseled.upper.w
+    3300160: MESH chiseled.upper.x
+    3300162: MESH chiseled.upper.y
+    3300164: MESH chiseled.upper.z
+    3300166: MESH chiseled.lower.i
+    3300168: MESH chiseled.lower.n
+    3300170: MESH chiseled.symbol.equal
+    4300000: MESH chiseled.upper.f
+    4300002: MESH chiseled.upper.e
+    4300004: MESH chiseled.upper.a
+    4300006: MESH chiseled.upper.b
+    4300008: MESH chiseled.upper.c
+    4300010: MESH chiseled.upper.d
+    4300012: MESH chiseled.upper.h
+    4300014: MESH chiseled.upper.i
+    4300016: MESH chiseled.upper.g
+    4300018: MESH chiseled.upper.j
+    4300020: MESH chiseled.upper.k
+    4300022: MESH chiseled.upper.l
+    4300024: MESH chiseled.upper.m
+    4300026: MESH chiseled.upper.z
+    4300028: MESH chiseled.upper.y
+    4300030: MESH chiseled.upper.x
+    4300032: MESH chiseled.upper.w
+    4300034: MESH chiseled.upper.v
+    4300036: MESH chiseled.upper.u
+    4300038: MESH chiseled.upper.t
+    4300040: MESH chiseled.upper.s
+    4300042: MESH chiseled.upper.r
+    4300044: MESH chiseled.upper.q
+    4300046: MESH chiseled.upper.p
+    4300048: MESH chiseled.upper.o
+    4300050: MESH chiseled.upper.n
+    4300052: MESH chiseled.lower.a
+    4300054: MESH chiseled.lower.b
+    4300056: MESH chiseled.lower.c
+    4300058: MESH chiseled.lower.d
+    4300060: MESH chiseled.lower.e
+    4300062: MESH chiseled.lower.f
+    4300064: MESH chiseled.lower.g
+    4300066: MESH chiseled.lower.h
+    4300068: MESH chiseled.lower.u
+    4300070: MESH chiseled.lower.j
+    4300072: MESH chiseled.lower.k
+    4300074: MESH chiseled.lower.l
+    4300076: MESH chiseled.lower.m
+    4300078: MESH chiseled.lower.n\
+    4300080: MESH chiseled.lower.o
+    4300082: MESH chiseled.lower.p
+    4300084: MESH chiseled.lower.q
+    4300086: MESH chiseled.lower.r
+    4300088: MESH chiseled.lower.s
+    4300090: MESH chiseled.lower.t
+    4300092: MESH chiseled.lower.u001
+    4300094: MESH chiseled.lower.v
+    4300096: MESH chiseled.lower.w
+    4300098: MESH chiseled.lower.x
+    4300100: MESH chiseled.lower.y
+    4300102: MESH chiseled.lower.z
+    4300104: MESH chiseled.number.0
+    4300106: MESH chiseled.number.1
+    4300108: MESH chiseled.number.2
+    4300110: MESH chiseled.number.3
+    4300112: MESH chiseled.number.4
+    4300114: MESH chiseled.number.5
+    4300116: MESH chiseled.number.6
+    4300118: MESH chiseled.number.7
+    4300120: MESH chiseled.number.8
+    4300122: MESH chiseled.number.9
+    4300124: MESH chiseled.punc.period
+    4300126: MESH chiseled.punc.comma
+    4300128: MESH chiseled.punc.exclamation
+    4300130: MESH chiseled.punc.question
+    4300132: MESH chiseled.punc.colon
+    4300134: MESH chiseled.punc.semiColon
+    4300136: MESH chiseled.punc.apostrophe
+    4300138: MESH chiseled.punc.quotation
+    4300140: MESH chiseled.symbol.at
+    4300142: MESH chiseled.symbol.number
+    4300144: MESH chiseled.symbol.dollar
+    4300146: MESH chiseled.symbol.percent
+    4300148: MESH chiseled.symbol.ampersand
+    4300150: MESH chiseled.symbol.asterisk
+    4300152: MESH chiseled.symbol.bracket.left
+    4300154: MESH chiseled.symbol.bracket.right
+    4300156: MESH chiseled.symbol.plus
+    4300158: MESH chiseled.symbol.equals
+    4300160: MESH chiseled.symbol.minus
+    4300162: MESH chiseled.symbol.slash
+    4300164: MESH chiseled.replacement
+    4300166: MESH chiseled.lower.i
+    4300168: MESH chiseled.lower.n
+    4300170: MESH chiseled.symbol.equal
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

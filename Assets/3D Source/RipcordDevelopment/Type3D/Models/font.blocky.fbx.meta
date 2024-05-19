@@ -1,0 +1,540 @@
+fileFormatVersion: 2
+guid: 4c66fe29a12051b40b42e5a5d8f09186
+timeCreated: 1499778854
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: MESH blocky.colon
+    100004: MESH blocky.equals
+    100006: MESH blocky.exclamation
+    100008: MESH blocky.lower.a
+    100010: MESH blocky.lower.b
+    100012: MESH blocky.lower.c
+    100014: MESH blocky.lower.d
+    100016: MESH blocky.lower.e
+    100018: MESH blocky.lower.f
+    100020: MESH blocky.lower.g
+    100022: MESH blocky.lower.h
+    100024: MESH blocky.lower.i
+    100026: MESH blocky.lower.j
+    100028: MESH blocky.lower.k
+    100030: MESH blocky.lower.l
+    100032: MESH blocky.lower.m
+    100034: MESH blocky.lower.n
+    100036: MESH blocky.lower.o
+    100038: MESH blocky.lower.p
+    100040: MESH blocky.lower.q
+    100042: MESH blocky.lower.r
+    100044: MESH blocky.lower.s
+    100046: MESH blocky.lower.t
+    100048: MESH blocky.lower.u
+    100050: MESH blocky.lower.v
+    100052: MESH blocky.lower.w
+    100054: MESH blocky.lower.x
+    100056: MESH blocky.lower.y
+    100058: MESH blocky.lower.z
+    100060: MESH blocky.minus
+    100062: MESH blocky.number.0
+    100064: MESH blocky.number.1
+    100066: MESH blocky.number.2
+    100068: MESH blocky.number.3
+    100070: MESH blocky.number.4
+    100072: MESH blocky.number.5
+    100074: MESH blocky.number.6
+    100076: MESH blocky.number.7
+    100078: MESH blocky.number.8
+    100080: MESH blocky.number.9
+    100082: MESH blocky.period
+    100084: MESH blocky.plus
+    100086: MESH blocky.question
+    100088: MESH blocky.slash
+    100090: MESH blocky.upper.a
+    100092: MESH blocky.upper.b
+    100094: MESH blocky.upper.c
+    100096: MESH blocky.upper.d
+    100098: MESH blocky.upper.e
+    100100: MESH blocky.upper.f
+    100102: MESH blocky.upper.g
+    100104: MESH blocky.upper.h
+    100106: MESH blocky.upper.i
+    100108: MESH blocky.upper.j
+    100110: MESH blocky.upper.k
+    100112: MESH blocky.upper.l
+    100114: MESH blocky.upper.m
+    100116: MESH blocky.upper.n
+    100118: MESH blocky.upper.o
+    100120: MESH blocky.upper.p
+    100122: MESH blocky.upper.q
+    100124: MESH blocky.upper.r
+    100126: MESH blocky.upper.s
+    100128: MESH blocky.upper.t
+    100130: MESH blocky.upper.u
+    100132: MESH blocky.upper.v
+    100134: MESH blocky.upper.w
+    100136: MESH blocky.upper.x
+    100138: MESH blocky.upper.y
+    100140: MESH blocky.upper.z
+    100142: MESH blocky.punc.apostrope
+    100144: MESH blocky.punc.comma
+    100146: MESH blocky.punc.quotation
+    100148: MESH blocky.punc.semiColon
+    100150: MESH blocky.symbol.ampersand
+    100152: MESH blocky.symbol.asterisk
+    100154: MESH blocky.symbol.at
+    100156: MESH blocky.symbol.bracket.left
+    100158: MESH blocky.symbol.bracket.right
+    100160: MESH blocky.symbol.dollar
+    100162: MESH blocky.symbol.number
+    100164: MESH blocky.symbol.percent
+    100166: MESH blocky.punc.colon
+    100168: MESH blocky.punc.exclamation
+    100170: MESH blocky.punc.period
+    100172: MESH blocky.punc.question
+    100174: MESH blocky.symbol.equals
+    100176: MESH blocky.symbol.minus
+    100178: MESH blocky.symbol.plus
+    100180: MESH blocky.symbol.slash
+    100182: MESH blocky.replacement
+    100184: MESH blocky.symbol.equal
+    400000: //RootNode
+    400002: MESH blocky.colon
+    400004: MESH blocky.equals
+    400006: MESH blocky.exclamation
+    400008: MESH blocky.lower.a
+    400010: MESH blocky.lower.b
+    400012: MESH blocky.lower.c
+    400014: MESH blocky.lower.d
+    400016: MESH blocky.lower.e
+    400018: MESH blocky.lower.f
+    400020: MESH blocky.lower.g
+    400022: MESH blocky.lower.h
+    400024: MESH blocky.lower.i
+    400026: MESH blocky.lower.j
+    400028: MESH blocky.lower.k
+    400030: MESH blocky.lower.l
+    400032: MESH blocky.lower.m
+    400034: MESH blocky.lower.n
+    400036: MESH blocky.lower.o
+    400038: MESH blocky.lower.p
+    400040: MESH blocky.lower.q
+    400042: MESH blocky.lower.r
+    400044: MESH blocky.lower.s
+    400046: MESH blocky.lower.t
+    400048: MESH blocky.lower.u
+    400050: MESH blocky.lower.v
+    400052: MESH blocky.lower.w
+    400054: MESH blocky.lower.x
+    400056: MESH blocky.lower.y
+    400058: MESH blocky.lower.z
+    400060: MESH blocky.minus
+    400062: MESH blocky.number.0
+    400064: MESH blocky.number.1
+    400066: MESH blocky.number.2
+    400068: MESH blocky.number.3
+    400070: MESH blocky.number.4
+    400072: MESH blocky.number.5
+    400074: MESH blocky.number.6
+    400076: MESH blocky.number.7
+    400078: MESH blocky.number.8
+    400080: MESH blocky.number.9
+    400082: MESH blocky.period
+    400084: MESH blocky.plus
+    400086: MESH blocky.question
+    400088: MESH blocky.slash
+    400090: MESH blocky.upper.a
+    400092: MESH blocky.upper.b
+    400094: MESH blocky.upper.c
+    400096: MESH blocky.upper.d
+    400098: MESH blocky.upper.e
+    400100: MESH blocky.upper.f
+    400102: MESH blocky.upper.g
+    400104: MESH blocky.upper.h
+    400106: MESH blocky.upper.i
+    400108: MESH blocky.upper.j
+    400110: MESH blocky.upper.k
+    400112: MESH blocky.upper.l
+    400114: MESH blocky.upper.m
+    400116: MESH blocky.upper.n
+    400118: MESH blocky.upper.o
+    400120: MESH blocky.upper.p
+    400122: MESH blocky.upper.q
+    400124: MESH blocky.upper.r
+    400126: MESH blocky.upper.s
+    400128: MESH blocky.upper.t
+    400130: MESH blocky.upper.u
+    400132: MESH blocky.upper.v
+    400134: MESH blocky.upper.w
+    400136: MESH blocky.upper.x
+    400138: MESH blocky.upper.y
+    400140: MESH blocky.upper.z
+    400142: MESH blocky.punc.apostrope
+    400144: MESH blocky.punc.comma
+    400146: MESH blocky.punc.quotation
+    400148: MESH blocky.punc.semiColon
+    400150: MESH blocky.symbol.ampersand
+    400152: MESH blocky.symbol.asterisk
+    400154: MESH blocky.symbol.at
+    400156: MESH blocky.symbol.bracket.left
+    400158: MESH blocky.symbol.bracket.right
+    400160: MESH blocky.symbol.dollar
+    400162: MESH blocky.symbol.number
+    400164: MESH blocky.symbol.percent
+    400166: MESH blocky.punc.colon
+    400168: MESH blocky.punc.exclamation
+    400170: MESH blocky.punc.period
+    400172: MESH blocky.punc.question
+    400174: MESH blocky.symbol.equals
+    400176: MESH blocky.symbol.minus
+    400178: MESH blocky.symbol.plus
+    400180: MESH blocky.symbol.slash
+    400182: MESH blocky.replacement
+    400184: MESH blocky.symbol.equal
+    2300000: MESH blocky.colon
+    2300002: MESH blocky.equals
+    2300004: MESH blocky.exclamation
+    2300006: MESH blocky.lower.a
+    2300008: MESH blocky.lower.b
+    2300010: MESH blocky.lower.c
+    2300012: MESH blocky.lower.d
+    2300014: MESH blocky.lower.e
+    2300016: MESH blocky.lower.f
+    2300018: MESH blocky.lower.g
+    2300020: MESH blocky.lower.h
+    2300022: MESH blocky.lower.i
+    2300024: MESH blocky.lower.j
+    2300026: MESH blocky.lower.k
+    2300028: MESH blocky.lower.l
+    2300030: MESH blocky.lower.m
+    2300032: MESH blocky.lower.n
+    2300034: MESH blocky.lower.o
+    2300036: MESH blocky.lower.p
+    2300038: MESH blocky.lower.q
+    2300040: MESH blocky.lower.r
+    2300042: MESH blocky.lower.s
+    2300044: MESH blocky.lower.t
+    2300046: MESH blocky.lower.u
+    2300048: MESH blocky.lower.v
+    2300050: MESH blocky.lower.w
+    2300052: MESH blocky.lower.x
+    2300054: MESH blocky.lower.y
+    2300056: MESH blocky.lower.z
+    2300058: MESH blocky.minus
+    2300060: MESH blocky.number.0
+    2300062: MESH blocky.number.1
+    2300064: MESH blocky.number.2
+    2300066: MESH blocky.number.3
+    2300068: MESH blocky.number.4
+    2300070: MESH blocky.number.5
+    2300072: MESH blocky.number.6
+    2300074: MESH blocky.number.7
+    2300076: MESH blocky.number.8
+    2300078: MESH blocky.number.9
+    2300080: MESH blocky.period
+    2300082: MESH blocky.plus
+    2300084: MESH blocky.question
+    2300086: MESH blocky.slash
+    2300088: MESH blocky.upper.a
+    2300090: MESH blocky.upper.b
+    2300092: MESH blocky.upper.c
+    2300094: MESH blocky.upper.d
+    2300096: MESH blocky.upper.e
+    2300098: MESH blocky.upper.f
+    2300100: MESH blocky.upper.g
+    2300102: MESH blocky.upper.h
+    2300104: MESH blocky.upper.i
+    2300106: MESH blocky.upper.j
+    2300108: MESH blocky.upper.k
+    2300110: MESH blocky.upper.l
+    2300112: MESH blocky.upper.m
+    2300114: MESH blocky.upper.n
+    2300116: MESH blocky.upper.o
+    2300118: MESH blocky.upper.p
+    2300120: MESH blocky.upper.q
+    2300122: MESH blocky.upper.r
+    2300124: MESH blocky.upper.s
+    2300126: MESH blocky.upper.t
+    2300128: MESH blocky.upper.u
+    2300130: MESH blocky.upper.v
+    2300132: MESH blocky.upper.w
+    2300134: MESH blocky.upper.x
+    2300136: MESH blocky.upper.y
+    2300138: MESH blocky.upper.z
+    2300140: MESH blocky.punc.apostrope
+    2300142: MESH blocky.punc.comma
+    2300144: MESH blocky.punc.quotation
+    2300146: MESH blocky.punc.semiColon
+    2300148: MESH blocky.symbol.ampersand
+    2300150: MESH blocky.symbol.asterisk
+    2300152: MESH blocky.symbol.at
+    2300154: MESH blocky.symbol.bracket.left
+    2300156: MESH blocky.symbol.bracket.right
+    2300158: MESH blocky.symbol.dollar
+    2300160: MESH blocky.symbol.number
+    2300162: MESH blocky.symbol.percent
+    2300164: MESH blocky.punc.colon
+    2300166: MESH blocky.punc.exclamation
+    2300168: MESH blocky.punc.period
+    2300170: MESH blocky.punc.question
+    2300172: MESH blocky.symbol.equals
+    2300174: MESH blocky.symbol.minus
+    2300176: MESH blocky.symbol.plus
+    2300178: MESH blocky.symbol.slash
+    2300180: MESH blocky.replacement
+    2300182: MESH blocky.symbol.equal
+    3300000: MESH blocky.colon
+    3300002: MESH blocky.equals
+    3300004: MESH blocky.exclamation
+    3300006: MESH blocky.lower.a
+    3300008: MESH blocky.lower.b
+    3300010: MESH blocky.lower.c
+    3300012: MESH blocky.lower.d
+    3300014: MESH blocky.lower.e
+    3300016: MESH blocky.lower.f
+    3300018: MESH blocky.lower.g
+    3300020: MESH blocky.lower.h
+    3300022: MESH blocky.lower.i
+    3300024: MESH blocky.lower.j
+    3300026: MESH blocky.lower.k
+    3300028: MESH blocky.lower.l
+    3300030: MESH blocky.lower.m
+    3300032: MESH blocky.lower.n
+    3300034: MESH blocky.lower.o
+    3300036: MESH blocky.lower.p
+    3300038: MESH blocky.lower.q
+    3300040: MESH blocky.lower.r
+    3300042: MESH blocky.lower.s
+    3300044: MESH blocky.lower.t
+    3300046: MESH blocky.lower.u
+    3300048: MESH blocky.lower.v
+    3300050: MESH blocky.lower.w
+    3300052: MESH blocky.lower.x
+    3300054: MESH blocky.lower.y
+    3300056: MESH blocky.lower.z
+    3300058: MESH blocky.minus
+    3300060: MESH blocky.number.0
+    3300062: MESH blocky.number.1
+    3300064: MESH blocky.number.2
+    3300066: MESH blocky.number.3
+    3300068: MESH blocky.number.4
+    3300070: MESH blocky.number.5
+    3300072: MESH blocky.number.6
+    3300074: MESH blocky.number.7
+    3300076: MESH blocky.number.8
+    3300078: MESH blocky.number.9
+    3300080: MESH blocky.period
+    3300082: MESH blocky.plus
+    3300084: MESH blocky.question
+    3300086: MESH blocky.slash
+    3300088: MESH blocky.upper.a
+    3300090: MESH blocky.upper.b
+    3300092: MESH blocky.upper.c
+    3300094: MESH blocky.upper.d
+    3300096: MESH blocky.upper.e
+    3300098: MESH blocky.upper.f
+    3300100: MESH blocky.upper.g
+    3300102: MESH blocky.upper.h
+    3300104: MESH blocky.upper.i
+    3300106: MESH blocky.upper.j
+    3300108: MESH blocky.upper.k
+    3300110: MESH blocky.upper.l
+    3300112: MESH blocky.upper.m
+    3300114: MESH blocky.upper.n
+    3300116: MESH blocky.upper.o
+    3300118: MESH blocky.upper.p
+    3300120: MESH blocky.upper.q
+    3300122: MESH blocky.upper.r
+    3300124: MESH blocky.upper.s
+    3300126: MESH blocky.upper.t
+    3300128: MESH blocky.upper.u
+    3300130: MESH blocky.upper.v
+    3300132: MESH blocky.upper.w
+    3300134: MESH blocky.upper.x
+    3300136: MESH blocky.upper.y
+    3300138: MESH blocky.upper.z
+    3300140: MESH blocky.punc.apostrope
+    3300142: MESH blocky.punc.comma
+    3300144: MESH blocky.punc.quotation
+    3300146: MESH blocky.punc.semiColon
+    3300148: MESH blocky.symbol.ampersand
+    3300150: MESH blocky.symbol.asterisk
+    3300152: MESH blocky.symbol.at
+    3300154: MESH blocky.symbol.bracket.left
+    3300156: MESH blocky.symbol.bracket.right
+    3300158: MESH blocky.symbol.dollar
+    3300160: MESH blocky.symbol.number
+    3300162: MESH blocky.symbol.percent
+    3300164: MESH blocky.punc.colon
+    3300166: MESH blocky.punc.exclamation
+    3300168: MESH blocky.punc.period
+    3300170: MESH blocky.punc.question
+    3300172: MESH blocky.symbol.equals
+    3300174: MESH blocky.symbol.minus
+    3300176: MESH blocky.symbol.plus
+    3300178: MESH blocky.symbol.slash
+    3300180: MESH blocky.replacement
+    3300182: MESH blocky.symbol.equal
+    4300000: MESH blocky.upper.a
+    4300002: MESH blocky.upper.b
+    4300004: MESH blocky.upper.c
+    4300006: MESH blocky.upper.d
+    4300008: MESH blocky.upper.e
+    4300010: MESH blocky.upper.f
+    4300012: MESH blocky.upper.g
+    4300014: MESH blocky.upper.h
+    4300016: MESH blocky.upper.i
+    4300018: MESH blocky.upper.j
+    4300020: MESH blocky.upper.k
+    4300022: MESH blocky.upper.l
+    4300024: MESH blocky.upper.m
+    4300026: MESH blocky.upper.n
+    4300028: MESH blocky.upper.o
+    4300030: MESH blocky.upper.p
+    4300032: MESH blocky.upper.q
+    4300034: MESH blocky.upper.r
+    4300036: MESH blocky.upper.s
+    4300038: MESH blocky.upper.t
+    4300040: MESH blocky.upper.u
+    4300042: MESH blocky.upper.x
+    4300044: MESH blocky.upper.y
+    4300046: MESH blocky.upper.z
+    4300048: MESH blocky.upper.w
+    4300050: MESH blocky.upper.v
+    4300052: MESH blocky.number.0
+    4300054: MESH blocky.number.1
+    4300056: MESH blocky.number.2
+    4300058: MESH blocky.number.3
+    4300060: MESH blocky.number.4
+    4300062: MESH blocky.number.5
+    4300064: MESH blocky.number.6
+    4300066: MESH blocky.number.7
+    4300068: MESH blocky.number.8
+    4300070: MESH blocky.number.9
+    4300072: MESH blocky.period
+    4300074: MESH blocky.exclamation
+    4300076: MESH blocky.question
+    4300078: MESH blocky.colon
+    4300080: MESH blocky.slash
+    4300082: MESH blocky.plus
+    4300084: MESH blocky.equals
+    4300086: MESH blocky.minus
+    4300088: MESH blocky.lower.a
+    4300090: MESH blocky.lower.b
+    4300092: MESH blocky.lower.c
+    4300094: MESH blocky.lower.d
+    4300096: MESH blocky.lower.e
+    4300098: MESH blocky.lower.f
+    4300100: MESH blocky.lower.g
+    4300102: MESH blocky.lower.h
+    4300104: MESH blocky.lower.i
+    4300106: MESH blocky.lower.j
+    4300108: MESH blocky.lower.k
+    4300110: MESH blocky.lower.l
+    4300112: MESH blocky.lower.m
+    4300114: MESH blocky.lower.n
+    4300116: MESH blocky.lower.o
+    4300118: MESH blocky.lower.p
+    4300120: MESH blocky.lower.q
+    4300122: MESH blocky.lower.r
+    4300124: MESH blocky.lower.s
+    4300126: MESH blocky.lower.t
+    4300128: MESH blocky.lower.u
+    4300130: MESH blocky.lower.v
+    4300132: MESH blocky.lower.w
+    4300134: MESH blocky.lower.x
+    4300136: MESH blocky.lower.y
+    4300138: MESH blocky.lower.z
+    4300140: MESH blocky.punc.apostrope
+    4300142: MESH blocky.punc.quotation
+    4300144: MESH blocky.punc.comma
+    4300146: MESH blocky.punc.semiColon
+    4300148: MESH blocky.symbol.number
+    4300150: MESH blocky.symbol.dollar
+    4300152: MESH blocky.symbol.percent
+    4300154: MESH blocky.symbol.ampersand
+    4300156: MESH blocky.symbol.asterisk
+    4300158: MESH blocky.symbol.bracket.left
+    4300160: MESH blocky.symbol.bracket.right
+    4300162: MESH blocky.symbol.at
+    4300164: MESH blocky.punc.period
+    4300166: MESH blocky.punc.exclamation
+    4300168: MESH blocky.punc.question
+    4300170: MESH blocky.punc.colon
+    4300172: MESH blocky.symbol.slash
+    4300174: MESH blocky.symbol.plus
+    4300176: MESH blocky.symbol.equals
+    4300178: MESH blocky.symbol.minus
+    4300180: MESH blocky.replacement
+    4300182: MESH blocky.symbol.equal
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
