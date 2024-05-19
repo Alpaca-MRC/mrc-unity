@@ -73,4 +73,9 @@ public class EnemyShootingCar : MonoBehaviour
         // 각도가 일정한 임계값 이내인 경우에만 사격 가능
         return angleToPlayer < shootingAngleThreshold;
     }
+
+    // 탄창 아이템 획득 시 재장전
+    public void SetCurrentMagazineToFull() {
+        curMagazine = maxMagazine;
+    }
 }
