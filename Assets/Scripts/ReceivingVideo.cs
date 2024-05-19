@@ -6,7 +6,7 @@ using System.Net.Sockets;
 using System.Threading;
 using UnityEngine;
 
-public class ReceivingVideo : MonoBehaviour
+public class streaming : MonoBehaviour
 {
     public string serverIP = "192.168.137.197";
     public int port = 9090;

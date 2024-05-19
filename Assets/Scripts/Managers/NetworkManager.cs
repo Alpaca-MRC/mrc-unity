@@ -8,16 +8,19 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Threading.Tasks;
 using UnityEngine.SceneManagement;
+using System.Threading;
 
 public class NetworkManager : MonoBehaviour
 {
     public static NetworkManager Instance { get; private set; }
     private TcpClient tcpClient;
     private NetworkStream tcpStream;
-    private UdpClient udpClient;
-    private IPEndPoint serverEndPoint;
+    private UdpClient controlUdpClient, cameraUdpClient;
+    private IPEndPoint controlServerEndPoint, cameraServerEndPoint;
+    public GameObject Cube; // 비디오 스트리밍 오브젝트 
     private string serverIp = "192.168.137.193"; // 라즈베리파이 서버의 IP 주소
-    private int serverPort = 25001; // 라즈베리파이 서버의 포트 번호
+    private int controlPort = 25001; // 라즈베리파이 제어 서버의 포트 번호
+    private int cameraPort = 8080; // 라즈베리파이 카메라 서버의 포트 번호
 
     // 컨트롤러 값 관리
     public InputActionAsset inputActionsAsset;
@@ -25,25 +28,14 @@ public class NetworkManager : MonoBehaviour
     private float updatedHorizontalInput, updatedIsAPressed, updatedIsBPressed;
     string commandMessage;
     private bool isControllerInputEnabled;
+    private bool isTryingToReconnect = false;
 
-    void Start()
-    {
-        isControllerInputEnabled = true;
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
+    private bool isConnected = false;
 
-    private void OnDestroy()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    void Update()
-    {
-        if (isControllerInputEnabled)
-        {
-            CheckControllerInput();
-        }
-    }
+    // 비디오 값 관리
+    public Thread receiveThread;
+    private Texture2D tex;
+    private Queue<Action> mainThreadActions = new Queue<Action>();
 
     // 소켓 인스턴스 생성
     private void Awake()
@@ -59,77 +51,174 @@ public class NetworkManager : MonoBehaviour
         }
     }
 
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    void Start()
     {
-        isControllerInputEnabled = true;
-        // isControllerInputEnabled = scene.name == "MainScene"; // MR 씬에서만 컨트롤러 값 전송
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    public void ConnectToUDPServer()
+    void Update()
     {
-        udpClient = new UdpClient();
-        serverEndPoint = new IPEndPoint(IPAddress.Parse(serverIp), serverPort);
+        if (isControllerInputEnabled)
+        {
+            CheckControllerInput();
+            CheckCameraData();
+        }
+    }
+
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        if (isConnected)
+        {
+            byte[] disconnectMessage = System.Text.Encoding.UTF8.GetBytes("disconnect");
+            cameraUdpClient.Send(disconnectMessage, disconnectMessage.Length);
+            isConnected = false;
+        }
+        receiveThread?.Abort();
+        cameraUdpClient?.Close();
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        isControllerInputEnabled = scene.name == "ARScene"; // MR 씬에서만 컨트롤러 값 전송
+        if (scene.name == "ARScene")
+        {
+            Cube = GameObject.Find("Cube");
+            StartToReceiveData();
+            if (Cube == null)
+            {
+                Debug.LogError("Cube not found in the scene.");
+            }
+        }
+    }
+
+    public void ConnectToControlUDPServer()
+    {
+        controlUdpClient = new UdpClient();
+        controlServerEndPoint = new IPEndPoint(IPAddress.Parse(serverIp), controlPort);
         Debug.Log("Connected to UDP Server");
     }
 
-    public async Task ConnectToTCPServer()
+    public void ConnectToCameraUDPServer()
     {
-        try
-        {
-            tcpClient = new TcpClient();
-            await tcpClient.ConnectAsync(serverIp, serverPort);
-            tcpStream = tcpClient.GetStream();
-            Debug.Log("Connected to TCP Server");
-        }
-        catch (Exception e)
-        {
-            Debug.LogError("TCP connection error: " + e);
-            throw;
-        }
+        tex = new Texture2D(1280, 720);
+        cameraServerEndPoint = new IPEndPoint(IPAddress.Parse(serverIp), cameraPort);
+        cameraUdpClient = new UdpClient();
+        cameraUdpClient.Connect(cameraServerEndPoint);
+    }
+
+    public void StartToReceiveData()
+    {
+        isConnected = true;
+        byte[] initialData = System.Text.Encoding.UTF8.GetBytes("Unity connected!");
+        cameraUdpClient.Send(initialData, initialData.Length);
+        receiveThread = new Thread(ReceiveData) { IsBackground = true };
+        receiveThread.Start();
     }
 
     public void SendMessageToUDPServer(string message)
     {
-        if (udpClient != null)
+        if (controlUdpClient != null)
         {
             byte[] data = Encoding.ASCII.GetBytes(message);
-            udpClient.Send(data, data.Length, serverEndPoint);
+            controlUdpClient.Send(data, data.Length, controlServerEndPoint);
             Debug.Log("UDP message sent: " + message);
         }
     }
 
-    public void SendMessageToTCPServer(string message)
+    public void ReceiveData()
     {
-        if (tcpStream != null)
+        while (true)
         {
-            byte[] data = Encoding.ASCII.GetBytes(message);
-            tcpStream.Write(data, 0, data.Length);
-            Debug.Log("TCP message sent: " + message);
-        }
-        // 서버로부터 응답 수신
-        // byte[] responseData = new byte[1024];
-        // int bytes = tcpStream.Read(responseData, 0, responseData.Length);
-        // string response = Encoding.ASCII.GetString(responseData, 0, bytes);
+            if (isTryingToReconnect)
+            {
+                Thread.Sleep(1000); // 재연결 시도 중 일시적으로 데이터 수신을 중단
+                continue;
+            }
 
-        // if (response != null && response != "")
-        // {
-        //     Debug.Log(response);
-        // }
+            try
+            {
+                byte[] imageSizeData = cameraUdpClient.Receive(ref cameraServerEndPoint);
+                int imageSize = BitConverter.ToInt32(imageSizeData, 0);
+                if (imageSize == 0) continue;
+                byte[] imageData = ReceiveFullImage(imageSize);
+                if (imageData != null)
+                {
+                    lock (mainThreadActions)
+                    {
+                        mainThreadActions.Enqueue(() => tex.LoadImage(imageData));
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning("이미지 데이터 수신 실패. 다음 데이터를 기다립니다.");
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"데이터 수신 중 예외 발생: {e.Message}");
+                AttemptReconnect();
+            }
+        }
     }
 
-    public void CloseConnections()
+    private void AttemptReconnect()
     {
-        SendMessageToUDPServer("close_");
-        SendMessageToTCPServer("close");
-        udpClient?.Close();
-        tcpStream?.Close();
-        tcpClient?.Close();
-        Debug.Log("Connections closed");
-// #if UNITY_EDITOR
-//     UnityEditor.EditorApplication.isPlaying = false;
-// #else
-//         // Application.Quit();
-// #endif
+        if (!isTryingToReconnect)
+        {
+            isTryingToReconnect = true;
+            Debug.LogWarning("Connection lost. Attempting to reconnect...");
+
+            for (int attempt = 0; attempt < 5; attempt++)
+            {
+                try
+                {
+                    CloseClient();
+                    ConnectToCameraUDPServer();
+                    StartToReceiveData();
+                    isTryingToReconnect = false;
+                    return;
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError($"Reconnection attempt {attempt + 1} failed: {e.Message}");
+                    Thread.Sleep(2000); // 재연결 시도 간 대기
+                }
+            }
+
+            Debug.LogError("Failed to reconnect after multiple attempts.");
+            isTryingToReconnect = false;
+        }
+    }
+
+    private byte[] ReceiveFullImage(int imageSize)
+    {
+        int received = 0;
+        List<byte> imageData = new List<byte>();
+
+        System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
+        stopwatch.Start();
+        
+        while (received < imageSize)
+        {
+            if (stopwatch.ElapsedMilliseconds > 1000)
+            {
+                Debug.LogError("1초가 초과되었습니다.");
+                return null;
+            }
+            try
+            {
+                byte[] packetData = cameraUdpClient.Receive(ref cameraServerEndPoint);
+                received += packetData.Length;
+                imageData.AddRange(packetData);
+            }
+            catch (SocketException e)
+            {
+                Debug.LogError($"데이터 수신 중 예외 발생: {e.Message}");
+                return null; 
+            }
+        }
+        return imageData.ToArray();
     }
 
     private void CheckControllerInput()
@@ -151,5 +240,75 @@ public class NetworkManager : MonoBehaviour
             isBPressed = updatedIsBPressed;
         }
     }
+
+    private void CheckCameraData()
+    {
+        lock (mainThreadActions)
+        {
+            while (mainThreadActions.Count > 0)
+            {
+                mainThreadActions.Dequeue().Invoke();
+            }
+        }
+
+        if (tex != null)
+        {
+            Cube.GetComponent<Renderer>().material.mainTexture = tex;
+        }
+    }
+
+    private void CloseClient() 
+    {
+        if (isConnected)
+        {
+            byte[] disconnectMessage = System.Text.Encoding.UTF8.GetBytes("disconnect");
+            cameraUdpClient.Send(disconnectMessage, disconnectMessage.Length);
+            isConnected = false;
+            Debug.Log("send close message");
+        }
+        cameraUdpClient?.Close();
+    }
 }
 
+
+    // public void SendMessageToTCPServer(string message)
+    // {
+    //     if (tcpStream != null)
+    //     {
+    //         byte[] data = Encoding.ASCII.GetBytes(message);
+    //         tcpStream.Write(data, 0, data.Length);
+    //         Debug.Log("TCP message sent: " + message);
+    //     }
+    //     // 서버로부터 응답 수신
+    //     // byte[] responseData = new byte[1024];
+    //     // int bytes = tcpStream.Read(responseData, 0, responseData.Length);
+    //     // string response = Encoding.ASCII.GetString(responseData, 0, bytes);
+
+    //     // if (response != null && response != "")
+    //     // {
+    //     //     Debug.Log(response);
+    //     // }
+    // }
+
+    // public async Task ConnectToTCPServer()
+    // {
+    //     try
+    //     {
+    //         tcpClient = new TcpClient();
+    //         await tcpClient.ConnectAsync(serverIp, controlPort);
+    //         tcpStream = tcpClient.GetStream();
+    //         Debug.Log("Connected to TCP Server");
+    //     }
+    //     catch (Exception e)
+    //     {
+    //         Debug.LogError("TCP connection error: " + e);
+    //         throw;
+    //     }
+    // }
+
+    // public void CloseConnections()
+    // {
+    //     SendMessageToUDPServer("close_");
+    //     controlUdpClient?.Close();
+    //     // Application.Quit();
+    // }
