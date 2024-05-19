@@ -1347,8 +1347,10 @@ MonoBehaviour:
     type: 3}
   gameManager: {fileID: 0}
   enemyShootingCar: {fileID: -3198181649396152092}
+  enemyHpBar: {fileID: 0}
   isPlayerInRange: 0
   isShooting: 0
+  isMagazineEmpty: 0
   _stunEffectPrefab: {fileID: 7131401307255788800, guid: a29f903bd122508488dbbc7a9daf954b,
     type: 3}
 --- !u!114 &-3198181649396152092
@@ -1363,12 +1365,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ffeb7fa7ff04504a8b35d36a6f5a206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 0.1
   FirePoint: {fileID: 6766407591042065732}
   Prefabs: []
   gameManager: {fileID: 8190636432445191920, guid: 4cf82701bb0219b4680dbabffee6b4af,
     type: 3}
   flagManager: {fileID: 0}
+  maxMagazine: 0
+  curMagazine: 0
+  curMagTxt: {fileID: 0}
   shootingAngleThreshold: 30
 --- !u!1 &1000012726857630
 GameObject:
@@ -2339,7 +2343,7 @@ Transform:
   m_GameObject: {fileID: 6766407591042065732}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2, z: 0}
+  m_LocalPosition: {x: 0, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2366,7 +2370,7 @@ PrefabInstance:
     - target: {fileID: 6615589901379891644, guid: c0e9f20ccb4c9214cb69db6527b3f053,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 6615589901379891644, guid: c0e9f20ccb4c9214cb69db6527b3f053,
         type: 3}

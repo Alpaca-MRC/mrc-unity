@@ -77,9 +77,19 @@ public class BulletManager : MonoBehaviour
     // 충돌 시 호출되는 메서드
     protected virtual void OnCollisionEnter(Collision collision)
     {
+        
         // 총알이 총구를 때려서 터지지 않게
         if (collision.gameObject.name.Equals("FireTool")) {
             return;
+        }
+        
+        // 자기가 자기 자신을 때리지 못하도록 예외처리
+        if (collision.collider.name.Equals("Enemy_Car"))
+        {
+            if (gameObject.name.Equals("Enemy Bullet(Clone)") || gameObject.name.Equals("Enemy Bullet"))
+            {
+                return;
+            }
         }
 
         // 모든 축의 이동과 회전을 제한

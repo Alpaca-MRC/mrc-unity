@@ -28,6 +28,7 @@ public class EnemyController : MonoBehaviour
     // 게임 상태 관리
     public bool isPlayerInRange;        // 플레이어 카트의 사격 범위 안에 있는지 여부
     public bool isShooting;             // 사격 중인지 여부
+    public bool isMagazineEmpty;
 
     // 스턴 효과
     [SerializeField]
@@ -54,26 +55,47 @@ public class EnemyController : MonoBehaviour
         isStun = false;
         isPlayerInRange = false;
         isShooting = false;
+        isMagazineEmpty = false;
     }
 
     // 상태에 따른 액션
     void ActionCommend()
     {
-        // 1. 플래그 바닥에 있는 경우
-        // 1-1. 플래그를 향해 이동
-        if (flagManager.flagState == FlagState.OnBoard) MoveToFlag();
-
-        // 2. 플래그가 플레이어에게 있는 경우
-        else if (flagManager.flagState == FlagState.OnPlayer)
+        // 탄창이 비어있고
+        // 주울 수 있는 탄창이 있다면
+        // 1 -> 2 -> 3번 탄창 순으로 검사
+        if (isMagazineEmpty && gameManager._isMagazineOneSetActive)
         {
-            // 플레이어를 향해 이동
-            MoveToPlayer();
-
+            // 1번 탄창으로 이동
+            MoveToMagazine(1);
         }
-        // 3. 플래그가 적에게 있는 경우
-        // 3-1. 골대를 향해 이동
-        else if (flagManager.flagState == FlagState.OnEnemy) MoveToGoal();
+        else if (isMagazineEmpty && gameManager._isMagazineTwoSetActive)
+        {
+            // 2번 탄창으로 이동
+            MoveToMagazine(2);
+        }
+        else if (isMagazineEmpty && gameManager._isMagazineThreeSetActive)
+        {
+            // 3번 탄창으로 이동
+            MoveToMagazine(3);
+        }
+        else
+        {
+            // 1. 플래그 바닥에 있는 경우
+            // 1-1. 플래그를 향해 이동
+            if (flagManager.flagState == FlagState.OnBoard) MoveToFlag();
 
+            // 2. 플래그가 플레이어에게 있는 경우
+            else if (flagManager.flagState == FlagState.OnPlayer)
+            {
+                // 플레이어를 향해 이동
+                MoveToPlayer();
+
+            }
+            // 3. 플래그가 적에게 있는 경우
+            // 3-1. 골대를 향해 이동
+            else if (flagManager.flagState == FlagState.OnEnemy) MoveToGoal();
+        }
     }
 
     // ################## 카트 체력에 따른 이벤트 ########################
@@ -198,6 +220,58 @@ public class EnemyController : MonoBehaviour
         // 적 카트가 골대를 향해 정면이 보이도록 회전
         Quaternion targetRotation = Quaternion.LookRotation(goalDirection);
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
+    }
+
+    // 4. 탄창을 향해 이동
+    void MoveToMagazine(int magazine)
+    {
+        switch (magazine)
+        {
+            case 1:
+                // 탄창 방향 벡터 계산
+                Vector3 magazineOneDirection = (gameManager.magazineOne.transform.position - transform.position).normalized;
+                magazineOneDirection.y = 0f;
+
+                // 일정 속도로 이동하도록 설정
+                float moveOneSpeed = 0.5f;
+                transform.position += moveOneSpeed * Time.deltaTime * magazineOneDirection;
+
+                // 탄창을 바라보도록 방향 회전
+                Quaternion targetOneRotation = Quaternion.LookRotation(magazineOneDirection);
+                transform.rotation = Quaternion.Lerp(transform.rotation, targetOneRotation, Time.deltaTime * 5f);
+                break;
+            
+            case 2:
+                // 탄창 방향 벡터 계산
+                Vector3 magazineTwoDirection = (gameManager.magazineTwo.transform.position - transform.position).normalized;
+                magazineTwoDirection.y = 0f;
+
+                // 일정 속도로 이동하도록 설정
+                float moveTwoSpeed = 0.5f;
+                transform.position += moveTwoSpeed * Time.deltaTime * magazineTwoDirection;
+
+                // 탄창을 바라보도록 방향 회전
+                Quaternion targetTwoRotation = Quaternion.LookRotation(magazineTwoDirection);
+                transform.rotation = Quaternion.Lerp(transform.rotation, targetTwoRotation, Time.deltaTime * 5f);
+                break;
+
+            case 3:
+                // 탄창 방향 벡터 계산
+                Vector3 magazineThreeDirection = (gameManager.magazineThree.transform.position - transform.position).normalized;
+                magazineThreeDirection.y = 0f;
+
+                // 일정 속도로 이동하도록 설정
+                float moveThreeSpeed = 0.5f;
+                transform.position += moveThreeSpeed * Time.deltaTime * magazineThreeDirection;
+
+                // 탄창을 바라보도록 방향 회전
+                Quaternion targetThreeRotation = Quaternion.LookRotation(magazineThreeDirection);
+                transform.rotation = Quaternion.Lerp(transform.rotation, targetThreeRotation, Time.deltaTime * 5f);
+                break;
+
+            default:
+                break;
+        }
     }
 
     // ####### 사격 액션 #######

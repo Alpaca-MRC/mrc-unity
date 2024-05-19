@@ -4,6 +4,7 @@ using System.Runtime.Serialization.Formatters;
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class EnemyShootingCar : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class EnemyShootingCar : MonoBehaviour
     public float maxMagazine;
     // 남은 탄약 수
     public float curMagazine;
+    public TextMeshProUGUI curMagTxt;
 
     // 플레이어 카트를 바라보는 각도 범위
     public float shootingAngleThreshold = 30f;
@@ -32,9 +34,13 @@ public class EnemyShootingCar : MonoBehaviour
 
     void Update()
     {
+        // 잔여 탄약 표시
+        curMagTxt.text = curMagazine.ToString();
+        
         // 남아있는 탄약이 없으면 총을 쏘지 않음
         if (curMagazine == 0)
         {
+            gameObject.GetComponent<EnemyController>().isMagazineEmpty = true;
             return;
         }
         // 예외처리 : 잔량이 0 미만으로 떨어졌다면 0으로 설정함
@@ -51,6 +57,7 @@ public class EnemyShootingCar : MonoBehaviour
         if (fireCountdown <= 0f && CanShootPlayer() && flagManager.flagState == FlagState.OnPlayer && gameManager.gameState == GameState.InProgress)
         {
             Instantiate(Prefabs[Prefab], FirePoint.transform.position, FirePoint.transform.rotation);
+            curMagazine -= 1;
             fireCountdown = 0;
             fireCountdown += fireRate;
         }
@@ -77,5 +84,6 @@ public class EnemyShootingCar : MonoBehaviour
     // 탄창 아이템 획득 시 재장전
     public void SetCurrentMagazineToFull() {
         curMagazine = maxMagazine;
+        gameObject.GetComponent<EnemyController>().isMagazineEmpty = false;
     }
 }
