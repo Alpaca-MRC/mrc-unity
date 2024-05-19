@@ -60,10 +60,13 @@ public class GameManager : MonoBehaviour
     public GameObject gateTwo;          // 적 게이트 instance
     public Transform gateOnePosition;   // 플레이어 게이트 위치
     public Transform gateTwoPosition;   // 적 게이트 위치
+    [SerializeField]
+    private ParticleSystem lineFireworksParticle;
+    [SerializeField]
+    private ParticleSystem fanFireworksParticle;
 
     // 플래그 
     public FlagManager flagManager;     // 플래그 매니저
-    // public GameObject _flagPrefab;      // 플래그 prefab
     public GameObject flag;             // 플래그 인스턴스
 
     // 앵커
@@ -116,6 +119,10 @@ public class GameManager : MonoBehaviour
 
         // 사용하지 않는 ui 비활성화
         ActivateUI(infoGameProcessGameObject);
+
+        // 폭죽 비활성화
+        if (lineFireworksParticle.isPlaying) lineFireworksParticle.Stop();
+        if (fanFireworksParticle.isPlaying) fanFireworksParticle.Stop();
 
         // 시작시 안내멘트 출력
         
@@ -424,16 +431,47 @@ public class GameManager : MonoBehaviour
     {
         switch (role)
         {
-            // 플레이어 승리시
+            // 플레이어 골인시
             case 0:
+                PlayFireworks(0);
                 playerScore++;
                 playerScoreText.text = playerScore.ToString();
                 break;
                 
-            // 적군 승리시
+            // 적군 골인시
             case 1:
+                PlayFireworks(1);
                 enemyScore++;
                 enemyScoreText.text = enemyScore.ToString();
+                break;
+            
+            default:
+                break;
+        }
+    }
+
+    // 골인시 폭죽 효과 실행
+    void PlayFireworks(int role) {
+        switch (role)
+        {
+            // 플레이어 골인시
+            case 0:
+                lineFireworksParticle.transform.position = gateOne.transform.position;
+                lineFireworksParticle.transform.rotation = gateOne.transform.rotation;
+                fanFireworksParticle.transform.position = gateOne.transform.position;
+                fanFireworksParticle.transform.rotation = gateOne.transform.rotation;
+                if (!lineFireworksParticle.isPlaying) lineFireworksParticle.Play();
+                if (!fanFireworksParticle.isPlaying) fanFireworksParticle.Play();
+                break;
+            
+            // 적군 골인시
+            case 1:
+                lineFireworksParticle.transform.position = gateTwo.transform.position;
+                lineFireworksParticle.transform.rotation = gateTwo.transform.rotation;
+                fanFireworksParticle.transform.position = gateTwo.transform.position;
+                fanFireworksParticle.transform.rotation = gateTwo.transform.rotation;
+                if (!lineFireworksParticle.isPlaying) lineFireworksParticle.Play();
+                if (!fanFireworksParticle.isPlaying) fanFireworksParticle.Play();
                 break;
             
             default:
