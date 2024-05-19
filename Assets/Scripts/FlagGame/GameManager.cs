@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using TMPro;
+using Type3D;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -37,11 +38,9 @@ public class GameManager : MonoBehaviour
     private Quaternion exampleRotation;
 
     // 플레이어 카트 prefab
-    // public GameObject _friendlyCartPrefab;
     public GameObject friendlyCart;
 
     // 적 카트 prefab
-    // public GameObject _enemyCartPrefab;
     public GameObject enemyCart;
 
     // 왼쪽 컨트롤러
@@ -50,6 +49,12 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private XRRayInteractor _leftRayInteractor; // 왼쪽 컨트롤러 ray 설정
+    [SerializeField]
+    private TimerManager timerManager;
+    [SerializeField]
+    private ScoreManager friendlyScoreManager;
+    [SerializeField]
+    private ScoreManager enemyScoreManager;
 
     // 골대
     // 골대 생성 controller
@@ -95,16 +100,9 @@ public class GameManager : MonoBehaviour
     public GameObject twoGameObject;                    // 2 
     public GameObject threeGameObject;                  // 3
     public GameObject winGameObject;                    // win
+    [SerializeField]
+    private GameObject InGameGameObject;
     public GameObject loseGameObject;                   // lose
-    
-    // 게임 UI 텍스트
-    public TextMeshProUGUI timer;                       // 타이머
-    public TextMeshProUGUI playerScoreText;             // 아군 점수
-    public TextMeshProUGUI enemyScoreText;              // 적군 점수
-
-    // 게임 스코어
-    public int playerScore;
-    public int enemyScore;
 
     void Start()
     {
@@ -163,6 +161,7 @@ public class GameManager : MonoBehaviour
         countDownGameObject.SetActive(false);
         winGameObject.SetActive(false);
         loseGameObject.SetActive(false);
+        InGameGameObject.SetActive(false);
 
         if (UIGameObject != null) UIGameObject.SetActive(true);
     }
@@ -190,17 +189,14 @@ public class GameManager : MonoBehaviour
         Destroy(cartExample);
         
         // 플레이어 카트 생성
-        // friendlyCart = Instantiate(_friendlyCartPrefab, examplePosition, exampleRotation);
         friendlyCart.SetActive(true);
         friendlyCart.transform.SetPositionAndRotation(examplePosition, exampleRotation);
-        // Debug.Log("friendlyCart의 rotation이에요: " + exampleRotation);
         // 플레이어 카트 이동 및 사격 제한
         friendlyCart.GetComponent<FriendlyCarMove>().enabled = false;
         friendlyCart.GetComponent<FriendlyShootingCar>().enabled = false;
         // 적 카트 생성
         Vector3 enemyPosition = gateTwoPosition.position + (gateOnePosition.position - gateTwoPosition.position).normalized / 2f;
         enemyPosition.y = 0f;
-        // enemyCart = Instantiate(_enemyCartPrefab, enemyPosition, Quaternion.identity);
         enemyCart.SetActive(true);
         enemyCart.transform.position = enemyPosition;
         enemyCart.transform.LookAt(gateOnePosition);
@@ -220,8 +216,62 @@ public class GameManager : MonoBehaviour
         flagManager.spawnPosition = flagPosition;
         flagManager.dropDistance = Vector3.Distance(gateOnePosition.position, gateTwoPosition.position) / 8f;
         flag.SetActive(true);
-        flag.transform.position = flagPosition;
-        flag.transform.rotation = Quaternion.identity;
+
+        // InGame GameObject도 골대 사이에 위치
+        Vector3 inGameUIPosition = flagPosition;
+        inGameUIPosition.y = 1f;
+        InGameGameObject.transform.position = inGameUIPosition;
+
+        // 방향은 두 골대를 잇는 직선에 직교하도록, 그리고 XR Origin쪽 방향 선택
+        Vector3 direction = gateTwoPosition.position - gateOnePosition.position;
+        Vector3 perpendicularDirection = Vector3.Cross(direction, Vector3.up).normalized;
+        Vector3 xrOriginDirection = (transform.position - inGameUIPosition).normalized;
+
+        // 방향을 XR Origin 쪽으로 설정
+        if (Vector3.Dot(perpendicularDirection, xrOriginDirection) >= 0)
+        {
+            perpendicularDirection = -perpendicularDirection;
+        }
+
+        // InGameGameObject의 회전 설정
+        InGameGameObject.transform.rotation = Quaternion.LookRotation(perpendicularDirection);
+
+        // Score 각 골대 위에 두기
+        Transform friendlyScore = InGameGameObject.transform.Find("Friendly Score");
+        Transform enemyScore = InGameGameObject.transform.Find("Enemy Score");
+
+        if (friendlyScore != null && enemyScore != null)
+        {   
+            // Friendly Score를 Friendly Gate 위에 배치 (왼쪽으로 이동)
+            Vector3 friendlyScorePosition = gateOnePosition.position;
+            friendlyScorePosition.y += 1f;
+            friendlyScore.position = friendlyScorePosition;
+
+            // Enemy Score를 Enemy Gate 위에 배치 (왼쪽으로 이동)
+            Vector3 enemyScorePosition = gateTwoPosition.position;
+            enemyScorePosition.y += 1f;
+            enemyScore.position = enemyScorePosition;
+
+            friendlyScore.LookAt(transform);
+            enemyScore.LookAt(transform);
+            friendlyScore.rotation *= Quaternion.Euler(0, 180, 0);
+            enemyScore.rotation *= Quaternion.Euler(0, 180, 0);
+
+            // y축 회전을 0으로 설정
+            Vector3 friendlyEulerAngles = friendlyScore.rotation.eulerAngles;
+            friendlyEulerAngles.y = 0;
+            friendlyScore.rotation = Quaternion.Euler(friendlyEulerAngles);
+
+            Vector3 enemyEulerAngles = enemyScore.rotation.eulerAngles;
+            enemyEulerAngles.y = 0;
+            enemyScore.rotation = Quaternion.Euler(enemyEulerAngles);
+
+            // 왼쪽으로 이동
+            friendlyScore.position -= friendlyScore.right;
+            enemyScore.position -= enemyScore.right;
+        }
+
+        flag.transform.SetPositionAndRotation(flagPosition, Quaternion.identity);
         yield return new WaitForSecondsRealtime(2.0f);
         ActivateUI(readyGameObject);
         gameReadyText.text = "잠시후 게임을 시작합니다.";
@@ -232,12 +282,11 @@ public class GameManager : MonoBehaviour
     // 게임 시작
     void StartGame()
     {
-        // 타이머 초기화
-        UpdateLapTime(gameTimeInSeconds);
         // 카운트 다운 시작
         StartCoroutine(StartCountdown());
         // 게임 설정 초기화
         InitializationGameSetting();
+        ActivateUI(InGameGameObject);
     }
 
     // 아군 골대 앞 카트 위치 생성(포탈)
@@ -338,23 +387,7 @@ public class GameManager : MonoBehaviour
     // 게임 초기화
     public void InitializationGameSetting()
     {
-        playerScore = 0;
-        enemyScore = 0;
         gameTimeInSeconds = 10f;
-        playerScoreText.text = playerScore.ToString();
-        enemyScoreText.text = enemyScore.ToString();
-        
-    }
-
-    // 랩타입 초기화
-    public void UpdateLapTime(float lapTime)
-    {
-        int minutes = Mathf.FloorToInt(lapTime / 60f);
-        int seconds = Mathf.FloorToInt(lapTime % 60f);
-        int milliseconds = Mathf.FloorToInt((lapTime * 1000f) % 1000f);
-        string timerString = string.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, milliseconds / 10);
-
-        timer.text = "Timer: " + timerString;
     }
 
     // 카운트 다운
@@ -368,7 +401,6 @@ public class GameManager : MonoBehaviour
         // 3초 카운트 다운
         for (int i = 3; i > 0; i--)
         {
-            // countdownText.text = i.ToString();
             if (i == 3) threeGameObject.SetActive(true);
             if (i == 2) {
                 threeGameObject.SetActive(false);
@@ -384,7 +416,6 @@ public class GameManager : MonoBehaviour
         oneGameObject.SetActive(false);
         startGameObject.SetActive(true);
         yield return new WaitForSeconds(1f);
-        ActivateUI(null);
 
         // 게임 시작
         gameState = GameState.InProgress;
@@ -392,28 +423,7 @@ public class GameManager : MonoBehaviour
         friendlyCart.gameObject.GetComponent<FriendlyCarMove>().enabled = true;
         friendlyCart.gameObject.GetComponent<FriendlyShootingCar>().enabled = true;
         // 적 카트 이동 및 사격
-        StartCoroutine(GameTimer());
-    }
-
-    IEnumerator GameTimer()
-    {
-        float timer = gameTimeInSeconds;
-
-        while (timer > 0 && gameState == GameState.InProgress)
-        {
-            timer -= Time.deltaTime;
-
-            // if (timer < 5f)
-            // {
-            //     enemyController.Exhaustion();
-            // }
-
-            UpdateLapTime(timer);
-            yield return null;
-        }
-
-        // 게임 종료
-        // EndGame();
+        StartCoroutine(timerManager.GameTimer(gameTimeInSeconds));
     }
 
     void EndGame()
@@ -433,16 +443,14 @@ public class GameManager : MonoBehaviour
         {
             // 플레이어 골인시
             case 0:
+                friendlyScoreManager.UpdateScore();
                 PlayFireworks(0);
-                playerScore++;
-                playerScoreText.text = playerScore.ToString();
                 break;
                 
             // 적군 골인시
             case 1:
+                enemyScoreManager.UpdateScore();
                 PlayFireworks(1);
-                enemyScore++;
-                enemyScoreText.text = enemyScore.ToString();
                 break;
             
             default:

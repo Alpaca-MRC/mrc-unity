@@ -18,7 +18,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     private EnemyShootingCar enemyShootingCar;  // 사격 매니저
     [SerializeField]
-    private HpBarScript hpBarScript;        // HP 바 관리
+    private EnemyHpBar enemyHpBar;        // HP 바 관리
 
     // 카트 상태 관리
     private int maxHealth;  // 최대 체력
@@ -86,12 +86,11 @@ public class EnemyController : MonoBehaviour
 
             // 이미 스턴 상태라면 피를 깎지 않음
             if (isStun) return;
-    
+
             // 피를 1 깎는다
             curHealth -= 1;
             float hpPercentage = (float) curHealth / maxHealth;
-            hpBarScript.UpdateHealthBar(hpPercentage);
-
+            enemyHpBar.UpdateHealthBar(hpPercentage);
             // 피가 0이 된다면
             if (curHealth == 0) {
                 Exhaustion();
@@ -134,7 +133,7 @@ public class EnemyController : MonoBehaviour
 
         // 체력 다시 채워주기
         curHealth = maxHealth;
-        hpBarScript.UpdateHealthBar(1f);
+        enemyHpBar.UpdateHealthBar(1f);
     }
 
 

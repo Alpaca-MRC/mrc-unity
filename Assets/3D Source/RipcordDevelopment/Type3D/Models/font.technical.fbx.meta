@@ -1,0 +1,500 @@
+fileFormatVersion: 2
+guid: 772d18225d35fb7469861b70068687a2
+timeCreated: 1516131525
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: MESH technical.lower.a
+    100004: MESH technical.lower.b
+    100006: MESH technical.lower.c
+    100008: MESH technical.lower.d
+    100010: MESH technical.lower.e
+    100012: MESH technical.lower.f
+    100014: MESH technical.lower.g
+    100016: MESH technical.lower.h
+    100018: MESH technical.lower.i
+    100020: MESH technical.lower.j
+    100022: MESH technical.lower.k
+    100024: MESH technical.lower.l
+    100026: MESH technical.lower.m
+    100028: MESH technical.lower.n
+    100030: MESH technical.lower.o
+    100032: MESH technical.lower.p
+    100034: MESH technical.lower.q
+    100036: MESH technical.lower.r
+    100038: MESH technical.lower.s
+    100040: MESH technical.lower.t
+    100042: MESH technical.lower.u
+    100044: MESH technical.lower.v
+    100046: MESH technical.lower.w
+    100048: MESH technical.lower.x
+    100050: MESH technical.lower.y
+    100052: MESH technical.lower.z
+    100054: MESH technical.number.0
+    100056: MESH technical.number.1
+    100058: MESH technical.number.2
+    100060: MESH technical.number.3
+    100062: MESH technical.number.4
+    100064: MESH technical.number.5
+    100066: MESH technical.number.6
+    100068: MESH technical.number.7
+    100070: MESH technical.number.8
+    100072: MESH technical.number.9
+    100074: MESH technical.punc.apostrophe
+    100076: MESH technical.punc.colon
+    100078: MESH technical.punc.comma
+    100080: MESH technical.punc.exclamation
+    100082: MESH technical.punc.period
+    100084: MESH technical.punc.question
+    100086: MESH technical.punc.quotation
+    100088: MESH technical.punc.semiColon
+    100090: MESH technical.replacement
+    100092: MESH technical.symbol.ampersand
+    100094: MESH technical.symbol.asterisk
+    100096: MESH technical.symbol.at
+    100098: MESH technical.symbol.bracket.left
+    100100: MESH technical.symbol.bracket.right
+    100102: MESH technical.symbol.dollar
+    100104: MESH technical.symbol.equal
+    100106: MESH technical.symbol.minus
+    100108: MESH technical.symbol.number
+    100110: MESH technical.symbol.percent
+    100112: MESH technical.symbol.plus
+    100114: MESH technical.symbol.slash
+    100116: MESH technical.upper.a
+    100118: MESH technical.upper.b
+    100120: MESH technical.upper.c
+    100122: MESH technical.upper.d
+    100124: MESH technical.upper.e
+    100126: MESH technical.upper.f
+    100128: MESH technical.upper.g
+    100130: MESH technical.upper.h
+    100132: MESH technical.upper.i
+    100134: MESH technical.upper.j
+    100136: MESH technical.upper.k
+    100138: MESH technical.upper.l
+    100140: MESH technical.upper.m
+    100142: MESH technical.upper.n
+    100144: MESH technical.upper.o
+    100146: MESH technical.upper.p
+    100148: MESH technical.upper.q
+    100150: MESH technical.upper.r
+    100152: MESH technical.upper.s
+    100154: MESH technical.upper.t
+    100156: MESH technical.upper.u
+    100158: MESH technical.upper.v
+    100160: MESH technical.upper.w
+    100162: MESH technical.upper.x
+    100164: MESH technical.upper.z
+    100166: Object003
+    100168: MESH technical.upper.y
+    400000: //RootNode
+    400002: MESH technical.lower.a
+    400004: MESH technical.lower.b
+    400006: MESH technical.lower.c
+    400008: MESH technical.lower.d
+    400010: MESH technical.lower.e
+    400012: MESH technical.lower.f
+    400014: MESH technical.lower.g
+    400016: MESH technical.lower.h
+    400018: MESH technical.lower.i
+    400020: MESH technical.lower.j
+    400022: MESH technical.lower.k
+    400024: MESH technical.lower.l
+    400026: MESH technical.lower.m
+    400028: MESH technical.lower.n
+    400030: MESH technical.lower.o
+    400032: MESH technical.lower.p
+    400034: MESH technical.lower.q
+    400036: MESH technical.lower.r
+    400038: MESH technical.lower.s
+    400040: MESH technical.lower.t
+    400042: MESH technical.lower.u
+    400044: MESH technical.lower.v
+    400046: MESH technical.lower.w
+    400048: MESH technical.lower.x
+    400050: MESH technical.lower.y
+    400052: MESH technical.lower.z
+    400054: MESH technical.number.0
+    400056: MESH technical.number.1
+    400058: MESH technical.number.2
+    400060: MESH technical.number.3
+    400062: MESH technical.number.4
+    400064: MESH technical.number.5
+    400066: MESH technical.number.6
+    400068: MESH technical.number.7
+    400070: MESH technical.number.8
+    400072: MESH technical.number.9
+    400074: MESH technical.punc.apostrophe
+    400076: MESH technical.punc.colon
+    400078: MESH technical.punc.comma
+    400080: MESH technical.punc.exclamation
+    400082: MESH technical.punc.period
+    400084: MESH technical.punc.question
+    400086: MESH technical.punc.quotation
+    400088: MESH technical.punc.semiColon
+    400090: MESH technical.replacement
+    400092: MESH technical.symbol.ampersand
+    400094: MESH technical.symbol.asterisk
+    400096: MESH technical.symbol.at
+    400098: MESH technical.symbol.bracket.left
+    400100: MESH technical.symbol.bracket.right
+    400102: MESH technical.symbol.dollar
+    400104: MESH technical.symbol.equal
+    400106: MESH technical.symbol.minus
+    400108: MESH technical.symbol.number
+    400110: MESH technical.symbol.percent
+    400112: MESH technical.symbol.plus
+    400114: MESH technical.symbol.slash
+    400116: MESH technical.upper.a
+    400118: MESH technical.upper.b
+    400120: MESH technical.upper.c
+    400122: MESH technical.upper.d
+    400124: MESH technical.upper.e
+    400126: MESH technical.upper.f
+    400128: MESH technical.upper.g
+    400130: MESH technical.upper.h
+    400132: MESH technical.upper.i
+    400134: MESH technical.upper.j
+    400136: MESH technical.upper.k
+    400138: MESH technical.upper.l
+    400140: MESH technical.upper.m
+    400142: MESH technical.upper.n
+    400144: MESH technical.upper.o
+    400146: MESH technical.upper.p
+    400148: MESH technical.upper.q
+    400150: MESH technical.upper.r
+    400152: MESH technical.upper.s
+    400154: MESH technical.upper.t
+    400156: MESH technical.upper.u
+    400158: MESH technical.upper.v
+    400160: MESH technical.upper.w
+    400162: MESH technical.upper.x
+    400164: MESH technical.upper.z
+    400166: Object003
+    400168: MESH technical.upper.y
+    2300000: MESH technical.lower.a
+    2300002: MESH technical.lower.b
+    2300004: MESH technical.lower.c
+    2300006: MESH technical.lower.d
+    2300008: MESH technical.lower.e
+    2300010: MESH technical.lower.f
+    2300012: MESH technical.lower.g
+    2300014: MESH technical.lower.h
+    2300016: MESH technical.lower.i
+    2300018: MESH technical.lower.j
+    2300020: MESH technical.lower.k
+    2300022: MESH technical.lower.l
+    2300024: MESH technical.lower.m
+    2300026: MESH technical.lower.n
+    2300028: MESH technical.lower.o
+    2300030: MESH technical.lower.p
+    2300032: MESH technical.lower.q
+    2300034: MESH technical.lower.r
+    2300036: MESH technical.lower.s
+    2300038: MESH technical.lower.t
+    2300040: MESH technical.lower.u
+    2300042: MESH technical.lower.v
+    2300044: MESH technical.lower.w
+    2300046: MESH technical.lower.x
+    2300048: MESH technical.lower.y
+    2300050: MESH technical.lower.z
+    2300052: MESH technical.number.0
+    2300054: MESH technical.number.1
+    2300056: MESH technical.number.2
+    2300058: MESH technical.number.3
+    2300060: MESH technical.number.4
+    2300062: MESH technical.number.5
+    2300064: MESH technical.number.6
+    2300066: MESH technical.number.7
+    2300068: MESH technical.number.8
+    2300070: MESH technical.number.9
+    2300072: MESH technical.punc.apostrophe
+    2300074: MESH technical.punc.colon
+    2300076: MESH technical.punc.comma
+    2300078: MESH technical.punc.exclamation
+    2300080: MESH technical.punc.period
+    2300082: MESH technical.punc.question
+    2300084: MESH technical.punc.quotation
+    2300086: MESH technical.punc.semiColon
+    2300088: MESH technical.replacement
+    2300090: MESH technical.symbol.ampersand
+    2300092: MESH technical.symbol.asterisk
+    2300094: MESH technical.symbol.at
+    2300096: MESH technical.symbol.bracket.left
+    2300098: MESH technical.symbol.bracket.right
+    2300100: MESH technical.symbol.dollar
+    2300102: MESH technical.symbol.equal
+    2300104: MESH technical.symbol.minus
+    2300106: MESH technical.symbol.number
+    2300108: MESH technical.symbol.percent
+    2300110: MESH technical.symbol.plus
+    2300112: MESH technical.symbol.slash
+    2300114: MESH technical.upper.a
+    2300116: MESH technical.upper.b
+    2300118: MESH technical.upper.c
+    2300120: MESH technical.upper.d
+    2300122: MESH technical.upper.e
+    2300124: MESH technical.upper.f
+    2300126: MESH technical.upper.g
+    2300128: MESH technical.upper.h
+    2300130: MESH technical.upper.i
+    2300132: MESH technical.upper.j
+    2300134: MESH technical.upper.k
+    2300136: MESH technical.upper.l
+    2300138: MESH technical.upper.m
+    2300140: MESH technical.upper.n
+    2300142: MESH technical.upper.o
+    2300144: MESH technical.upper.p
+    2300146: MESH technical.upper.q
+    2300148: MESH technical.upper.r
+    2300150: MESH technical.upper.s
+    2300152: MESH technical.upper.t
+    2300154: MESH technical.upper.u
+    2300156: MESH technical.upper.v
+    2300158: MESH technical.upper.w
+    2300160: MESH technical.upper.x
+    2300162: MESH technical.upper.z
+    2300164: Object003
+    2300166: MESH technical.upper.y
+    3300000: MESH technical.lower.a
+    3300002: MESH technical.lower.b
+    3300004: MESH technical.lower.c
+    3300006: MESH technical.lower.d
+    3300008: MESH technical.lower.e
+    3300010: MESH technical.lower.f
+    3300012: MESH technical.lower.g
+    3300014: MESH technical.lower.h
+    3300016: MESH technical.lower.i
+    3300018: MESH technical.lower.j
+    3300020: MESH technical.lower.k
+    3300022: MESH technical.lower.l
+    3300024: MESH technical.lower.m
+    3300026: MESH technical.lower.n
+    3300028: MESH technical.lower.o
+    3300030: MESH technical.lower.p
+    3300032: MESH technical.lower.q
+    3300034: MESH technical.lower.r
+    3300036: MESH technical.lower.s
+    3300038: MESH technical.lower.t
+    3300040: MESH technical.lower.u
+    3300042: MESH technical.lower.v
+    3300044: MESH technical.lower.w
+    3300046: MESH technical.lower.x
+    3300048: MESH technical.lower.y
+    3300050: MESH technical.lower.z
+    3300052: MESH technical.number.0
+    3300054: MESH technical.number.1
+    3300056: MESH technical.number.2
+    3300058: MESH technical.number.3
+    3300060: MESH technical.number.4
+    3300062: MESH technical.number.5
+    3300064: MESH technical.number.6
+    3300066: MESH technical.number.7
+    3300068: MESH technical.number.8
+    3300070: MESH technical.number.9
+    3300072: MESH technical.punc.apostrophe
+    3300074: MESH technical.punc.colon
+    3300076: MESH technical.punc.comma
+    3300078: MESH technical.punc.exclamation
+    3300080: MESH technical.punc.period
+    3300082: MESH technical.punc.question
+    3300084: MESH technical.punc.quotation
+    3300086: MESH technical.punc.semiColon
+    3300088: MESH technical.replacement
+    3300090: MESH technical.symbol.ampersand
+    3300092: MESH technical.symbol.asterisk
+    3300094: MESH technical.symbol.at
+    3300096: MESH technical.symbol.bracket.left
+    3300098: MESH technical.symbol.bracket.right
+    3300100: MESH technical.symbol.dollar
+    3300102: MESH technical.symbol.equal
+    3300104: MESH technical.symbol.minus
+    3300106: MESH technical.symbol.number
+    3300108: MESH technical.symbol.percent
+    3300110: MESH technical.symbol.plus
+    3300112: MESH technical.symbol.slash
+    3300114: MESH technical.upper.a
+    3300116: MESH technical.upper.b
+    3300118: MESH technical.upper.c
+    3300120: MESH technical.upper.d
+    3300122: MESH technical.upper.e
+    3300124: MESH technical.upper.f
+    3300126: MESH technical.upper.g
+    3300128: MESH technical.upper.h
+    3300130: MESH technical.upper.i
+    3300132: MESH technical.upper.j
+    3300134: MESH technical.upper.k
+    3300136: MESH technical.upper.l
+    3300138: MESH technical.upper.m
+    3300140: MESH technical.upper.n
+    3300142: MESH technical.upper.o
+    3300144: MESH technical.upper.p
+    3300146: MESH technical.upper.q
+    3300148: MESH technical.upper.r
+    3300150: MESH technical.upper.s
+    3300152: MESH technical.upper.t
+    3300154: MESH technical.upper.u
+    3300156: MESH technical.upper.v
+    3300158: MESH technical.upper.w
+    3300160: MESH technical.upper.x
+    3300162: MESH technical.upper.z
+    3300164: Object003
+    3300166: MESH technical.upper.y
+    4300000: MESH technical.upper.z
+    4300002: MESH technical.upper.x
+    4300004: MESH technical.upper.w
+    4300006: MESH technical.upper.v
+    4300008: MESH technical.upper.t
+    4300010: MESH technical.upper.h
+    4300012: MESH technical.upper.i
+    4300014: MESH technical.upper.l
+    4300016: MESH technical.upper.m
+    4300018: MESH technical.upper.k
+    4300020: MESH technical.upper.f
+    4300022: MESH technical.upper.e
+    4300024: MESH technical.upper.c
+    4300026: MESH technical.upper.a
+    4300028: MESH technical.upper.n
+    4300030: MESH technical.upper.u
+    4300032: MESH technical.upper.s
+    4300034: MESH technical.upper.b
+    4300036: MESH technical.upper.d
+    4300038: MESH technical.upper.g
+    4300040: MESH technical.upper.j
+    4300042: MESH technical.upper.o
+    4300044: MESH technical.upper.p
+    4300046: MESH technical.upper.r
+    4300048: MESH technical.upper.q
+    4300050: MESH technical.lower.x
+    4300052: MESH technical.lower.y
+    4300054: MESH technical.lower.z
+    4300056: MESH technical.lower.w
+    4300058: MESH technical.lower.v
+    4300060: MESH technical.lower.u
+    4300062: MESH technical.lower.t
+    4300064: MESH technical.lower.l
+    4300066: MESH technical.lower.k
+    4300068: MESH technical.lower.i
+    4300070: MESH technical.lower.j
+    4300072: MESH technical.lower.h
+    4300074: MESH technical.lower.f
+    4300076: MESH technical.lower.r
+    4300078: MESH technical.lower.s
+    4300080: MESH technical.lower.n
+    4300082: MESH technical.lower.o
+    4300084: MESH technical.lower.p
+    4300086: MESH technical.lower.q
+    4300088: MESH technical.lower.a
+    4300090: MESH technical.lower.b
+    4300092: MESH technical.lower.c
+    4300094: MESH technical.lower.d
+    4300096: MESH technical.lower.e
+    4300098: MESH technical.lower.g
+    4300100: MESH technical.lower.m
+    4300102: MESH technical.punc.period
+    4300104: MESH technical.punc.comma
+    4300106: MESH technical.punc.exclamation
+    4300108: MESH technical.punc.colon
+    4300110: MESH technical.punc.semiColon
+    4300112: MESH technical.punc.apostrophe
+    4300114: MESH technical.punc.quotation
+    4300116: MESH technical.punc.question
+    4300118: MESH technical.number.1
+    4300120: MESH technical.number.0
+    4300122: MESH technical.number.2
+    4300124: MESH technical.number.4
+    4300126: MESH technical.number.7
+    4300128: MESH technical.number.3
+    4300130: MESH technical.number.5
+    4300132: MESH technical.number.6
+    4300134: MESH technical.number.9
+    4300136: MESH technical.number.8
+    4300138: MESH technical.symbol.asterisk
+    4300140: MESH technical.symbol.number
+    4300142: MESH technical.symbol.plus
+    4300144: MESH technical.symbol.equal
+    4300146: MESH technical.symbol.minus
+    4300148: MESH technical.symbol.slash
+    4300150: MESH technical.symbol.at
+    4300152: MESH technical.symbol.dollar
+    4300154: MESH technical.symbol.ampersand
+    4300156: MESH technical.symbol.bracket.right
+    4300158: MESH technical.symbol.bracket.left
+    4300160: MESH technical.symbol.percent
+    4300162: MESH technical.replacement
+    4300164: Object003
+    4300166: MESH technical.upper.y
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

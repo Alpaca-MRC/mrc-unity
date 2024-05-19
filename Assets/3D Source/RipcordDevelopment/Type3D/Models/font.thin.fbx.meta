@@ -1,0 +1,542 @@
+fileFormatVersion: 2
+guid: 5f9cbed727df6914a82fa02d35086fb9
+timeCreated: 1500041292
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: MESH thin.lower.a
+    100004: MESH thin.lower.b
+    100006: MESH thin.lower.c
+    100008: MESH thin.lower.d
+    100010: MESH thin.lower.e
+    100012: MESH thin.lower.f
+    100014: MESH thin.lower.g
+    100016: MESH thin.lower.h
+    100018: MESH thin.lower.i
+    100020: MESH thin.lower.j
+    100022: MESH thin.lower.k
+    100024: MESH thin.lower.l
+    100026: MESH thin.lower.m
+    100028: MESH thin.lower.n
+    100030: MESH thin.lower.o
+    100032: MESH thin.lower.p
+    100034: MESH thin.lower.q
+    100036: MESH thin.lower.r
+    100038: MESH thin.lower.s
+    100040: MESH thin.lower.t
+    100042: MESH thin.lower.u
+    100044: MESH thin.lower.v
+    100046: MESH thin.lower.w
+    100048: MESH thin.lower.x
+    100050: MESH thin.lower.y
+    100052: MESH thin.lower.z
+    100054: MESH thin.number.0
+    100056: MESH thin.number.1
+    100058: MESH thin.number.2
+    100060: MESH thin.number.3
+    100062: MESH thin.number.4
+    100064: MESH thin.number.5
+    100066: MESH thin.number.6
+    100068: MESH thin.number.7
+    100070: MESH thin.number.8
+    100072: MESH thin.number.9
+    100074: MESH thin.punc.colon
+    100076: MESH thin.punc.equals
+    100078: MESH thin.punc.exclamation
+    100080: MESH thin.punc.minus
+    100082: MESH thin.punc.period
+    100084: MESH thin.punc.plus
+    100086: MESH thin.punc.question
+    100088: MESH thin.punc.slash
+    100090: MESH thin.upper.a
+    100092: MESH thin.upper.b
+    100094: MESH thin.upper.c
+    100096: MESH thin.upper.d
+    100098: MESH thin.upper.e
+    100100: MESH thin.upper.f
+    100102: MESH thin.upper.g
+    100104: MESH thin.upper.h
+    100106: MESH thin.upper.i
+    100108: MESH thin.upper.j
+    100110: MESH thin.upper.k
+    100112: MESH thin.upper.l
+    100114: MESH thin.upper.m
+    100116: MESH thin.upper.n
+    100118: MESH thin.upper.o
+    100120: MESH thin.upper.p
+    100122: MESH thin.upper.q
+    100124: MESH thin.upper.r
+    100126: MESH thin.upper.s
+    100128: MESH thin.upper.t
+    100130: MESH thin.upper.u
+    100132: MESH thin.upper.v
+    100134: MESH thin.upper.w
+    100136: MESH thin.upper.x
+    100138: MESH thin.upper.y
+    100140: MESH thin.upper.z
+    100142: MESH thin.symbol.ampersand
+    100144: MESH thin.symbol.apostrophe
+    100146: MESH thin.symbol.asterisk
+    100148: MESH thin.symbol.at
+    100150: MESH thin.symbol.bracket.left
+    100152: MESH thin.symbol.bracket.right
+    100154: MESH thin.symbol.dollar
+    100156: MESH thin.symbol.percent
+    100158: MESH thin.symbol.pound
+    100160: MESH thin.symbol.quotation
+    100162: MESH thin.symbol.semiColon
+    100164: Rectangle002
+    100166: MESH thin.symbol.number
+    100168: MESH thin.punc.semiColon
+    100170: MESH thin.punc.comma
+    100172: MESH thin.symbol.equals
+    100174: MESH thin.symbol.minus
+    100176: MESH thin.symbol.plus
+    100178: MESH thin.symbol.slash
+    100180: MESH thin.replacement
+    100182: MESH thin.punc.apostrophe
+    100184: MESH thin.punc.quotation
+    100186: MESH thin.symbol.equal
+    400000: //RootNode
+    400002: MESH thin.lower.a
+    400004: MESH thin.lower.b
+    400006: MESH thin.lower.c
+    400008: MESH thin.lower.d
+    400010: MESH thin.lower.e
+    400012: MESH thin.lower.f
+    400014: MESH thin.lower.g
+    400016: MESH thin.lower.h
+    400018: MESH thin.lower.i
+    400020: MESH thin.lower.j
+    400022: MESH thin.lower.k
+    400024: MESH thin.lower.l
+    400026: MESH thin.lower.m
+    400028: MESH thin.lower.n
+    400030: MESH thin.lower.o
+    400032: MESH thin.lower.p
+    400034: MESH thin.lower.q
+    400036: MESH thin.lower.r
+    400038: MESH thin.lower.s
+    400040: MESH thin.lower.t
+    400042: MESH thin.lower.u
+    400044: MESH thin.lower.v
+    400046: MESH thin.lower.w
+    400048: MESH thin.lower.x
+    400050: MESH thin.lower.y
+    400052: MESH thin.lower.z
+    400054: MESH thin.number.0
+    400056: MESH thin.number.1
+    400058: MESH thin.number.2
+    400060: MESH thin.number.3
+    400062: MESH thin.number.4
+    400064: MESH thin.number.5
+    400066: MESH thin.number.6
+    400068: MESH thin.number.7
+    400070: MESH thin.number.8
+    400072: MESH thin.number.9
+    400074: MESH thin.punc.colon
+    400076: MESH thin.punc.equals
+    400078: MESH thin.punc.exclamation
+    400080: MESH thin.punc.minus
+    400082: MESH thin.punc.period
+    400084: MESH thin.punc.plus
+    400086: MESH thin.punc.question
+    400088: MESH thin.punc.slash
+    400090: MESH thin.upper.a
+    400092: MESH thin.upper.b
+    400094: MESH thin.upper.c
+    400096: MESH thin.upper.d
+    400098: MESH thin.upper.e
+    400100: MESH thin.upper.f
+    400102: MESH thin.upper.g
+    400104: MESH thin.upper.h
+    400106: MESH thin.upper.i
+    400108: MESH thin.upper.j
+    400110: MESH thin.upper.k
+    400112: MESH thin.upper.l
+    400114: MESH thin.upper.m
+    400116: MESH thin.upper.n
+    400118: MESH thin.upper.o
+    400120: MESH thin.upper.p
+    400122: MESH thin.upper.q
+    400124: MESH thin.upper.r
+    400126: MESH thin.upper.s
+    400128: MESH thin.upper.t
+    400130: MESH thin.upper.u
+    400132: MESH thin.upper.v
+    400134: MESH thin.upper.w
+    400136: MESH thin.upper.x
+    400138: MESH thin.upper.y
+    400140: MESH thin.upper.z
+    400142: MESH thin.symbol.ampersand
+    400144: MESH thin.symbol.apostrophe
+    400146: MESH thin.symbol.asterisk
+    400148: MESH thin.symbol.at
+    400150: MESH thin.symbol.bracket.left
+    400152: MESH thin.symbol.bracket.right
+    400154: MESH thin.symbol.dollar
+    400156: MESH thin.symbol.percent
+    400158: MESH thin.symbol.pound
+    400160: MESH thin.symbol.quotation
+    400162: MESH thin.symbol.semiColon
+    400164: Rectangle002
+    400166: MESH thin.symbol.number
+    400168: MESH thin.punc.semiColon
+    400170: MESH thin.punc.comma
+    400172: MESH thin.symbol.equals
+    400174: MESH thin.symbol.minus
+    400176: MESH thin.symbol.plus
+    400178: MESH thin.symbol.slash
+    400180: MESH thin.replacement
+    400182: MESH thin.punc.apostrophe
+    400184: MESH thin.punc.quotation
+    400186: MESH thin.symbol.equal
+    2300000: MESH thin.lower.a
+    2300002: MESH thin.lower.b
+    2300004: MESH thin.lower.c
+    2300006: MESH thin.lower.d
+    2300008: MESH thin.lower.e
+    2300010: MESH thin.lower.f
+    2300012: MESH thin.lower.g
+    2300014: MESH thin.lower.h
+    2300016: MESH thin.lower.i
+    2300018: MESH thin.lower.j
+    2300020: MESH thin.lower.k
+    2300022: MESH thin.lower.l
+    2300024: MESH thin.lower.m
+    2300026: MESH thin.lower.n
+    2300028: MESH thin.lower.o
+    2300030: MESH thin.lower.p
+    2300032: MESH thin.lower.q
+    2300034: MESH thin.lower.r
+    2300036: MESH thin.lower.s
+    2300038: MESH thin.lower.t
+    2300040: MESH thin.lower.u
+    2300042: MESH thin.lower.v
+    2300044: MESH thin.lower.w
+    2300046: MESH thin.lower.x
+    2300048: MESH thin.lower.y
+    2300050: MESH thin.lower.z
+    2300052: MESH thin.number.0
+    2300054: MESH thin.number.1
+    2300056: MESH thin.number.2
+    2300058: MESH thin.number.3
+    2300060: MESH thin.number.4
+    2300062: MESH thin.number.5
+    2300064: MESH thin.number.6
+    2300066: MESH thin.number.7
+    2300068: MESH thin.number.8
+    2300070: MESH thin.number.9
+    2300072: MESH thin.punc.colon
+    2300074: MESH thin.punc.equals
+    2300076: MESH thin.punc.exclamation
+    2300078: MESH thin.punc.minus
+    2300080: MESH thin.punc.period
+    2300082: MESH thin.punc.plus
+    2300084: MESH thin.punc.question
+    2300086: MESH thin.punc.slash
+    2300088: MESH thin.upper.a
+    2300090: MESH thin.upper.b
+    2300092: MESH thin.upper.c
+    2300094: MESH thin.upper.d
+    2300096: MESH thin.upper.e
+    2300098: MESH thin.upper.f
+    2300100: MESH thin.upper.g
+    2300102: MESH thin.upper.h
+    2300104: MESH thin.upper.i
+    2300106: MESH thin.upper.j
+    2300108: MESH thin.upper.k
+    2300110: MESH thin.upper.l
+    2300112: MESH thin.upper.m
+    2300114: MESH thin.upper.n
+    2300116: MESH thin.upper.o
+    2300118: MESH thin.upper.p
+    2300120: MESH thin.upper.q
+    2300122: MESH thin.upper.r
+    2300124: MESH thin.upper.s
+    2300126: MESH thin.upper.t
+    2300128: MESH thin.upper.u
+    2300130: MESH thin.upper.v
+    2300132: MESH thin.upper.w
+    2300134: MESH thin.upper.x
+    2300136: MESH thin.upper.y
+    2300138: MESH thin.upper.z
+    2300140: MESH thin.symbol.ampersand
+    2300142: MESH thin.symbol.apostrophe
+    2300144: MESH thin.symbol.asterisk
+    2300146: MESH thin.symbol.at
+    2300148: MESH thin.symbol.bracket.left
+    2300150: MESH thin.symbol.bracket.right
+    2300152: MESH thin.symbol.dollar
+    2300154: MESH thin.symbol.percent
+    2300156: MESH thin.symbol.pound
+    2300158: MESH thin.symbol.quotation
+    2300160: MESH thin.symbol.semiColon
+    2300162: MESH thin.symbol.number
+    2300164: MESH thin.punc.semiColon
+    2300166: MESH thin.punc.comma
+    2300168: MESH thin.symbol.equals
+    2300170: MESH thin.symbol.minus
+    2300172: MESH thin.symbol.plus
+    2300174: MESH thin.symbol.slash
+    2300176: MESH thin.replacement
+    2300178: MESH thin.punc.apostrophe
+    2300180: MESH thin.punc.quotation
+    2300182: MESH thin.symbol.equal
+    3300000: MESH thin.lower.a
+    3300002: MESH thin.lower.b
+    3300004: MESH thin.lower.c
+    3300006: MESH thin.lower.d
+    3300008: MESH thin.lower.e
+    3300010: MESH thin.lower.f
+    3300012: MESH thin.lower.g
+    3300014: MESH thin.lower.h
+    3300016: MESH thin.lower.i
+    3300018: MESH thin.lower.j
+    3300020: MESH thin.lower.k
+    3300022: MESH thin.lower.l
+    3300024: MESH thin.lower.m
+    3300026: MESH thin.lower.n
+    3300028: MESH thin.lower.o
+    3300030: MESH thin.lower.p
+    3300032: MESH thin.lower.q
+    3300034: MESH thin.lower.r
+    3300036: MESH thin.lower.s
+    3300038: MESH thin.lower.t
+    3300040: MESH thin.lower.u
+    3300042: MESH thin.lower.v
+    3300044: MESH thin.lower.w
+    3300046: MESH thin.lower.x
+    3300048: MESH thin.lower.y
+    3300050: MESH thin.lower.z
+    3300052: MESH thin.number.0
+    3300054: MESH thin.number.1
+    3300056: MESH thin.number.2
+    3300058: MESH thin.number.3
+    3300060: MESH thin.number.4
+    3300062: MESH thin.number.5
+    3300064: MESH thin.number.6
+    3300066: MESH thin.number.7
+    3300068: MESH thin.number.8
+    3300070: MESH thin.number.9
+    3300072: MESH thin.punc.colon
+    3300074: MESH thin.punc.equals
+    3300076: MESH thin.punc.exclamation
+    3300078: MESH thin.punc.minus
+    3300080: MESH thin.punc.period
+    3300082: MESH thin.punc.plus
+    3300084: MESH thin.punc.question
+    3300086: MESH thin.punc.slash
+    3300088: MESH thin.upper.a
+    3300090: MESH thin.upper.b
+    3300092: MESH thin.upper.c
+    3300094: MESH thin.upper.d
+    3300096: MESH thin.upper.e
+    3300098: MESH thin.upper.f
+    3300100: MESH thin.upper.g
+    3300102: MESH thin.upper.h
+    3300104: MESH thin.upper.i
+    3300106: MESH thin.upper.j
+    3300108: MESH thin.upper.k
+    3300110: MESH thin.upper.l
+    3300112: MESH thin.upper.m
+    3300114: MESH thin.upper.n
+    3300116: MESH thin.upper.o
+    3300118: MESH thin.upper.p
+    3300120: MESH thin.upper.q
+    3300122: MESH thin.upper.r
+    3300124: MESH thin.upper.s
+    3300126: MESH thin.upper.t
+    3300128: MESH thin.upper.u
+    3300130: MESH thin.upper.v
+    3300132: MESH thin.upper.w
+    3300134: MESH thin.upper.x
+    3300136: MESH thin.upper.y
+    3300138: MESH thin.upper.z
+    3300140: MESH thin.symbol.ampersand
+    3300142: MESH thin.symbol.apostrophe
+    3300144: MESH thin.symbol.asterisk
+    3300146: MESH thin.symbol.at
+    3300148: MESH thin.symbol.bracket.left
+    3300150: MESH thin.symbol.bracket.right
+    3300152: MESH thin.symbol.dollar
+    3300154: MESH thin.symbol.percent
+    3300156: MESH thin.symbol.pound
+    3300158: MESH thin.symbol.quotation
+    3300160: MESH thin.symbol.semiColon
+    3300162: MESH thin.symbol.number
+    3300164: MESH thin.punc.semiColon
+    3300166: MESH thin.punc.comma
+    3300168: MESH thin.symbol.equals
+    3300170: MESH thin.symbol.minus
+    3300172: MESH thin.symbol.plus
+    3300174: MESH thin.symbol.slash
+    3300176: MESH thin.replacement
+    3300178: MESH thin.punc.apostrophe
+    3300180: MESH thin.punc.quotation
+    3300182: MESH thin.symbol.equal
+    4300000: MESH thin.upper.a
+    4300002: MESH thin.upper.b
+    4300004: MESH thin.upper.c
+    4300006: MESH thin.upper.d
+    4300008: MESH thin.upper.e
+    4300010: MESH thin.upper.f
+    4300012: MESH thin.upper.g
+    4300014: MESH thin.upper.h
+    4300016: MESH thin.upper.i
+    4300018: MESH thin.upper.j
+    4300020: MESH thin.upper.k
+    4300022: MESH thin.upper.l
+    4300024: MESH thin.upper.m
+    4300026: MESH thin.upper.z
+    4300028: MESH thin.upper.y
+    4300030: MESH thin.upper.x
+    4300032: MESH thin.upper.w
+    4300034: MESH thin.upper.v
+    4300036: MESH thin.upper.u
+    4300038: MESH thin.upper.t
+    4300040: MESH thin.upper.s
+    4300042: MESH thin.upper.r
+    4300044: MESH thin.upper.q
+    4300046: MESH thin.upper.p
+    4300048: MESH thin.upper.o
+    4300050: MESH thin.upper.n
+    4300052: MESH thin.lower.a
+    4300054: MESH thin.lower.b
+    4300056: MESH thin.lower.c
+    4300058: MESH thin.lower.d
+    4300060: MESH thin.lower.e
+    4300062: MESH thin.lower.f
+    4300064: MESH thin.lower.g
+    4300066: MESH thin.lower.h
+    4300068: MESH thin.lower.i
+    4300070: MESH thin.lower.j
+    4300072: MESH thin.lower.k
+    4300074: MESH thin.lower.l
+    4300076: MESH thin.lower.m
+    4300078: MESH thin.lower.z
+    4300080: MESH thin.lower.y
+    4300082: MESH thin.lower.x
+    4300084: MESH thin.lower.w
+    4300086: MESH thin.lower.v
+    4300088: MESH thin.lower.u
+    4300090: MESH thin.lower.t
+    4300092: MESH thin.lower.s
+    4300094: MESH thin.lower.r
+    4300096: MESH thin.lower.q
+    4300098: MESH thin.lower.p
+    4300100: MESH thin.lower.o
+    4300102: MESH thin.lower.n
+    4300104: MESH thin.number.1
+    4300106: MESH thin.number.2
+    4300108: MESH thin.number.3
+    4300110: MESH thin.number.4
+    4300112: MESH thin.number.5
+    4300114: MESH thin.number.6
+    4300116: MESH thin.number.7
+    4300118: MESH thin.number.8
+    4300120: MESH thin.number.9
+    4300122: MESH thin.number.0
+    4300124: MESH thin.punc.period
+    4300126: MESH thin.punc.exclamation
+    4300128: MESH thin.punc.question
+    4300130: MESH thin.punc.colon
+    4300132: MESH thin.punc.slash
+    4300134: MESH thin.punc.plus
+    4300136: MESH thin.punc.equals
+    4300138: MESH thin.punc.minus
+    4300140: MESH thin.symbol.at
+    4300142: MESH thin.symbol.pound
+    4300144: MESH thin.symbol.dollar
+    4300146: MESH thin.symbol.percent
+    4300148: MESH thin.symbol.ampersand
+    4300150: MESH thin.symbol.asterisk
+    4300152: MESH thin.symbol.bracket.left
+    4300154: MESH thin.symbol.bracket.right
+    4300156: MESH thin.symbol.apostrophe
+    4300158: MESH thin.symbol.quotation
+    4300160: MESH thin.symbol.semiColon
+    4300162: MESH thin.symbol.number
+    4300164: MESH thin.punc.semiColon
+    4300166: MESH thin.punc.comma
+    4300168: MESH thin.symbol.slash
+    4300170: MESH thin.symbol.plus
+    4300172: MESH thin.symbol.equals
+    4300174: MESH thin.symbol.minus
+    4300176: MESH thin.replacement
+    4300178: MESH thin.punc.apostrophe
+    4300180: MESH thin.punc.quotation
+    4300182: MESH thin.symbol.equal
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

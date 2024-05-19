@@ -13,7 +13,7 @@ public class FriendlyCarMove : MonoBehaviour
     [SerializeField]
     private FlagManager flagManager;     // 플래그 상태 관리
     [SerializeField]
-    private HpBarScript hpBarScript;
+    private FriendlyHpBar friendlyHpBar;
 
     // 아군 차량 상태
     private int maxHealth;  // 최대 체력
@@ -178,8 +178,7 @@ public class FriendlyCarMove : MonoBehaviour
             // 피를 1 깎는다
             curHealth -= 1;
             float hpPercentage = (float) curHealth / maxHealth;
-            hpBarScript.UpdateHealthBar(hpPercentage);
-
+            friendlyHpBar.UpdateHealthBar(hpPercentage);
             // 피가 0이 된다면
             if (curHealth <= 0) {
                 Exhaustion();
@@ -218,7 +217,7 @@ public class FriendlyCarMove : MonoBehaviour
 
         // 체력 다시 채워주기
         curHealth = maxHealth;
-        hpBarScript.UpdateHealthBar(1f);
+        friendlyHpBar.UpdateHealthBar(1f);
     }
 }
 
