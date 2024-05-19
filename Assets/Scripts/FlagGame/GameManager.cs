@@ -67,8 +67,6 @@ public class GameManager : MonoBehaviour
     public Transform gateTwoPosition;   // 적 게이트 위치
     [SerializeField]
     private ParticleSystem lineFireworksParticle;
-    [SerializeField]
-    private ParticleSystem fanFireworksParticle;
 
     // 플래그 
     public FlagManager flagManager;     // 플래그 매니저
@@ -76,9 +74,17 @@ public class GameManager : MonoBehaviour
 
     // 탄창
     public GameObject magazineOne;
+    private bool _lockMagazineOne;
+    private float _magazinOneWaitingTime;
+    public bool _isMagazineOneSetActive;
     public GameObject magazineTwo;
+    private bool _lockMagazineTwo;
+    private float _magazinTwoWaitingTime;
+    public bool _isMagazineTwoSetActive;
     public GameObject magazineThree;
-    
+    private bool _lockMagazineThree;
+    private float _magazinThreeWaitingTime;
+    public bool _isMagazineThreeSetActive;
 
     // 앵커
     private ARAnchorManager _anchorManager;
@@ -127,12 +133,25 @@ public class GameManager : MonoBehaviour
 
         // 폭죽 비활성화
         if (lineFireworksParticle.isPlaying) lineFireworksParticle.Stop();
-        if (fanFireworksParticle.isPlaying) fanFireworksParticle.Stop();
 
         // 탄창 비활성화
         magazineOne.SetActive(false);
         magazineTwo.SetActive(false);
         magazineThree.SetActive(false);
+        
+        _lockMagazineOne = false;
+        _lockMagazineTwo = false;
+        _lockMagazineThree = false;
+
+        // 탄창 재생성 시간 (15초)
+        _magazinOneWaitingTime = 15f;
+        _magazinTwoWaitingTime = 15f;
+        _magazinThreeWaitingTime = 15f;
+
+        // 활성상태 초기화
+        _isMagazineOneSetActive = false;
+        _isMagazineTwoSetActive = false;
+        _isMagazineThreeSetActive = false;
 
         // 시작시 안내멘트 출력
         
@@ -147,6 +166,72 @@ public class GameManager : MonoBehaviour
 
         _anchorManager.anchorsChanged += OnAnchorsChanged;
         _leftActivateAction.action.performed += OnLeftActivateAction;
+    }
+
+    void Update()
+    {
+        // 1번 탄창 재생성 시작
+        if (_lockMagazineOne)
+        {
+            // 재생성 시간이 끝나지 않았다면
+            if (0 < _magazinOneWaitingTime)
+            {
+                _magazinOneWaitingTime -= Time.deltaTime;
+            }
+            // 대기시간이 지났다면
+            else
+            {
+                _lockMagazineOne = false;
+                _magazinOneWaitingTime = 15f;
+                magazineOne.SetActive(true);
+                _isMagazineOneSetActive = true;
+                Vector3 magazineOneNewPosition = flag.transform.position + (UnityEngine.Random.insideUnitSphere * 1f);
+                magazineOneNewPosition.y = 0.07f;
+                magazineOne.transform.position = magazineOneNewPosition;
+            }
+        }
+
+        // 2번 탄창 재생성 시작
+        if (_lockMagazineTwo)
+        {
+            // 재생성 시간이 끝나지 않았다면
+            if (0 < _magazinTwoWaitingTime)
+            {
+                _magazinTwoWaitingTime -= Time.deltaTime;
+            }
+            // 대기시간이 지났다면
+            else
+            {
+                _lockMagazineTwo = false;
+                _magazinTwoWaitingTime = 15f;
+                magazineTwo.SetActive(true);
+                _isMagazineTwoSetActive = true;
+                Vector3 magazineTwoNewPosition = flag.transform.position + (UnityEngine.Random.insideUnitSphere * 1f);
+                magazineTwoNewPosition.y = 0.07f;
+                magazineTwo.transform.position = magazineTwoNewPosition;
+            }
+        }
+
+        // 3번 탄창 재생성 시작
+        if (_lockMagazineThree)
+        {
+            // 재생성 시간이 끝나지 않았다면
+            if (0 < _magazinThreeWaitingTime)
+            {
+                _magazinThreeWaitingTime -= Time.deltaTime;
+            }
+            // 대기시간이 지났다면
+            else
+            {
+                _lockMagazineThree = false;
+                _magazinThreeWaitingTime = 15f;
+                magazineThree.SetActive(true);
+                _isMagazineThreeSetActive = true;
+                Vector3 magazineThreeNewPosition = flag.transform.position + (UnityEngine.Random.insideUnitSphere * 1f);
+                magazineThreeNewPosition.y = 0.07f;
+                magazineThree.transform.position = magazineThreeNewPosition;
+            }
+        }
     }
 
     IEnumerator InforBeforeGameStart() 
@@ -247,6 +332,21 @@ public class GameManager : MonoBehaviour
 
         // InGameGameObject의 회전 설정
         InGameGameObject.transform.rotation = Quaternion.LookRotation(perpendicularDirection);
+        
+        // 타이머 찾기
+        Transform timerObj = InGameGameObject.transform.Find("Timer");
+
+        timerObj.LookAt(transform);
+
+        // 타이머의 현재 위치를 가져옴
+        Vector3 newTimerPosition = timerObj.position;
+
+        // 타이머의 y축 좌표를 약간 올림
+        newTimerPosition.y += 0.7f;
+
+        // 새로운 위치를 설정
+        timerObj.position = newTimerPosition;
+        timerObj.rotation *= Quaternion.Euler(0, 180, 0);
 
         // Score 각 골대 위에 두기
         Transform friendlyScore = InGameGameObject.transform.Find("Friendly Score");
@@ -266,17 +366,9 @@ public class GameManager : MonoBehaviour
 
             friendlyScore.LookAt(transform);
             enemyScore.LookAt(transform);
+
             friendlyScore.rotation *= Quaternion.Euler(0, 180, 0);
             enemyScore.rotation *= Quaternion.Euler(0, 180, 0);
-
-            // y축 회전을 0으로 설정
-            Vector3 friendlyEulerAngles = friendlyScore.rotation.eulerAngles;
-            friendlyEulerAngles.y = 0;
-            friendlyScore.rotation = Quaternion.Euler(friendlyEulerAngles);
-
-            Vector3 enemyEulerAngles = enemyScore.rotation.eulerAngles;
-            enemyEulerAngles.y = 0;
-            enemyScore.rotation = Quaternion.Euler(enemyEulerAngles);
 
             // 왼쪽으로 이동
             friendlyScore.position -= friendlyScore.right;
@@ -438,12 +530,15 @@ public class GameManager : MonoBehaviour
         magazineThreePosition.y = 0.07f;
 
         magazineOne.SetActive(true);
+        _isMagazineOneSetActive = true;
         magazineOne.transform.position = magazineOnePosition;
 
         magazineTwo.SetActive(true);
+        _isMagazineTwoSetActive = true;
         magazineTwo.transform.position = magazineTwoPosition;
 
         magazineThree.SetActive(true);
+        _isMagazineThreeSetActive = true;
         magazineThree.transform.position = magazineThreePosition;
     }
 
@@ -500,20 +595,14 @@ public class GameManager : MonoBehaviour
             case 0:
                 lineFireworksParticle.transform.position = gateOne.transform.position;
                 lineFireworksParticle.transform.rotation = gateOne.transform.rotation;
-                fanFireworksParticle.transform.position = gateOne.transform.position;
-                fanFireworksParticle.transform.rotation = gateOne.transform.rotation;
                 if (!lineFireworksParticle.isPlaying) lineFireworksParticle.Play();
-                if (!fanFireworksParticle.isPlaying) fanFireworksParticle.Play();
                 break;
             
             // 적군 골인시
             case 1:
                 lineFireworksParticle.transform.position = gateTwo.transform.position;
                 lineFireworksParticle.transform.rotation = gateTwo.transform.rotation;
-                fanFireworksParticle.transform.position = gateTwo.transform.position;
-                fanFireworksParticle.transform.rotation = gateTwo.transform.rotation;
                 if (!lineFireworksParticle.isPlaying) lineFireworksParticle.Play();
-                if (!fanFireworksParticle.isPlaying) fanFireworksParticle.Play();
                 break;
             
             default:
@@ -528,39 +617,21 @@ public class GameManager : MonoBehaviour
             // 1번 탄창
             case 1:
                 magazineOne.SetActive(false);
-                Debug.Log("15초 기다리기 시작");
-                Debug.Log("15초 기다리기 끝");
-                // if (gameState != GameState.InProgress) return;
-                Debug.Log("다시 나타나기 시작");
-                magazineOne.SetActive(true);
-                Vector3 magazineOneNewPosition = flag.transform.position + (UnityEngine.Random.insideUnitSphere * 1f);
-                magazineOneNewPosition.y = 0.07f;
-                magazineOne.transform.position = magazineOneNewPosition;
+                _isMagazineOneSetActive = false;
+                _lockMagazineOne = true;
                 break;
             
             // 2번 탄창
             case 2:
                 magazineTwo.SetActive(false);
-                Debug.Log("15초 기다리기 시작");
-                // yield return new WaitForSecondsRealtime(15f);
-                Debug.Log("15초 기다리기 끝");
-                // if (gameState != GameState.InProgress) yield return null;
-                magazineTwo.SetActive(true);
-                Vector3 magazineTwoNewPosition = flag.transform.position + (UnityEngine.Random.insideUnitSphere * 1f);
-                magazineTwoNewPosition.y = 0.07f;
-                magazineTwo.transform.position = magazineTwoNewPosition;
+                _isMagazineTwoSetActive = false;
+                _lockMagazineTwo = true;
                 break;
 
             case 3:
                 magazineThree.SetActive(false);
-                Debug.Log("15초 기다리기 시작");
-                // yield return new WaitForSecondsRealtime(15f);
-                Debug.Log("15초 기다리기 끝");
-                // if (gameState != GameState.InProgress) yield return null;
-                magazineThree.SetActive(true);
-                Vector3 magazineThreeNewPosition = flag.transform.position + (UnityEngine.Random.insideUnitSphere * 1f);
-                magazineThreeNewPosition.y = 0.07f;
-                magazineThree.transform.position = magazineThreeNewPosition;
+                _isMagazineThreeSetActive = false;
+                _lockMagazineThree = true;
                 break;
             
             default:

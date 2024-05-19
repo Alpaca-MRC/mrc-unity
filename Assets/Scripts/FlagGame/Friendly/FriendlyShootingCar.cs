@@ -4,6 +4,8 @@ using System.Runtime.Serialization.Formatters;
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Unity.XR.CoreUtils;
+using TMPro;
 
 public class FriendlyShootingCar : MonoBehaviour
 {
@@ -22,6 +24,7 @@ public class FriendlyShootingCar : MonoBehaviour
     public float curMagazine;
     public GameObject[] Prefabs;
     public GameObject myCar;
+    public TextMeshProUGUI curMagTxt;
 
     void Start(){
         maxMagazine = 200f;
@@ -30,6 +33,9 @@ public class FriendlyShootingCar : MonoBehaviour
 
     void Update()
     {
+        // 잔여 탄약 표시
+        curMagTxt.text = curMagazine.ToString();
+
         // 남아있는 탄약이 없으면 총을 쏘지 않음
         if (curMagazine == 0)
         {

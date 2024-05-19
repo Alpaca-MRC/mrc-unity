@@ -546,6 +546,12 @@ MonoBehaviour:
   flagManager: {fileID: 4461071782106265470, guid: b9d294838ca8d8d409c24de0a2ec7106,
     type: 3}
   flag: {fileID: 0}
+  magazineOne: {fileID: 0}
+  _isMagazineOneSetActive: 0
+  magazineTwo: {fileID: 0}
+  _isMagazineTwoSetActive: 0
+  magazineThree: {fileID: 0}
+  _isMagazineThreeSetActive: 0
   infoGameProcessGameObject: {fileID: 7425851336001209737, guid: f69596a749fde2742b3600639ed4cf00,
     type: 3}
   infoText: {fileID: 2320599210501010060, guid: b5bf4a4cfe3000d4184f75acaf17b080,
@@ -584,9 +590,10 @@ MonoBehaviour:
     type: 3}
   winGameObject: {fileID: 5679867811898144088, guid: 5c5cff8d9cd392a459525b93c9ce662f,
     type: 3}
-  InGameGameObject: {fileID: 0}
   loseGameObject: {fileID: 6739584480251884428, guid: e7563411b30fdd04ebb02a2ed2303d89,
     type: 3}
+  drawGameObject: {fileID: 0}
+  InGameGameObject: {fileID: 0}
 --- !u!1 &7244690944645723575
 GameObject:
   m_ObjectHideFlags: 0
