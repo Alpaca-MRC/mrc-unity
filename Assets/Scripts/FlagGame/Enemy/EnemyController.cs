@@ -49,7 +49,7 @@ public class EnemyController : MonoBehaviour
     void InitializationGameSetting()
     {
         // 상태 초기화
-        maxHealth = 70;
+        maxHealth = 130;  // 적 피가 좀 더 많음
         curHealth = maxHealth;
         isStun = false;
         isPlayerInRange = false;
@@ -86,11 +86,12 @@ public class EnemyController : MonoBehaviour
 
             // 이미 스턴 상태라면 피를 깎지 않음
             if (isStun) return;
-
+    
             // 피를 1 깎는다
             curHealth -= 1;
             float hpPercentage = (float) curHealth / maxHealth;
             hpBarScript.UpdateHealthBar(hpPercentage);
+
             // 피가 0이 된다면
             if (curHealth == 0) {
                 Exhaustion();
@@ -149,6 +150,13 @@ public class EnemyController : MonoBehaviour
         // 적 카트가 플래그 방향으로 일정한 속도로 이동하도록 설정
         float moveSpeed = 0.5f;
         transform.position += moveSpeed * Time.deltaTime * flagDirection;
+
+        // 깃발이 존재하지 않는다면 상대방 카트를 쫓아다님
+        if (flagDirection == Vector3.zero)
+        {
+            MoveToPlayer();
+            return;
+        }
 
         // 적 카트가 플래그를 향해 정면이 보이도록 회전
         Quaternion targetRotation = Quaternion.LookRotation(flagDirection);
