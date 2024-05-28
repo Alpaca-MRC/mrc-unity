@@ -6,15 +6,26 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/StartScene.unity
+    guid: b0a860ba1bb6c8d4db7a0c145f6faff1
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: dd5e7d63283b4b343a3e2ef3cbc8e182
+  - enabled: 1
+    path: Assets/Scenes/ProfileScene.unity
+    guid: 9506d7bb224024f42b4fae1593df7eb7
+  - enabled: 1
+    path: Assets/Scenes/ARScene.unity
+    guid: 2a419efc26d5e734cbe8259eab7baca2
   m_configObjects:
-    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 3e852fa752bacbe46ac693fd64fb1b61,
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2639c040549cdc24e83f60a256554dad,
+      type: 2}
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 2a3b8d9e66f638043b2d6c4cbc18a35f,
       type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000,
       guid: 8d80653d3eeb89948b08550134a907ea, type: 2}
-    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
-      guid: 453895da5afe08f4e99b498c8a57ec70, type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: e04d6f0111694f9489c3a12923227fe4,
+      type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 68e54bac4ecc116459df5457c77c6c2b,
       type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: fdfdfa1c7b76c4e43a5ef3926f41508a,

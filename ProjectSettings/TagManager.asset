@@ -3,14 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - CharacterOnStage
+  - Cart
+  - Flag
+  - Goal
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Post-process Layer
   - Water
   - UI
+  - Friendly
+  - Enemy
+  - Floor
   - 
   - 
   - 
@@ -32,10 +40,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - XR Simulation
   - 
   m_SortingLayers:
   - name: Default

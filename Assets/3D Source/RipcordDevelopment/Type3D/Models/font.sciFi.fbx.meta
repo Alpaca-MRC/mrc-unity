@@ -1,0 +1,505 @@
+fileFormatVersion: 2
+guid: 36af98d173997b04799dbd9fd218d4db
+timeCreated: 1516197455
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: MESH sciFi.upper.a001
+    100004: MESH sciFi.upper.b
+    100006: MESH sciFi.upper.c
+    100008: MESH sciFi.lower.a
+    100010: MESH sciFi.lower.apostrophe
+    100012: MESH sciFi.lower.b
+    100014: MESH sciFi.lower.c
+    100016: MESH sciFi.lower.d
+    100018: MESH sciFi.lower.e
+    100020: MESH sciFi.lower.f
+    100022: MESH sciFi.lower.g
+    100024: MESH sciFi.lower.h
+    100026: MESH sciFi.lower.i
+    100028: MESH sciFi.lower.j
+    100030: MESH sciFi.lower.k
+    100032: MESH sciFi.lower.l
+    100034: MESH sciFi.lower.m
+    100036: MESH sciFi.lower.n
+    100038: MESH sciFi.lower.o
+    100040: MESH sciFi.lower.p
+    100042: MESH sciFi.lower.q
+    100044: MESH sciFi.lower.r
+    100046: MESH sciFi.lower.s
+    100048: MESH sciFi.lower.t
+    100050: MESH sciFi.lower.u
+    100052: MESH sciFi.lower.v
+    100054: MESH sciFi.lower.w
+    100056: MESH sciFi.lower.x
+    100058: MESH sciFi.lower.y
+    100060: MESH sciFi.lower.z
+    100062: MESH sciFi.number.0
+    100064: MESH sciFi.number.1
+    100066: MESH sciFi.number.2
+    100068: MESH sciFi.number.3
+    100070: MESH sciFi.number.4
+    100072: MESH sciFi.number.5
+    100074: MESH sciFi.number.6
+    100076: MESH sciFi.number.7
+    100078: MESH sciFi.number.8
+    100080: MESH sciFi.number.9
+    100082: MESH sciFi.punc.colon
+    100084: MESH sciFi.punc.comma
+    100086: MESH sciFi.punc.exclamation
+    100088: MESH sciFi.punc.period
+    100090: MESH sciFi.punc.question
+    100092: MESH sciFi.punc.quotation
+    100094: MESH sciFi.punc.semiColon
+    100096: MESH sciFi.replacement
+    100098: MESH sciFi.symbol.ampersand
+    100100: MESH sciFi.symbol.asterisk
+    100102: MESH sciFi.symbol.at
+    100104: MESH sciFi.symbol.bracket.left
+    100106: MESH sciFi.symbol.bracket.right
+    100108: MESH sciFi.symbol.dollar
+    100110: MESH sciFi.symbol.equal
+    100112: MESH sciFi.symbol.minus
+    100114: MESH sciFi.symbol.number
+    100116: MESH sciFi.symbol.percent
+    100118: MESH sciFi.symbol.plus
+    100120: MESH sciFi.symbol.slash
+    100122: MESH sciFi.upper.a
+    100124: MESH sciFi.upper.d
+    100126: MESH sciFi.upper.e
+    100128: MESH sciFi.upper.f
+    100130: MESH sciFi.upper.g
+    100132: MESH sciFi.upper.h
+    100134: MESH sciFi.upper.i
+    100136: MESH sciFi.upper.j
+    100138: MESH sciFi.upper.k
+    100140: MESH sciFi.upper.l
+    100142: MESH sciFi.upper.m
+    100144: MESH sciFi.upper.n
+    100146: MESH sciFi.upper.o
+    100148: MESH sciFi.upper.p
+    100150: MESH sciFi.upper.q
+    100152: MESH sciFi.upper.r
+    100154: MESH sciFi.upper.s
+    100156: MESH sciFi.upper.t
+    100158: MESH sciFi.upper.u
+    100160: MESH sciFi.upper.v
+    100162: MESH sciFi.upper.w
+    100164: MESH sciFi.upper.x
+    100166: MESH sciFi.upper.y
+    100168: MESH sciFi.upper.z
+    100170: MESH sciFi.punc.apostrophe
+    400000: //RootNode
+    400002: MESH sciFi.upper.a001
+    400004: MESH sciFi.upper.b
+    400006: MESH sciFi.upper.c
+    400008: MESH sciFi.lower.a
+    400010: MESH sciFi.lower.apostrophe
+    400012: MESH sciFi.lower.b
+    400014: MESH sciFi.lower.c
+    400016: MESH sciFi.lower.d
+    400018: MESH sciFi.lower.e
+    400020: MESH sciFi.lower.f
+    400022: MESH sciFi.lower.g
+    400024: MESH sciFi.lower.h
+    400026: MESH sciFi.lower.i
+    400028: MESH sciFi.lower.j
+    400030: MESH sciFi.lower.k
+    400032: MESH sciFi.lower.l
+    400034: MESH sciFi.lower.m
+    400036: MESH sciFi.lower.n
+    400038: MESH sciFi.lower.o
+    400040: MESH sciFi.lower.p
+    400042: MESH sciFi.lower.q
+    400044: MESH sciFi.lower.r
+    400046: MESH sciFi.lower.s
+    400048: MESH sciFi.lower.t
+    400050: MESH sciFi.lower.u
+    400052: MESH sciFi.lower.v
+    400054: MESH sciFi.lower.w
+    400056: MESH sciFi.lower.x
+    400058: MESH sciFi.lower.y
+    400060: MESH sciFi.lower.z
+    400062: MESH sciFi.number.0
+    400064: MESH sciFi.number.1
+    400066: MESH sciFi.number.2
+    400068: MESH sciFi.number.3
+    400070: MESH sciFi.number.4
+    400072: MESH sciFi.number.5
+    400074: MESH sciFi.number.6
+    400076: MESH sciFi.number.7
+    400078: MESH sciFi.number.8
+    400080: MESH sciFi.number.9
+    400082: MESH sciFi.punc.colon
+    400084: MESH sciFi.punc.comma
+    400086: MESH sciFi.punc.exclamation
+    400088: MESH sciFi.punc.period
+    400090: MESH sciFi.punc.question
+    400092: MESH sciFi.punc.quotation
+    400094: MESH sciFi.punc.semiColon
+    400096: MESH sciFi.replacement
+    400098: MESH sciFi.symbol.ampersand
+    400100: MESH sciFi.symbol.asterisk
+    400102: MESH sciFi.symbol.at
+    400104: MESH sciFi.symbol.bracket.left
+    400106: MESH sciFi.symbol.bracket.right
+    400108: MESH sciFi.symbol.dollar
+    400110: MESH sciFi.symbol.equal
+    400112: MESH sciFi.symbol.minus
+    400114: MESH sciFi.symbol.number
+    400116: MESH sciFi.symbol.percent
+    400118: MESH sciFi.symbol.plus
+    400120: MESH sciFi.symbol.slash
+    400122: MESH sciFi.upper.a
+    400124: MESH sciFi.upper.d
+    400126: MESH sciFi.upper.e
+    400128: MESH sciFi.upper.f
+    400130: MESH sciFi.upper.g
+    400132: MESH sciFi.upper.h
+    400134: MESH sciFi.upper.i
+    400136: MESH sciFi.upper.j
+    400138: MESH sciFi.upper.k
+    400140: MESH sciFi.upper.l
+    400142: MESH sciFi.upper.m
+    400144: MESH sciFi.upper.n
+    400146: MESH sciFi.upper.o
+    400148: MESH sciFi.upper.p
+    400150: MESH sciFi.upper.q
+    400152: MESH sciFi.upper.r
+    400154: MESH sciFi.upper.s
+    400156: MESH sciFi.upper.t
+    400158: MESH sciFi.upper.u
+    400160: MESH sciFi.upper.v
+    400162: MESH sciFi.upper.w
+    400164: MESH sciFi.upper.x
+    400166: MESH sciFi.upper.y
+    400168: MESH sciFi.upper.z
+    400170: MESH sciFi.punc.apostrophe
+    2300000: MESH sciFi.upper.a001
+    2300002: MESH sciFi.upper.b
+    2300004: MESH sciFi.upper.c
+    2300006: MESH sciFi.lower.a
+    2300008: MESH sciFi.lower.apostrophe
+    2300010: MESH sciFi.lower.b
+    2300012: MESH sciFi.lower.c
+    2300014: MESH sciFi.lower.d
+    2300016: MESH sciFi.lower.e
+    2300018: MESH sciFi.lower.f
+    2300020: MESH sciFi.lower.g
+    2300022: MESH sciFi.lower.h
+    2300024: MESH sciFi.lower.i
+    2300026: MESH sciFi.lower.j
+    2300028: MESH sciFi.lower.k
+    2300030: MESH sciFi.lower.l
+    2300032: MESH sciFi.lower.m
+    2300034: MESH sciFi.lower.n
+    2300036: MESH sciFi.lower.o
+    2300038: MESH sciFi.lower.p
+    2300040: MESH sciFi.lower.q
+    2300042: MESH sciFi.lower.r
+    2300044: MESH sciFi.lower.s
+    2300046: MESH sciFi.lower.t
+    2300048: MESH sciFi.lower.u
+    2300050: MESH sciFi.lower.v
+    2300052: MESH sciFi.lower.w
+    2300054: MESH sciFi.lower.x
+    2300056: MESH sciFi.lower.y
+    2300058: MESH sciFi.lower.z
+    2300060: MESH sciFi.number.0
+    2300062: MESH sciFi.number.1
+    2300064: MESH sciFi.number.2
+    2300066: MESH sciFi.number.3
+    2300068: MESH sciFi.number.4
+    2300070: MESH sciFi.number.5
+    2300072: MESH sciFi.number.6
+    2300074: MESH sciFi.number.7
+    2300076: MESH sciFi.number.8
+    2300078: MESH sciFi.number.9
+    2300080: MESH sciFi.punc.colon
+    2300082: MESH sciFi.punc.comma
+    2300084: MESH sciFi.punc.exclamation
+    2300086: MESH sciFi.punc.period
+    2300088: MESH sciFi.punc.question
+    2300090: MESH sciFi.punc.quotation
+    2300092: MESH sciFi.punc.semiColon
+    2300094: MESH sciFi.replacement
+    2300096: MESH sciFi.symbol.ampersand
+    2300098: MESH sciFi.symbol.asterisk
+    2300100: MESH sciFi.symbol.at
+    2300102: MESH sciFi.symbol.bracket.left
+    2300104: MESH sciFi.symbol.bracket.right
+    2300106: MESH sciFi.symbol.dollar
+    2300108: MESH sciFi.symbol.equal
+    2300110: MESH sciFi.symbol.minus
+    2300112: MESH sciFi.symbol.number
+    2300114: MESH sciFi.symbol.percent
+    2300116: MESH sciFi.symbol.plus
+    2300118: MESH sciFi.symbol.slash
+    2300120: MESH sciFi.upper.a
+    2300122: MESH sciFi.upper.d
+    2300124: MESH sciFi.upper.e
+    2300126: MESH sciFi.upper.f
+    2300128: MESH sciFi.upper.g
+    2300130: MESH sciFi.upper.h
+    2300132: MESH sciFi.upper.i
+    2300134: MESH sciFi.upper.j
+    2300136: MESH sciFi.upper.k
+    2300138: MESH sciFi.upper.l
+    2300140: MESH sciFi.upper.m
+    2300142: MESH sciFi.upper.n
+    2300144: MESH sciFi.upper.o
+    2300146: MESH sciFi.upper.p
+    2300148: MESH sciFi.upper.q
+    2300150: MESH sciFi.upper.r
+    2300152: MESH sciFi.upper.s
+    2300154: MESH sciFi.upper.t
+    2300156: MESH sciFi.upper.u
+    2300158: MESH sciFi.upper.v
+    2300160: MESH sciFi.upper.w
+    2300162: MESH sciFi.upper.x
+    2300164: MESH sciFi.upper.y
+    2300166: MESH sciFi.upper.z
+    2300168: MESH sciFi.punc.apostrophe
+    3300000: MESH sciFi.upper.a001
+    3300002: MESH sciFi.upper.b
+    3300004: MESH sciFi.upper.c
+    3300006: MESH sciFi.lower.a
+    3300008: MESH sciFi.lower.apostrophe
+    3300010: MESH sciFi.lower.b
+    3300012: MESH sciFi.lower.c
+    3300014: MESH sciFi.lower.d
+    3300016: MESH sciFi.lower.e
+    3300018: MESH sciFi.lower.f
+    3300020: MESH sciFi.lower.g
+    3300022: MESH sciFi.lower.h
+    3300024: MESH sciFi.lower.i
+    3300026: MESH sciFi.lower.j
+    3300028: MESH sciFi.lower.k
+    3300030: MESH sciFi.lower.l
+    3300032: MESH sciFi.lower.m
+    3300034: MESH sciFi.lower.n
+    3300036: MESH sciFi.lower.o
+    3300038: MESH sciFi.lower.p
+    3300040: MESH sciFi.lower.q
+    3300042: MESH sciFi.lower.r
+    3300044: MESH sciFi.lower.s
+    3300046: MESH sciFi.lower.t
+    3300048: MESH sciFi.lower.u
+    3300050: MESH sciFi.lower.v
+    3300052: MESH sciFi.lower.w
+    3300054: MESH sciFi.lower.x
+    3300056: MESH sciFi.lower.y
+    3300058: MESH sciFi.lower.z
+    3300060: MESH sciFi.number.0
+    3300062: MESH sciFi.number.1
+    3300064: MESH sciFi.number.2
+    3300066: MESH sciFi.number.3
+    3300068: MESH sciFi.number.4
+    3300070: MESH sciFi.number.5
+    3300072: MESH sciFi.number.6
+    3300074: MESH sciFi.number.7
+    3300076: MESH sciFi.number.8
+    3300078: MESH sciFi.number.9
+    3300080: MESH sciFi.punc.colon
+    3300082: MESH sciFi.punc.comma
+    3300084: MESH sciFi.punc.exclamation
+    3300086: MESH sciFi.punc.period
+    3300088: MESH sciFi.punc.question
+    3300090: MESH sciFi.punc.quotation
+    3300092: MESH sciFi.punc.semiColon
+    3300094: MESH sciFi.replacement
+    3300096: MESH sciFi.symbol.ampersand
+    3300098: MESH sciFi.symbol.asterisk
+    3300100: MESH sciFi.symbol.at
+    3300102: MESH sciFi.symbol.bracket.left
+    3300104: MESH sciFi.symbol.bracket.right
+    3300106: MESH sciFi.symbol.dollar
+    3300108: MESH sciFi.symbol.equal
+    3300110: MESH sciFi.symbol.minus
+    3300112: MESH sciFi.symbol.number
+    3300114: MESH sciFi.symbol.percent
+    3300116: MESH sciFi.symbol.plus
+    3300118: MESH sciFi.symbol.slash
+    3300120: MESH sciFi.upper.a
+    3300122: MESH sciFi.upper.d
+    3300124: MESH sciFi.upper.e
+    3300126: MESH sciFi.upper.f
+    3300128: MESH sciFi.upper.g
+    3300130: MESH sciFi.upper.h
+    3300132: MESH sciFi.upper.i
+    3300134: MESH sciFi.upper.j
+    3300136: MESH sciFi.upper.k
+    3300138: MESH sciFi.upper.l
+    3300140: MESH sciFi.upper.m
+    3300142: MESH sciFi.upper.n
+    3300144: MESH sciFi.upper.o
+    3300146: MESH sciFi.upper.p
+    3300148: MESH sciFi.upper.q
+    3300150: MESH sciFi.upper.r
+    3300152: MESH sciFi.upper.s
+    3300154: MESH sciFi.upper.t
+    3300156: MESH sciFi.upper.u
+    3300158: MESH sciFi.upper.v
+    3300160: MESH sciFi.upper.w
+    3300162: MESH sciFi.upper.x
+    3300164: MESH sciFi.upper.y
+    3300166: MESH sciFi.upper.z
+    3300168: MESH sciFi.punc.apostrophe
+    4300000: MESH sciFi.upper.a001
+    4300002: MESH sciFi.upper.b
+    4300004: MESH sciFi.upper.c
+    4300006: MESH sciFi.upper.a
+    4300008: MESH sciFi.upper.d
+    4300010: MESH sciFi.upper.e
+    4300012: MESH sciFi.upper.f
+    4300014: MESH sciFi.upper.g
+    4300016: MESH sciFi.upper.h
+    4300018: MESH sciFi.upper.i
+    4300020: MESH sciFi.upper.j
+    4300022: MESH sciFi.upper.k
+    4300024: MESH sciFi.upper.l
+    4300026: MESH sciFi.upper.m
+    4300028: MESH sciFi.upper.n
+    4300030: MESH sciFi.upper.o
+    4300032: MESH sciFi.upper.p
+    4300034: MESH sciFi.upper.q
+    4300036: MESH sciFi.upper.r
+    4300038: MESH sciFi.upper.s
+    4300040: MESH sciFi.upper.t
+    4300042: MESH sciFi.upper.u
+    4300044: MESH sciFi.upper.v
+    4300046: MESH sciFi.upper.w
+    4300048: MESH sciFi.upper.x
+    4300050: MESH sciFi.upper.y
+    4300052: MESH sciFi.upper.z
+    4300054: MESH sciFi.lower.v
+    4300056: MESH sciFi.lower.u
+    4300058: MESH sciFi.lower.t
+    4300060: MESH sciFi.lower.i
+    4300062: MESH sciFi.lower.j
+    4300064: MESH sciFi.lower.h
+    4300066: MESH sciFi.lower.l
+    4300068: MESH sciFi.lower.k
+    4300070: MESH sciFi.lower.c
+    4300072: MESH sciFi.lower.d
+    4300074: MESH sciFi.lower.a
+    4300076: MESH sciFi.lower.b
+    4300078: MESH sciFi.lower.e
+    4300080: MESH sciFi.lower.f
+    4300082: MESH sciFi.lower.g
+    4300084: MESH sciFi.lower.m
+    4300086: MESH sciFi.lower.n
+    4300088: MESH sciFi.lower.o
+    4300090: MESH sciFi.lower.p
+    4300092: MESH sciFi.lower.q
+    4300094: MESH sciFi.lower.r
+    4300096: MESH sciFi.lower.s
+    4300098: MESH sciFi.lower.x
+    4300100: MESH sciFi.lower.w
+    4300102: MESH sciFi.lower.y
+    4300104: MESH sciFi.lower.z
+    4300106: MESH sciFi.number.1
+    4300108: MESH sciFi.number.0
+    4300110: MESH sciFi.number.2
+    4300112: MESH sciFi.number.3
+    4300114: MESH sciFi.number.4
+    4300116: MESH sciFi.number.5
+    4300118: MESH sciFi.number.6
+    4300120: MESH sciFi.number.7
+    4300122: MESH sciFi.number.9
+    4300124: MESH sciFi.number.8
+    4300126: MESH sciFi.punc.colon
+    4300128: MESH sciFi.punc.semiColon
+    4300130: MESH sciFi.punc.comma
+    4300132: MESH sciFi.punc.exclamation
+    4300134: MESH sciFi.punc.question
+    4300136: MESH sciFi.punc.quotation
+    4300138: MESH sciFi.lower.apostrophe
+    4300140: MESH sciFi.punc.period
+    4300142: MESH sciFi.symbol.asterisk
+    4300144: MESH sciFi.symbol.plus
+    4300146: MESH sciFi.symbol.minus
+    4300148: MESH sciFi.symbol.equal
+    4300150: MESH sciFi.symbol.at
+    4300152: MESH sciFi.symbol.bracket.left
+    4300154: MESH sciFi.symbol.bracket.right
+    4300156: MESH sciFi.symbol.dollar
+    4300158: MESH sciFi.symbol.slash
+    4300160: MESH sciFi.symbol.number
+    4300162: MESH sciFi.symbol.ampersand
+    4300164: MESH sciFi.symbol.percent
+    4300166: MESH sciFi.replacement
+    4300168: MESH sciFi.punc.apostrophe
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

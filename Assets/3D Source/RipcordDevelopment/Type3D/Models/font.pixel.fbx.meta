@@ -1,0 +1,520 @@
+fileFormatVersion: 2
+guid: aa07fcb3e8138774196a7f35791506fb
+timeCreated: 1499815638
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: MESH pixel.lower.a
+    100004: MESH pixel.lower.b
+    100006: MESH pixel.lower.c
+    100008: MESH pixel.lower.d
+    100010: MESH pixel.lower.e
+    100012: MESH pixel.lower.f
+    100014: MESH pixel.lower.g
+    100016: MESH pixel.lower.h
+    100018: MESH pixel.lower.i
+    100020: MESH pixel.lower.j
+    100022: MESH pixel.lower.k
+    100024: MESH pixel.lower.l
+    100026: MESH pixel.lower.m
+    100028: MESH pixel.lower.n
+    100030: MESH pixel.lower.o
+    100032: MESH pixel.lower.p
+    100034: MESH pixel.lower.q
+    100036: MESH pixel.lower.r
+    100038: MESH pixel.lower.s
+    100040: MESH pixel.lower.t
+    100042: MESH pixel.lower.u
+    100044: MESH pixel.lower.v
+    100046: MESH pixel.lower.w
+    100048: MESH pixel.lower.x
+    100050: MESH pixel.lower.y
+    100052: MESH pixel.lower.z
+    100054: MESH pixel.number.0
+    100056: MESH pixel.number.1
+    100058: MESH pixel.number.2
+    100060: MESH pixel.number.3
+    100062: MESH pixel.number.4
+    100064: MESH pixel.number.5
+    100066: MESH pixel.number.6
+    100068: MESH pixel.number.7
+    100070: MESH pixel.number.8
+    100072: MESH pixel.number.9
+    100074: MESH pixel.punc.colon
+    100076: MESH pixel.punc.equals
+    100078: MESH pixel.punc.exclamation
+    100080: MESH pixel.punc.minus
+    100082: MESH pixel.punc.period
+    100084: MESH pixel.punc.plus
+    100086: MESH pixel.punc.question
+    100088: MESH pixel.punc.slash
+    100090: MESH pixel.upper.a
+    100092: MESH pixel.upper.b
+    100094: MESH pixel.upper.c
+    100096: MESH pixel.upper.d
+    100098: MESH pixel.upper.e
+    100100: MESH pixel.upper.f
+    100102: MESH pixel.upper.g
+    100104: MESH pixel.upper.h
+    100106: MESH pixel.upper.i
+    100108: MESH pixel.upper.j
+    100110: MESH pixel.upper.k
+    100112: MESH pixel.upper.l
+    100114: MESH pixel.upper.m
+    100116: MESH pixel.upper.n
+    100118: MESH pixel.upper.o
+    100120: MESH pixel.upper.p
+    100122: MESH pixel.upper.q
+    100124: MESH pixel.upper.r
+    100126: MESH pixel.upper.s
+    100128: MESH pixel.upper.t
+    100130: MESH pixel.upper.u
+    100132: MESH pixel.upper.v
+    100134: MESH pixel.upper.w
+    100136: MESH pixel.upper.x
+    100138: MESH pixel.upper.y
+    100140: MESH pixel.upper.z
+    100142: MESH pixel.punc.apostrophe
+    100144: MESH pixel.punc.comma
+    100146: MESH pixel.punc.quotation
+    100148: MESH pixel.punc.semiColon
+    100150: MESH pixel.symbol.ampersand
+    100152: MESH pixel.symbol.asterisk
+    100154: MESH pixel.symbol.at
+    100156: MESH pixel.symbol.bracket.left
+    100158: MESH pixel.symbol.bracket.right
+    100160: MESH pixel.symbol.dollar
+    100162: MESH pixel.symbol.number
+    100164: MESH pixel.symbol.percent
+    100166: MESH pixel.symbol.equals
+    100168: MESH pixel.symbol.minus
+    100170: MESH pixel.symbol.plus
+    100172: MESH pixel.symbol.slash
+    100174: MESH pixel.replacement
+    100176: MESH pixel.symbol.equal
+    400000: //RootNode
+    400002: MESH pixel.lower.a
+    400004: MESH pixel.lower.b
+    400006: MESH pixel.lower.c
+    400008: MESH pixel.lower.d
+    400010: MESH pixel.lower.e
+    400012: MESH pixel.lower.f
+    400014: MESH pixel.lower.g
+    400016: MESH pixel.lower.h
+    400018: MESH pixel.lower.i
+    400020: MESH pixel.lower.j
+    400022: MESH pixel.lower.k
+    400024: MESH pixel.lower.l
+    400026: MESH pixel.lower.m
+    400028: MESH pixel.lower.n
+    400030: MESH pixel.lower.o
+    400032: MESH pixel.lower.p
+    400034: MESH pixel.lower.q
+    400036: MESH pixel.lower.r
+    400038: MESH pixel.lower.s
+    400040: MESH pixel.lower.t
+    400042: MESH pixel.lower.u
+    400044: MESH pixel.lower.v
+    400046: MESH pixel.lower.w
+    400048: MESH pixel.lower.x
+    400050: MESH pixel.lower.y
+    400052: MESH pixel.lower.z
+    400054: MESH pixel.number.0
+    400056: MESH pixel.number.1
+    400058: MESH pixel.number.2
+    400060: MESH pixel.number.3
+    400062: MESH pixel.number.4
+    400064: MESH pixel.number.5
+    400066: MESH pixel.number.6
+    400068: MESH pixel.number.7
+    400070: MESH pixel.number.8
+    400072: MESH pixel.number.9
+    400074: MESH pixel.punc.colon
+    400076: MESH pixel.punc.equals
+    400078: MESH pixel.punc.exclamation
+    400080: MESH pixel.punc.minus
+    400082: MESH pixel.punc.period
+    400084: MESH pixel.punc.plus
+    400086: MESH pixel.punc.question
+    400088: MESH pixel.punc.slash
+    400090: MESH pixel.upper.a
+    400092: MESH pixel.upper.b
+    400094: MESH pixel.upper.c
+    400096: MESH pixel.upper.d
+    400098: MESH pixel.upper.e
+    400100: MESH pixel.upper.f
+    400102: MESH pixel.upper.g
+    400104: MESH pixel.upper.h
+    400106: MESH pixel.upper.i
+    400108: MESH pixel.upper.j
+    400110: MESH pixel.upper.k
+    400112: MESH pixel.upper.l
+    400114: MESH pixel.upper.m
+    400116: MESH pixel.upper.n
+    400118: MESH pixel.upper.o
+    400120: MESH pixel.upper.p
+    400122: MESH pixel.upper.q
+    400124: MESH pixel.upper.r
+    400126: MESH pixel.upper.s
+    400128: MESH pixel.upper.t
+    400130: MESH pixel.upper.u
+    400132: MESH pixel.upper.v
+    400134: MESH pixel.upper.w
+    400136: MESH pixel.upper.x
+    400138: MESH pixel.upper.y
+    400140: MESH pixel.upper.z
+    400142: MESH pixel.punc.apostrophe
+    400144: MESH pixel.punc.comma
+    400146: MESH pixel.punc.quotation
+    400148: MESH pixel.punc.semiColon
+    400150: MESH pixel.symbol.ampersand
+    400152: MESH pixel.symbol.asterisk
+    400154: MESH pixel.symbol.at
+    400156: MESH pixel.symbol.bracket.left
+    400158: MESH pixel.symbol.bracket.right
+    400160: MESH pixel.symbol.dollar
+    400162: MESH pixel.symbol.number
+    400164: MESH pixel.symbol.percent
+    400166: MESH pixel.symbol.equals
+    400168: MESH pixel.symbol.minus
+    400170: MESH pixel.symbol.plus
+    400172: MESH pixel.symbol.slash
+    400174: MESH pixel.replacement
+    400176: MESH pixel.symbol.equal
+    2300000: MESH pixel.lower.a
+    2300002: MESH pixel.lower.b
+    2300004: MESH pixel.lower.c
+    2300006: MESH pixel.lower.d
+    2300008: MESH pixel.lower.e
+    2300010: MESH pixel.lower.f
+    2300012: MESH pixel.lower.g
+    2300014: MESH pixel.lower.h
+    2300016: MESH pixel.lower.i
+    2300018: MESH pixel.lower.j
+    2300020: MESH pixel.lower.k
+    2300022: MESH pixel.lower.l
+    2300024: MESH pixel.lower.m
+    2300026: MESH pixel.lower.n
+    2300028: MESH pixel.lower.o
+    2300030: MESH pixel.lower.p
+    2300032: MESH pixel.lower.q
+    2300034: MESH pixel.lower.r
+    2300036: MESH pixel.lower.s
+    2300038: MESH pixel.lower.t
+    2300040: MESH pixel.lower.u
+    2300042: MESH pixel.lower.v
+    2300044: MESH pixel.lower.w
+    2300046: MESH pixel.lower.x
+    2300048: MESH pixel.lower.y
+    2300050: MESH pixel.lower.z
+    2300052: MESH pixel.number.0
+    2300054: MESH pixel.number.1
+    2300056: MESH pixel.number.2
+    2300058: MESH pixel.number.3
+    2300060: MESH pixel.number.4
+    2300062: MESH pixel.number.5
+    2300064: MESH pixel.number.6
+    2300066: MESH pixel.number.7
+    2300068: MESH pixel.number.8
+    2300070: MESH pixel.number.9
+    2300072: MESH pixel.punc.colon
+    2300074: MESH pixel.punc.equals
+    2300076: MESH pixel.punc.exclamation
+    2300078: MESH pixel.punc.minus
+    2300080: MESH pixel.punc.period
+    2300082: MESH pixel.punc.plus
+    2300084: MESH pixel.punc.question
+    2300086: MESH pixel.punc.slash
+    2300088: MESH pixel.upper.a
+    2300090: MESH pixel.upper.b
+    2300092: MESH pixel.upper.c
+    2300094: MESH pixel.upper.d
+    2300096: MESH pixel.upper.e
+    2300098: MESH pixel.upper.f
+    2300100: MESH pixel.upper.g
+    2300102: MESH pixel.upper.h
+    2300104: MESH pixel.upper.i
+    2300106: MESH pixel.upper.j
+    2300108: MESH pixel.upper.k
+    2300110: MESH pixel.upper.l
+    2300112: MESH pixel.upper.m
+    2300114: MESH pixel.upper.n
+    2300116: MESH pixel.upper.o
+    2300118: MESH pixel.upper.p
+    2300120: MESH pixel.upper.q
+    2300122: MESH pixel.upper.r
+    2300124: MESH pixel.upper.s
+    2300126: MESH pixel.upper.t
+    2300128: MESH pixel.upper.u
+    2300130: MESH pixel.upper.v
+    2300132: MESH pixel.upper.w
+    2300134: MESH pixel.upper.x
+    2300136: MESH pixel.upper.y
+    2300138: MESH pixel.upper.z
+    2300140: MESH pixel.punc.apostrophe
+    2300142: MESH pixel.punc.comma
+    2300144: MESH pixel.punc.quotation
+    2300146: MESH pixel.punc.semiColon
+    2300148: MESH pixel.symbol.ampersand
+    2300150: MESH pixel.symbol.asterisk
+    2300152: MESH pixel.symbol.at
+    2300154: MESH pixel.symbol.bracket.left
+    2300156: MESH pixel.symbol.bracket.right
+    2300158: MESH pixel.symbol.dollar
+    2300160: MESH pixel.symbol.number
+    2300162: MESH pixel.symbol.percent
+    2300164: MESH pixel.symbol.equals
+    2300166: MESH pixel.symbol.minus
+    2300168: MESH pixel.symbol.plus
+    2300170: MESH pixel.symbol.slash
+    2300172: MESH pixel.replacement
+    2300174: MESH pixel.symbol.equal
+    3300000: MESH pixel.lower.a
+    3300002: MESH pixel.lower.b
+    3300004: MESH pixel.lower.c
+    3300006: MESH pixel.lower.d
+    3300008: MESH pixel.lower.e
+    3300010: MESH pixel.lower.f
+    3300012: MESH pixel.lower.g
+    3300014: MESH pixel.lower.h
+    3300016: MESH pixel.lower.i
+    3300018: MESH pixel.lower.j
+    3300020: MESH pixel.lower.k
+    3300022: MESH pixel.lower.l
+    3300024: MESH pixel.lower.m
+    3300026: MESH pixel.lower.n
+    3300028: MESH pixel.lower.o
+    3300030: MESH pixel.lower.p
+    3300032: MESH pixel.lower.q
+    3300034: MESH pixel.lower.r
+    3300036: MESH pixel.lower.s
+    3300038: MESH pixel.lower.t
+    3300040: MESH pixel.lower.u
+    3300042: MESH pixel.lower.v
+    3300044: MESH pixel.lower.w
+    3300046: MESH pixel.lower.x
+    3300048: MESH pixel.lower.y
+    3300050: MESH pixel.lower.z
+    3300052: MESH pixel.number.0
+    3300054: MESH pixel.number.1
+    3300056: MESH pixel.number.2
+    3300058: MESH pixel.number.3
+    3300060: MESH pixel.number.4
+    3300062: MESH pixel.number.5
+    3300064: MESH pixel.number.6
+    3300066: MESH pixel.number.7
+    3300068: MESH pixel.number.8
+    3300070: MESH pixel.number.9
+    3300072: MESH pixel.punc.colon
+    3300074: MESH pixel.punc.equals
+    3300076: MESH pixel.punc.exclamation
+    3300078: MESH pixel.punc.minus
+    3300080: MESH pixel.punc.period
+    3300082: MESH pixel.punc.plus
+    3300084: MESH pixel.punc.question
+    3300086: MESH pixel.punc.slash
+    3300088: MESH pixel.upper.a
+    3300090: MESH pixel.upper.b
+    3300092: MESH pixel.upper.c
+    3300094: MESH pixel.upper.d
+    3300096: MESH pixel.upper.e
+    3300098: MESH pixel.upper.f
+    3300100: MESH pixel.upper.g
+    3300102: MESH pixel.upper.h
+    3300104: MESH pixel.upper.i
+    3300106: MESH pixel.upper.j
+    3300108: MESH pixel.upper.k
+    3300110: MESH pixel.upper.l
+    3300112: MESH pixel.upper.m
+    3300114: MESH pixel.upper.n
+    3300116: MESH pixel.upper.o
+    3300118: MESH pixel.upper.p
+    3300120: MESH pixel.upper.q
+    3300122: MESH pixel.upper.r
+    3300124: MESH pixel.upper.s
+    3300126: MESH pixel.upper.t
+    3300128: MESH pixel.upper.u
+    3300130: MESH pixel.upper.v
+    3300132: MESH pixel.upper.w
+    3300134: MESH pixel.upper.x
+    3300136: MESH pixel.upper.y
+    3300138: MESH pixel.upper.z
+    3300140: MESH pixel.punc.apostrophe
+    3300142: MESH pixel.punc.comma
+    3300144: MESH pixel.punc.quotation
+    3300146: MESH pixel.punc.semiColon
+    3300148: MESH pixel.symbol.ampersand
+    3300150: MESH pixel.symbol.asterisk
+    3300152: MESH pixel.symbol.at
+    3300154: MESH pixel.symbol.bracket.left
+    3300156: MESH pixel.symbol.bracket.right
+    3300158: MESH pixel.symbol.dollar
+    3300160: MESH pixel.symbol.number
+    3300162: MESH pixel.symbol.percent
+    3300164: MESH pixel.symbol.equals
+    3300166: MESH pixel.symbol.minus
+    3300168: MESH pixel.symbol.plus
+    3300170: MESH pixel.symbol.slash
+    3300172: MESH pixel.replacement
+    3300174: MESH pixel.symbol.equal
+    4300000: MESH pixel.punc.minus
+    4300002: MESH pixel.upper.a
+    4300004: MESH pixel.upper.b
+    4300006: MESH pixel.upper.c
+    4300008: MESH pixel.upper.d
+    4300010: MESH pixel.upper.e
+    4300012: MESH pixel.upper.f
+    4300014: MESH pixel.upper.g
+    4300016: MESH pixel.upper.h
+    4300018: MESH pixel.upper.i
+    4300020: MESH pixel.upper.j
+    4300022: MESH pixel.upper.k
+    4300024: MESH pixel.upper.l
+    4300026: MESH pixel.upper.m
+    4300028: MESH pixel.upper.z
+    4300030: MESH pixel.upper.y
+    4300032: MESH pixel.upper.x
+    4300034: MESH pixel.upper.w
+    4300036: MESH pixel.upper.v
+    4300038: MESH pixel.upper.u
+    4300040: MESH pixel.upper.t
+    4300042: MESH pixel.upper.s
+    4300044: MESH pixel.upper.r
+    4300046: MESH pixel.upper.q
+    4300048: MESH pixel.upper.p
+    4300050: MESH pixel.upper.o
+    4300052: MESH pixel.upper.n
+    4300054: MESH pixel.lower.a
+    4300056: MESH pixel.lower.b
+    4300058: MESH pixel.lower.c
+    4300060: MESH pixel.lower.d
+    4300062: MESH pixel.lower.e
+    4300064: MESH pixel.lower.f
+    4300066: MESH pixel.lower.g
+    4300068: MESH pixel.lower.h
+    4300070: MESH pixel.lower.i
+    4300072: MESH pixel.lower.j
+    4300074: MESH pixel.lower.k
+    4300076: MESH pixel.lower.l
+    4300078: MESH pixel.lower.m
+    4300080: MESH pixel.lower.n
+    4300082: MESH pixel.lower.o
+    4300084: MESH pixel.lower.p
+    4300086: MESH pixel.lower.q
+    4300088: MESH pixel.lower.r
+    4300090: MESH pixel.lower.s
+    4300092: MESH pixel.lower.t
+    4300094: MESH pixel.lower.u
+    4300096: MESH pixel.lower.v
+    4300098: MESH pixel.lower.w
+    4300100: MESH pixel.lower.x
+    4300102: MESH pixel.lower.y
+    4300104: MESH pixel.lower.z
+    4300106: MESH pixel.number.0
+    4300108: MESH pixel.number.1
+    4300110: MESH pixel.number.2
+    4300112: MESH pixel.number.3
+    4300114: MESH pixel.number.4
+    4300116: MESH pixel.number.5
+    4300118: MESH pixel.number.6
+    4300120: MESH pixel.number.7
+    4300122: MESH pixel.number.8
+    4300124: MESH pixel.number.9
+    4300126: MESH pixel.punc.period
+    4300128: MESH pixel.punc.exclamation
+    4300130: MESH pixel.punc.question
+    4300132: MESH pixel.punc.colon
+    4300134: MESH pixel.punc.slash
+    4300136: MESH pixel.punc.plus
+    4300138: MESH pixel.punc.equals
+    4300140: MESH pixel.punc.comma
+    4300142: MESH pixel.punc.semiColon
+    4300144: MESH pixel.punc.apostrophe
+    4300146: MESH pixel.punc.quotation
+    4300148: MESH pixel.symbol.at
+    4300150: MESH pixel.symbol.number
+    4300152: MESH pixel.symbol.dollar
+    4300154: MESH pixel.symbol.percent
+    4300156: MESH pixel.symbol.ampersand
+    4300158: MESH pixel.symbol.asterisk
+    4300160: MESH pixel.symbol.bracket.left
+    4300162: MESH pixel.symbol.bracket.right
+    4300164: MESH pixel.symbol.minus
+    4300166: MESH pixel.symbol.slash
+    4300168: MESH pixel.symbol.plus
+    4300170: MESH pixel.symbol.equals
+    4300172: MESH pixel.replacement
+    4300174: MESH pixel.symbol.equal
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,77 @@
+fileFormatVersion: 2
+guid: 7b1f01d6b8c3c7c47b32b3b841b296d1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _cartExamplePrefab: {fileID: 7986504087968017091, guid: 7e6c0472b7f3dec4bbb5202140458211,
+      type: 3}
+  - _friendlyCartPrefab: {fileID: 1399408944216986053, guid: c06bdda61db9b8f4f9e099d97efc7855,
+      type: 3}
+  - friendlyCart: {instanceID: 0}
+  - _enemyCartPrefab: {fileID: 1000012657452956, guid: 1b82079bbc5064ef78676a5a00cc0d69,
+      type: 3}
+  - enemyCart: {instanceID: 0}
+  - _leftActivateAction: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  - _leftRayInteractor: {fileID: 3757804698442645337, guid: 30c7c65d9dbaf3a439f8ac531340e114,
+      type: 3}
+  - gateOne: {instanceID: 0}
+  - gateTwo: {instanceID: 0}
+  - gateOnePosition: {instanceID: 0}
+  - gateTwoPosition: {instanceID: 0}
+  - flagManager: {fileID: 4461071782106265470, guid: b9d294838ca8d8d409c24de0a2ec7106,
+      type: 3}
+  - _flagPrefab: {fileID: 1253502270666672, guid: b9d294838ca8d8d409c24de0a2ec7106,
+      type: 3}
+  - flag: {instanceID: 0}
+  - infoGameProcessGameObject: {fileID: 7425851336001209737, guid: f69596a749fde2742b3600639ed4cf00,
+      type: 3}
+  - infoText: {fileID: 2320599210501010060, guid: b5bf4a4cfe3000d4184f75acaf17b080,
+      type: 3}
+  - selectFirstGateModalGameObject: {fileID: 8707296379090357289, guid: 59d984deb8e3f87438c9fbda2299a7a3,
+      type: 3}
+  - selectFirstGateText: {fileID: 299580526154431633, guid: 59d984deb8e3f87438c9fbda2299a7a3,
+      type: 3}
+  - selectSecondGateModalGameObject: {fileID: 457555699923731843, guid: e0d6a76cafccf7e429699e569160f449,
+      type: 3}
+  - selectSecondGateText: {fileID: 8133937746807372495, guid: 53fb811910e87cf43bbe21d14b0a5a98,
+      type: 3}
+  - infoMoveYourCartModalGameObject: {fileID: 4455354564514447087, guid: abd5823e2fec87c42897f328c1dc29f9,
+      type: 3}
+  - moveCartText: {fileID: 5629488854318155938, guid: 455928e7bd2a43c44b95ec25e8da28b0,
+      type: 3}
+  - infoCreateFlagModalGameObject: {fileID: 6800015085388017753, guid: cf3f6b81b28f1104dbf28bce7f23f1aa,
+      type: 3}
+  - createFlagText: {fileID: 4075082966738790431, guid: 13d589dae3baa434da85b5509fdacfcb,
+      type: 3}
+  - readyGameObject: {fileID: 2432955005003576082, guid: 9723b7ac081b9ce4287e4fe703a24c2f,
+      type: 3}
+  - _readyToGoBtn: {fileID: 4638604894549994737, guid: 6ecdf1153841a334f85ffc636d78a6d1,
+      type: 3}
+  - gameReadyText: {fileID: 3766529043499562896, guid: 629b1bc0c14fd614da8634ac3e839a88,
+      type: 3}
+  - countDownGameObject: {fileID: 5737764713923470513, guid: a3ab4ab232420b2439e38d5e05854568,
+      type: 3}
+  - startGameObject: {fileID: 7236374368745821624, guid: c8af0e0524775434f95644bbe7909ecd,
+      type: 3}
+  - oneGameObject: {fileID: 1068896949776185126, guid: cbf75a61ea71d394a9d7336dd713eb50,
+      type: 3}
+  - twoGameObject: {fileID: 6868952422634828626, guid: 80c78c12fe9f6784dbdd6a4ef3eba572,
+      type: 3}
+  - threeGameObject: {fileID: 558468429313105246, guid: 33b80dcf9b8a5574696fc296503d957a,
+      type: 3}
+  - winGameObject: {fileID: 5679867811898144088, guid: 5c5cff8d9cd392a459525b93c9ce662f,
+      type: 3}
+  - loseGameObject: {fileID: 6739584480251884428, guid: e7563411b30fdd04ebb02a2ed2303d89,
+      type: 3}
+  - timer: {fileID: 3122861402189292142, guid: d020668920029fd48ba65f79cc7e8d9f, type: 3}
+  - playerScoreText: {fileID: 5160691674443425126, guid: 756286b3cae420c4c877dd96313581bd,
+      type: 3}
+  - enemyScoreText: {fileID: 7652250790697829379, guid: 4ba0fcd702109284fbb62817c261dfee,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
